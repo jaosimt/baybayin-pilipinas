@@ -1,0 +1,64 @@
+@import "../../common";
+$menuColor: rgba(0, 0, 0, 0.7);
+
+.menu {
+    position: fixed;
+    width: 300px;
+    height: 100%;
+    background-color: $menuColor;
+    font-weight: 500;
+    color: white;
+    @include transition-enabled;
+    
+    .menu-header {
+        height: 100px;
+        background: transparent url("../../images/baybayin-pilipinas.png") no-repeat center;
+        background-size: cover;
+    }
+    
+    .menu-item {
+        font-size: 21px;
+        padding: 21px 14px;
+        text-align: center;
+        border-top: 1px solid transparent;
+        border-bottom: 1px solid transparent;
+        cursor: pointer;
+        @include transition-enabled;
+    }
+    
+    .menu-item:hover:not(.selected) {
+        color: $hover
+    }
+    
+    .menu-item.selected {
+        background-color: rgba(53, 53, 53, 0.7);
+        color: $babayi;
+        border-top: 1px solid #ffffff52;
+        border-bottom: 1px solid #ffffff52;
+    }
+    
+    .menu-item:hover:not(.selected) {
+        opacity: 0.7;
+    }
+    
+    .menu-item:hover:not(.selected):active {
+        opacity: 0.3;
+    }
+    
+    .handle {
+        position: absolute;
+        top: 0;
+        right: -80px;
+        width: 80px;
+        height: 100px;
+        background: transparent url("../../images/menu.png") no-repeat center;
+        -webkit-background-size: contain;
+        background-size: 70%;
+        cursor: pointer;
+        @include transition-enabled;
+    }
+    
+    .handle:hover:active {
+        opacity: 0.3;
+    }
+}

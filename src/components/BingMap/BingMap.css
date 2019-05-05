@@ -1,0 +1,56 @@
+.infobox-info {
+    color: #777
+}
+
+.react-bing-map {
+    width: 100%;
+    height: 100%;
+}
+
+.react-bing-map-overlay {
+    color: #a7a7a7;
+    font-size: 30px;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute;
+}
+
+.react-bing-map-overlay .add {
+    font-size: 14px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.v-align,
+.h-align,
+.m-align {
+    position: relative;
+}
+
+.m-align,
+.v-align {
+    top: 50%;
+}
+
+.v-align {
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.m-align,
+.h-align {
+    float: left;
+    left: 50%;
+}
+
+.h-align {
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+.m-align {
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}

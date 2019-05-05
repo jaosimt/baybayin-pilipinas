@@ -1,0 +1,119 @@
+$lalaki: #71c2ff;
+$babayi: #dc00dc;
+$hover: gold;
+
+@mixin transition-enabled {
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+@mixin transition-all-1s {
+    -webkit-transition: all 1s ease-out;
+    -moz-transition: all 1s ease-out;
+    -ms-transition: all 1s ease-out;
+    -o-transition: all 1s ease-out;
+    transition: all 1s ease-out;
+}
+
+@mixin middle-transform {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);;
+    -moz-transform: translate(-50%, -50%);;
+    -ms-transform: translate(-50%, -50%);;
+    -o-transform: translate(-50%, -50%);;
+    transform: translate(-50%, -50%);;
+}
+
+@mixin middle-flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin edit-field {
+    padding: 3px 7px;
+    font-size: 14px;
+}
+
+@mixin clear-after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+@mixin flip-horizontal {
+    -webkit-transform: rotateY(180deg);;
+    -moz-transform: rotateY(180deg);;
+    -ms-transform: rotateY(180deg);;
+    -o-transform: rotateY(180deg);;
+    transform: rotateY(180deg);;
+}
+
+@mixin ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-wrap: none;
+}
+
+@mixin large-font {
+    font-size: 21px;
+    font-weight: bold;
+    padding: 7px;
+}
+
+@mixin blink {
+    -webkit-animation: blinker 1s linear infinite;
+    -o-animation: blinker 1s linear infinite;
+    animation: blinker 1s linear infinite;
+}
+
+@mixin spin {
+    -webkit-animation: spinner 7s linear infinite;
+    -o-animation: spinner 7s linear infinite;
+    animation: spinner 7s linear infinite;
+}
+
+@mixin fadeIn {
+    -webkit-animation: fadeIn 1s linear 1;
+    -o-animation: fadeIn 1s linear 1;
+    animation: fadeIn 1s linear 1;
+}
+
+@keyframes blinker {
+    50% {
+        opacity: 0;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0.1;
+    }
+    to {
+        opacity: 1.0;
+    }
+}
+
+@keyframes spinner {
+    from {
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(360deg);;
+        -moz-transform: rotate(360deg);;
+        -ms-transform: rotate(360deg);;
+        -o-transform: rotate(360deg);;
+        transform: rotate(360deg);;
+    }
+}

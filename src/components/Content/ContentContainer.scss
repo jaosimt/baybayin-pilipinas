@@ -1,0 +1,11 @@
+@import "../../common";
+
+.content-container {
+    padding: 70px;
+    position: absolute;
+    width: 100%;
+    height: calc(100% - 40px);
+    top: 40px;
+    background-color: rgba(255, 255, 255, 0.9);
+    @include transition-enabled;
+}

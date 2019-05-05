@@ -1,0 +1,37 @@
+@import "./common";
+
+.app {
+    opacity: 0;
+    @include transition-all-1s;
+    
+    .wrapper {
+        position: absolute;
+        width: 100%;
+        background: url("images/bg.jpg") no-repeat center;
+        background-size: cover;
+        
+        .slogan {
+            @include middle-transform;
+            text-align: center;
+            color: #fff;
+            font-weight: 500;
+            text-shadow: 3px 3px 7px $babayi;
+        
+            .s1 {
+                font-size: 4vw;
+            }
+        
+            .s2 {
+                padding: 7px;
+                font-size: 21px;
+            }
+        }
+    
+        .content {
+            position: fixed;
+            overflow: hidden;
+            top: 100%;
+            @include transition-enabled;
+        }
+    }
+}
