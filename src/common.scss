@@ -7,6 +7,12 @@ $page-bg: rgba(0, 0, 0, 0.3);
 $page-fg: #fff;
 $hover: gold;
 $grid-gap: 21px;
+$max-z-index: 2147483647;
+
+@mixin blurred {
+    filter: blur(7px);
+    -webkit-filter: blur(7px);
+}
 
 @mixin transition($transition, $duration) {
     -webkit-transition-duration: $duration;

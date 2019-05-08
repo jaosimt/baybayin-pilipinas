@@ -1,13 +1,15 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import './ImageSlider.scss';
 import HideIf from "../HideIf";
+import MediaPreview from "../MediaPreview/MediaPreview";
 
 export default class ImageSlider extends React.Component {
     state = {
         firstImageLeft: -55,
         hasLeft: true,
-        hasRight: true
+        hasRight: true,
+        mediaPreview: ''
     };
     
     onRightButtonClick = (e) => {
@@ -40,6 +42,15 @@ export default class ImageSlider extends React.Component {
         this.setState(thisStates);
     };
     
+    onMediaPreviewClose = () => this.setState({mediaPreview: ''});
+    
+    onCarouselImageClick = (e) => {
+        if (e.target.classList.contains('blurred')) return;
+        
+        const fileName = e.target.style.background.replace(/^.*\("(.*)"\).*$/, "$1");
+        if (fileName) this.setState({mediaPreview: fileName});
+    };
+    
     render() {
         const {
             firstImageLeft,
@@ -49,59 +60,69 @@ export default class ImageSlider extends React.Component {
         
         const {images} = this.props;
         
-        return <div
-            className={'slider-container'}
-        >
-            {
-                images.map((img, idx) => {
-                    const thisLeft = firstImageLeft + (idx * 70);
-                    let classNames = 'img';
-                    
-                    if (thisLeft !== 15) classNames += ' blurred';
-                    
-                    return <div
-                        key={idx}
-                        className={classNames}
-                        style={{
-                            left: `${thisLeft}%`,
-                            background: `transparent url(${img.image}) no-repeat center`
-                        }}
-                    >
-                        <HideIf condition={(!img.name && !img.link) || (img.name.trim() === '' && img.link.trim() === '')}>
-                            <div className={'label'}>
-                                <HideIf condition={!img.name || img.name.trim() === ''}>
-                                    <div className={'name'}>{img.name}</div>
-                                </HideIf>
-                                
-                                <HideIf condition={!img.link || img.link.trim() === ''}>
-                                    <div className={'link'}>
-                                        <a
-                                            rel="noopener noreferrer"
-                                            target='_blank'
-                                            href={img.link}>{img.link}
+        return <Fragment>
+            <div
+                className={'slider-container'}
+            >
+                {
+                    images.map((img, idx) => {
+                        const thisLeft = firstImageLeft + (idx * 70);
+                        let classNames = 'img';
+                
+                        if (thisLeft !== 15) classNames += ' blurred';
+                
+                        return <div
+                            key={idx}
+                            className={classNames}
+                            onClick={this.onCarouselImageClick}
+                            style={{
+                                left: `${thisLeft}%`,
+                                background: `transparent url(${img.image}) no-repeat center`
+                            }}
+                        >
+                            <HideIf condition={(!img.name && !img.link) || (img.name.trim() === '' && img.link.trim() === '')}>
+                                <div className={'label'}>
+                                    <HideIf condition={!img.name || img.name.trim() === ''}>
+                                        <div className={'name'}>{img.name}</div>
+                                    </HideIf>
+                            
+                                    <HideIf condition={!img.link || img.link.trim() === ''}>
+                                        <div className={'link'}>
+                                            <a
+                                                rel="noopener noreferrer"
+                                                target='_blank'
+                                                href={img.link}>{img.link}
                                             </a>
-                                    </div>
-                                </HideIf>
-                            </div>
-                        </HideIf>
-                    </div>
-                })
-            }
-            
-            <HideIf condition={!hasLeft}>
-                <div
-                    className={'btn left'}
-                    onClick={this.onLeftButtonClick}
-                />
-            </HideIf>
-            
-            <HideIf condition={!hasRight}>
-                <div
-                    className={'btn right'}
-                    onClick={this.onRightButtonClick}
-                />
-            </HideIf>
-        </div>;
+                                        </div>
+                                    </HideIf>
+                                </div>
+                            </HideIf>
+                        </div>
+                    })
+                }
+        
+                <HideIf condition={!hasLeft}>
+                    <div
+                        className={'btn left'}
+                        onClick={this.onLeftButtonClick}
+                    />
+                </HideIf>
+        
+                <HideIf condition={!hasRight}>
+                    <div
+                        className={'btn right'}
+                        onClick={this.onRightButtonClick}
+                    />
+                </HideIf>
+    
+                <HideIf condition={this.state.mediaPreview === ''}>
+                    <MediaPreview
+                        media={this.state.mediaPreview}
+                        onClose={this.onMediaPreviewClose}
+                    />
+                </HideIf>
+            </div>
+        </Fragment>;
     }
 }
 

@@ -11,6 +11,12 @@
     grid-column-gap: $grid-gap;
     height: 100%;
     
+    .info,
+    textarea,
+    .preview {
+        border: 1px solid #777;
+    }
+    
     textarea,
     .preview {
         background-color: white;

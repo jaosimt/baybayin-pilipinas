@@ -7,7 +7,7 @@
     height: calc(100% - 100px);
     top: 100px;
     color: $page-fg;
-    background-color: $page-bg;
+    //background-color: $page-bg;
     @include transition('ease-in-out', 0.3s);
     overflow: auto;
 }

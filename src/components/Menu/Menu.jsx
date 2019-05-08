@@ -20,6 +20,8 @@ export default class Menu extends React.Component {
     }
     
     onComponentClick = (e) => {
+        console.log(e.target.parentNode.className);
+        
         if (e.target.parentNode.className.match(this.props.clickExcludesRegEx) || this.state.menuLeft < 0) return;
         
         if (!this.node.contains(e.target)) this.setState({menuLeft: -300}, () => {
