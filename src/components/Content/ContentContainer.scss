@@ -1,11 +1,13 @@
 @import "../../common";
 
 .content-container {
-    padding: 70px;
+    padding: 30px 70px;
     position: absolute;
     width: 100%;
-    height: calc(100% - 40px);
-    top: 40px;
-    background-color: rgba(255, 255, 255, 0.9);
-    @include transition-enabled;
+    height: calc(100% - 100px);
+    top: 100px;
+    color: $page-fg;
+    background-color: $page-bg;
+    @include transition('ease-in-out', 0.3s);
+    overflow: auto;
 }

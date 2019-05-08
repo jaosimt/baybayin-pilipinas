@@ -2,13 +2,54 @@
 
 .app {
     opacity: 0;
-    @include transition-all-1s;
+    @include transition('ease-in-out', 0.7s);;
     
     .wrapper {
         position: absolute;
         width: 100%;
         background: url("images/bg.jpg") no-repeat center;
         background-size: cover;
+        
+        .social {
+            top: 0;
+            height: 100px;
+            float: right;
+            margin-right: 7px;
+            
+            .facebook {
+                background: transparent url("./images/facebook.jpg") no-repeat center;
+            }
+    
+            .instagram {
+                background: transparent url("./images/instagram.jpg") no-repeat center;
+            }
+    
+            .twitter {
+                background: transparent url("./images/twitter.jpg") no-repeat center;
+            }
+            
+            .linkedin {
+                background: transparent url("./images/linkedin.jpg") no-repeat center;
+            }
+            
+            .facebook,
+            .instagram,
+            .twitter,
+            .linkedin {
+                background-size: 100%;
+                border-radius: 7px;
+            }
+            
+            > div {
+                margin: 29px 14px 0 0;
+                float: right;
+                width: 40px;
+                height: 40px;
+                -webkit-box-shadow: 0 0 7px white;
+                -moz-box-shadow: 0 0 7px white;
+                box-shadow: 0 0 7px white;
+            }
+        };
         
         .slogan {
             @include middle-transform;
@@ -31,7 +72,7 @@
             position: fixed;
             overflow: hidden;
             top: 100%;
-            @include transition-enabled;
+            @include transition('ease-in-out', 0.73s);;
         }
     }
 }

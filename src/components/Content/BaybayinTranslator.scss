@@ -1,0 +1,109 @@
+@import "../../common";
+@import "./Baybayin-Modern-Club";
+
+.baybayin-translator {
+    position: relative;
+    display: grid;
+    grid-template-columns: 50% 50% auto;
+    grid-template-areas:
+        'text-area preview'
+        'info info'; // chart';
+    grid-column-gap: $grid-gap;
+    height: 100%;
+    
+    textarea,
+    .preview {
+        background-color: white;
+        -webkit-border-radius: 14px;
+        -moz-border-radius: 14px;
+        border-radius: 14px;
+        min-height: 200px;
+    }
+    
+    //.chart,
+    textarea,
+    .preview {
+        padding: 14px;
+    }
+    
+    textarea {
+        grid-area: text-area;
+        resize: none;
+        font-size: 49px;
+        font-family: Baybayin-Modern-Club;
+    }
+    
+    .preview {
+        grid-area: preview;
+        color: #777;
+        font-size: 21px;
+        
+        .dimmed {
+            color: gainsboro;
+        }
+    }
+    
+    //.chart,
+    .info {
+        margin-top: $grid-gap;
+        overflow: auto;
+    }
+
+    .info {
+        grid-area: info;
+        -webkit-border-radius: 14px;
+        -moz-border-radius: 14px;
+        border-radius: 14px;
+        overflow: hidden;
+        position: relative;
+        min-height: 70%;
+    }
+    
+    //.chart {
+    //    grid-area: chart;
+    //
+    //    .vowels {
+    //        grid-template-columns: auto auto auto;
+    //    }
+    //
+    //    .consonants {
+    //        grid-template-columns: auto auto auto auto auto auto auto;
+    //    }
+    //
+    //    .vowels,
+    //    .consonants {
+    //        display: grid;
+    //        grid-column-gap: $grid-gap;
+    //        justify-content: center;
+    //        justify-items: center;
+    //
+    //        > div {
+    //            @include transition('ease-in-out', 0.3s);
+    //            cursor: pointer;
+    //            text-align: center;
+    //            width: 70px;
+    //            background-color: white;
+    //            color: black;
+    //            font-size: 28px;
+    //            border-radius: 14px;
+    //            margin-top: $grid-gap;
+    //            box-shadow: 0 0 7px #000;
+    //
+    //            > div:last-child {
+    //                border-top: 1px solid #777;
+    //                color: #777;
+    //                font-size: 14px;
+    //                font-weight: bold;
+    //            }
+    //
+    //            div {
+    //                padding: 7px;
+    //            }
+    //        }
+    //
+    //        > div:hover {
+    //            transform: scale(1.3)
+    //        }
+    //    }
+    //}
+}

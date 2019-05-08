@@ -1,21 +1,30 @@
 $lalaki: #71c2ff;
-$babayi: #dc00dc;
+$babayi: rgba(222, 148, 222, 0.7);
 $hover: gold;
+$menu-bg: rgba(0, 0, 0, 0.7);
+$menu-fg: white;
+$page-bg: rgba(0, 0, 0, 0.3);
+$page-fg: #fff;
+$hover: gold;
+$grid-gap: 21px;
 
-@mixin transition-enabled {
-    -webkit-transition: all 0.3s ease-in-out;
-    -moz-transition: all 0.3s ease-in-out;
-    -ms-transition: all 0.3s ease-in-out;
-    -o-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
+@mixin transition($transition, $duration) {
+    -webkit-transition-duration: $duration;
+    -moz-transition-duration: $duration;
+    transition-duration: $duration;
+    
+    -webkit-transition-timing-function: $transition;
+    -moz-transition-timing-function: $transition;
+    -ms-transition-timing-function: $transition;
+    -o-transition-timing-function: $transition;
+    transition-timing-function: $transition;
 }
 
-@mixin transition-all-1s {
-    -webkit-transition: all 1s ease-out;
-    -moz-transition: all 1s ease-out;
-    -ms-transition: all 1s ease-out;
-    -o-transition: all 1s ease-out;
-    transition: all 1s ease-out;
+@mixin rotate($property) {
+    -webkit-transform: rotate($property);
+    -ms-transform: rotate($property);
+    transform: rotate($property);
+    
 }
 
 @mixin middle-transform {

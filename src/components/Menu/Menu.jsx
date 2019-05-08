@@ -11,7 +11,7 @@ export default class Menu extends React.Component {
         super(props);
         
         this.state = {
-            menuLeft: 0,
+            menuLeft: this.props.initLeft,
             selected: this.props.menu[0].index
         };
         
@@ -20,7 +20,8 @@ export default class Menu extends React.Component {
     }
     
     onComponentClick = (e) => {
-        e.stopPropagation();
+        if (e.target.parentNode.className.match(this.props.clickExcludesRegEx) || this.state.menuLeft < 0) return;
+        
         if (!this.node.contains(e.target)) this.setState({menuLeft: -300}, () => {
             if (isFunction(this.props.onSetLeft)) this.props.onSetLeft(this.state.menuLeft);
         });
@@ -82,6 +83,7 @@ export default class Menu extends React.Component {
 }
 
 Menu.propTypes = {
+    initLeft: PropTypes.number,
     menu: PropTypes.arrayOf(
         PropTypes.shape({
             name: PropTypes.string,
@@ -89,9 +91,12 @@ Menu.propTypes = {
         })
     ).isRequired,
     onClick: PropTypes.func,
-    onSetLeft: PropTypes.func
+    onSetLeft: PropTypes.func,
+    clickExcludesRegEx: PropTypes.any
 };
 
-Menu.propTypes = {
-    onClick: () => {}
+Menu.defaultProps = {
+    initLeft: 0,
+    onClick: () => {},
+    clickExcludesRegEx: / /
 };
