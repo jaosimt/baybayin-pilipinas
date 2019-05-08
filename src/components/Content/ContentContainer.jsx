@@ -22,6 +22,13 @@ export default class ContentContainer extends React.Component {
             case 'baybayin':
                 contents = <BaybayinTranslator/>;
                 break;
+            case 'about':
+                contents = <div className={'under-construction'}>
+                    <div className={'image'}>
+                        <div className={'label'}>This page is still under construction!</div>
+                    </div>
+                </div>;
+                break;
             default:
                 thisStyle.backgroundColor = `transparent`;
                 contents = <HomeTiles data={homeItems}/>

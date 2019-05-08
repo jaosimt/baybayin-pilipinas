@@ -132,6 +132,11 @@ export const menItems = [
         index: 1,
         name: 'baybayin',
         label: 'online keyboard and translator'
+    },
+    {
+        index: 2,
+        name: 'about',
+        label: 'about'
     }
 ];
 

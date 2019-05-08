@@ -10,4 +10,28 @@
     //background-color: $page-bg;
     @include transition('ease-in-out', 0.3s);
     overflow: auto;
+    
+    .under-construction {
+        height: 100%;
+        
+        .image {
+            @include middle-transform;
+    
+            width: 600px;
+            height: 420px;
+            background: rgba(255, 255, 255, 0.9) url("../../images/under-construction-kkk.png") no-repeat bottom;
+            background-size: contain;
+            -webkit-border-radius: 14px;
+            -moz-border-radius: 14px;
+            border: 1px solid gainsboro;
+            
+            .label {
+                padding: 49px 14px;
+                font-size: 28px;
+                font-weight: bold;
+                text-align: center;
+                color: #e707ff;
+            }
+        }
+    }
 }
