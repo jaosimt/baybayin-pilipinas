@@ -1,0 +1,45 @@
+@import "../../../common";
+
+.home-tile-items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 28px;
+    @include transition(ease-out, 0.7s);
+    
+    .tiles {
+        background-color: white;
+        color: #777;
+        padding: 28px;
+        -webkit-border-radius: 14px;
+        -moz-border-radius: 14px;
+        border-radius: 14px;
+        cursor: pointer;
+        @include transition(ease-out, 0.3s);
+    
+        > div {
+            @include transition(ease-out, 0.3s);
+        }
+        
+        .title {
+            text-align: center;
+            font-size: 1.4em;
+            font-weight: bold;
+            margin-bottom: 14px;
+        }
+        
+        .image {
+            background-size: contain !important;
+            height: 300px;
+            margin-bottom: 14px;
+        }
+        
+        .description {
+            text-align: justify;
+            font-size: 1.2em;
+        }
+    }
+    
+    .tiles:hover {
+        transform: scale(1.07);
+    }
+}

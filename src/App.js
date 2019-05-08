@@ -62,7 +62,7 @@ export default class App extends React.Component {
             >
                 <div className={'social'}>
                     {
-                        socialMedia.map((s, i) => <div key={i} className={s.name}/>)
+                        socialMedia.map((s, i) => <div key={i} className={s.name} onClick={() => window.open(s.url, '_blank')}/>)
                     }
                 </div>
                 

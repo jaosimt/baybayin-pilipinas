@@ -12,11 +12,14 @@
         background-size: cover;
         
         .social {
+            z-index: 1;
+            position: fixed;
+            right: 0;
             top: 0;
             height: 100px;
             float: right;
             margin-right: 7px;
-            
+    
             .facebook {
                 background: transparent url("./images/facebook.jpg") no-repeat center;
             }
@@ -37,11 +40,7 @@
             .instagram,
             .twitter,
             .linkedin {
-                background-size: 100%;
-                border-radius: 7px;
-            }
-            
-            > div {
+                @include transition(linear, 0.3s);
                 margin: 29px 14px 0 0;
                 float: right;
                 width: 40px;
@@ -49,6 +48,13 @@
                 -webkit-box-shadow: 0 0 7px white;
                 -moz-box-shadow: 0 0 7px white;
                 box-shadow: 0 0 7px white;
+                background-size: 100%;
+                border-radius: 7px;
+                cursor: pointer;
+            }
+            
+            > div:hover {
+                transform: scale(1.2);
             }
         };
         

@@ -83,10 +83,10 @@ $max-z-index: 2147483647;
     padding: 7px;
 }
 
-@mixin blink {
-    -webkit-animation: blinker 1s linear infinite;
-    -o-animation: blinker 1s linear infinite;
-    animation: blinker 1s linear infinite;
+@mixin blink($icount) {
+    -webkit-animation: blinker 1s linear $icount;
+    -o-animation: blinker 1s linear $icount;
+    animation: blinker 1s linear $icount;
 }
 
 @mixin spin {

@@ -2,6 +2,8 @@ import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import "./ContentContainer.scss";
 import BaybayinTranslator from "./BaybayinTranslator";
+import HomeTiles from "./HomeTiles/HomeTiles";
+import {homeItems} from "../../utils";
 
 export default class ContentContainer extends React.Component {
     render() {
@@ -20,12 +22,9 @@ export default class ContentContainer extends React.Component {
             case 'baybayin':
                 contents = <BaybayinTranslator/>;
                 break;
-            case 'news':
-                break;
-            case 'links':
-                break;
             default:
-                thisStyle.backgroundColor = `transparent`
+                thisStyle.backgroundColor = `transparent`;
+                contents = <HomeTiles data={homeItems}/>
         }
         
         return <div

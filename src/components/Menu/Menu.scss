@@ -23,7 +23,7 @@
         border-top: 1px solid transparent;
         border-bottom: 1px solid transparent;
         cursor: pointer;
-        color: #5cd3fc;
+        color: #e707ff;
         @include transition('ease-in-out', 0.3s);
     }
     
@@ -32,7 +32,7 @@
     }
     
     .menu-item.selected {
-        background-color: #5cd3fc;
+        background-color: #e707ff;
         color: white;
         border-top: 1px solid #ffffff52;
         border-bottom: 1px solid #ffffff52;
@@ -57,6 +57,7 @@
         background-size: 70%;
         cursor: pointer;
         @include transition('ease-in-out', 0.3s);
+        @include blink(7)
     }
     
     .handle:hover:active {
