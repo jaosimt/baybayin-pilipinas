@@ -4,6 +4,7 @@ import "./ContentContainer.scss";
 import BaybayinTranslator from "./BaybayinTranslator";
 import HomeTiles from "./HomeTiles/HomeTiles";
 import { homeItems } from "../../data";
+import UnderConstruction from "../UnderConstruction/UnderConstruction";
 
 export default class ContentContainer extends React.Component {
     render() {
@@ -23,11 +24,7 @@ export default class ContentContainer extends React.Component {
                 contents = <BaybayinTranslator/>;
                 break;
             case 'about':
-                contents = <div className={'under-construction'}>
-                    <div className={'image'}>
-                        <div className={'label'}>This page is still under construction!</div>
-                    </div>
-                </div>;
+                contents = <UnderConstruction/>;
                 break;
             default:
                 thisStyle.backgroundColor = `transparent`;

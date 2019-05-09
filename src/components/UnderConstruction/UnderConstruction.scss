@@ -1,0 +1,17 @@
+@import "../../common";
+
+.under-construction {
+    width: 500px;
+    height: 406px;
+    background: black url("./underconstruction.png") no-repeat center;
+    background-size: cover;
+    border-radius: 14px;
+    @include middle-transform;
+}
+
+@media (max-width: 767px) {
+    .under-construction {
+        width: 300px;
+        height: 244px;
+    }
+}

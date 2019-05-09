@@ -7,34 +7,8 @@
     height: calc(100% - 100px);
     top: 100px;
     color: $page-fg;
-    //background-color: $page-bg;
     @include transition('ease-in-out', 0.3s);
     overflow: auto;
-    
-    .under-construction {
-        height: 100%;
-        -webkit-border-radius: 14px;
-        -moz-border-radius: 14px;
-        border-radius: 14px;
-        
-        .image {
-            @include middle-transform;
-    
-            width: 600px;
-            height: 420px;
-            background: rgba(255, 255, 255, 0.9) url("../../images/under-construction-kkk.png") no-repeat bottom;
-            background-size: contain;
-            border: 1px solid gainsboro;
-            
-            .label {
-                padding: 49px 14px;
-                font-size: 28px;
-                font-weight: bold;
-                text-align: center;
-                color: #e707ff;
-            }
-        }
-    }
 }
 
 @media (max-width: 767px) {
