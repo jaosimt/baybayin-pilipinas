@@ -34,7 +34,7 @@
     textarea {
         grid-area: text-area;
         resize: none;
-        font-size: 49px;
+        font-size: 35px;
         font-family: Baybayin-Modern-Club;
     }
     
@@ -60,7 +60,7 @@
         border-radius: 14px;
         overflow: hidden;
         position: relative;
-        min-height: 150px;
+        min-height: 300px;
     }
 }
 
@@ -96,6 +96,7 @@
         .info {
             margin-top: 0;
             margin-bottom: 16px;
+            min-height: 150px;
         }
     }
 }

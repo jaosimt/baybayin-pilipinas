@@ -15,6 +15,8 @@ import baybayinPinas from './images/homeItems/baybayinPinas.jpg';
 import baybayinBuhayin from './images/homeItems/baybayinBuhayin.jpg';
 import nordenx from './images/homeItems/nordenx.jpg';
 import baybayinScript from './images/homeItems/baybayinScript.jpg';
+import bayLogo from './images/homeItems/baylogo2.png';
+import baybayinChart from './images/homeItems/baychart.jpg';
 
 export const homeItems = [
     {
@@ -22,6 +24,18 @@ export const homeItems = [
         url: 'https://sim.portfolio.ph/howto/how-to-use-the-baybayin-keyboard/',
         image: keyboard,
         description: 'Typing using a baybayin keyboard is not as simple as how we know typing is.  There are certain typing behaviours that we need to pay attention to.  For instance, typing a vowel character needs to be typed in with the caps lock on.'
+    },
+    {
+        title: 'Baybayin - The Ancient Script of the Philippines',
+        url: 'http://paulmorrow.ca/bayeng1.htm',
+        image: bayLogo,
+        description: 'This language of ours is like any other, it once had an alphabet and its own letters that vanished as though a tempest had set upon a boat on a lake in a time now long gone.'
+    },
+    {
+        title: 'Baybayin and nationalism',
+        url: 'https://blogs.brown.edu/alioshabp/baybayin-and-nationalism/',
+        image: baybayinChart,
+        description: 'In the past few decades, several early baybayin inscriptions have been discovered. These are generally written on stone or similar hardy materials, with a particularly interesting example being the Butuan Ivory Seal from 1002.'
     },
     {
         title: 'Baybayin Script',
@@ -57,7 +71,7 @@ export const homeItems = [
         title: 'Nordenx Blogspot',
         url: 'http://nordenx.blogspot.com/',
         image: nordenx,
-        description: 'I am a graphic designer and Philippine Script (Baybayin, Kulitan, Surat Mangyan, etc.) font developer. I do workshops and academic presentations about Philippine writing systems; its history and modern day applications. I\'ve done presentations at universities and cultural centers in Tokyo, Taiwan, The Philippines, and the United States.'
+        description: 'I am a graphic designer and Philippine Script (Baybayin, Kulitan, Surat Mangyan, etc.) font developer. I do workshops and academic presentations about Philippine writing systems; its history and modern day applications.'
     }
 ];
 

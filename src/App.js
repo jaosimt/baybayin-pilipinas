@@ -79,11 +79,11 @@ export default class App extends React.Component {
                      height: `${windowHeight}px`
                  }}
             >
-                <div className={'social'}>
-                    {
-                        socialMedia.map((s, i) => <div key={i} className={s.name} onClick={() => window.open(s.url, '_blank')}/>)
-                    }
-                </div>
+                {/*<div className={'social'}>*/}
+                    {/*{*/}
+                        {/*socialMedia.map((s, i) => <div key={i} className={s.name} onClick={() => window.open(s.url, '_blank')}/>)*/}
+                    {/*}*/}
+                {/*</div>*/}
                 
                 <div className={'slogan'}>
                     <div className={'s1'}>ᜃᜌ᜔ᜄᜈ᜔ᜇᜅ᜔ ᜉᜒᜎᜒᜉᜒᜈᜐ᜔</div>

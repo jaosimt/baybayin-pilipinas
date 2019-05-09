@@ -10,12 +10,12 @@ describe('homeItems', () => {
     
     it('is an array of object with property title, url, image & description', () => {
         for (let i = 0; i < homeItems.length; i++) {
-            expect(homeItems[0].hasOwnProperty('title')).toBe(true);
-            expect(homeItems[0].hasOwnProperty('url')).toBe(true);
-            expect(homeItems[0].hasOwnProperty('image')).toBe(true);
-            expect(homeItems[0].hasOwnProperty('description')).toBe(true);
-            expect(homeItems[0].title).toMatch(/./);
-            expect(homeItems[0].image).toMatch(/./);
+            expect(homeItems[i].hasOwnProperty('title')).toBe(true);
+            expect(homeItems[i].hasOwnProperty('url')).toBe(true);
+            expect(homeItems[i].hasOwnProperty('image')).toBe(true);
+            expect(homeItems[i].hasOwnProperty('description')).toBe(true);
+            expect(homeItems[i].title).toMatch(/./);
+            expect(homeItems[i].image).toMatch(/./);
         }
     })
 });
@@ -27,10 +27,10 @@ describe('carouselImages', () => {
     
     it('is an array of object with property image, name & link', () => {
         for (let i = 0; i < carouselImages.length; i++) {
-            expect(carouselImages[0].hasOwnProperty('image')).toBe(true);
-            expect(carouselImages[0].hasOwnProperty('name')).toBe(true);
-            expect(carouselImages[0].hasOwnProperty('link')).toBe(true);
-            expect(carouselImages[0].image).toMatch(/./);
+            expect(carouselImages[i].hasOwnProperty('image')).toBe(true);
+            expect(carouselImages[i].hasOwnProperty('name')).toBe(true);
+            expect(carouselImages[i].hasOwnProperty('link')).toBe(true);
+            expect(carouselImages[i].image).toMatch(/./);
         }
     })
 });
