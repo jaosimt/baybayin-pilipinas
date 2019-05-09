@@ -68,7 +68,9 @@ export const carouselImages = [
         link: ''
     },
     {
-        image: chars
+        image: chars,
+        name: '',
+        link: ''
     },
     {
         image: theRules,
@@ -77,6 +79,8 @@ export const carouselImages = [
     },
     {
         image: saligUgOras,
+        name: '',
+        link: ''
     },
     {
         image: phNativeScrips,
