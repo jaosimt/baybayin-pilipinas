@@ -18,7 +18,7 @@ export const socialMedia = [
     
 ];
 
-export const menItems = [
+export const menuItems = [
     {
         index: 0,
         name: 'home',

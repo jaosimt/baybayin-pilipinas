@@ -1,8 +1,19 @@
 import {
     fileImageCompression,
     getMaxKey,
-    toFixed
+    toFixed,
+    menuItems
 } from '../utils';
+
+describe('menuItems', () => {
+    it('is an array of object with property index, name, label', () => {
+        for (let i = 0; i < menuItems.length; i++) {
+            expect(menuItems[0].hasOwnProperty('index')).toBe(true);
+            expect(menuItems[0].hasOwnProperty('name')).toBe(true);
+            expect(menuItems[0].hasOwnProperty('label')).toBe(true);
+        }
+    })
+});
 
 describe('toFixed', () => {
     it('returns the number argument fixed in specified or 2 digit decimal as a string', () => {

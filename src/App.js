@@ -3,7 +3,7 @@ import './app.scss';
 import {debounce} from 'lodash'
 import Menu from "./components/Menu/Menu";
 import {
-    menItems,
+    menuItems,
     socialMedia
 } from './utils';
 import ContentContainer from "./components/Content/ContentContainer";
@@ -15,7 +15,7 @@ export default class App extends React.Component {
         this.state = {
             windowWidth: '0',
             windowHeight: '0',
-            page: menItems.length ? menItems[0].index : 0,
+            page: menuItems.length ? menuItems[0].index : 0,
             menuLeft: 0,
             opaque: 0
         };
@@ -74,7 +74,7 @@ export default class App extends React.Component {
                 </div>
                 
                 {
-                    menItems.map(m => {
+                    menuItems.map(m => {
                         return <div
                             key={m.index}
                             className={`content ${m.name}`}
@@ -93,7 +93,7 @@ export default class App extends React.Component {
             </div>
             
             <Menu
-                menu={menItems}
+                menu={menuItems}
                 initLeft={menuLeft}
                 onClick={this.onMenuSelected}
                 onSetLeft={this.onMenuSetLeft}
