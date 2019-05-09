@@ -28,7 +28,7 @@ export default class App extends React.Component {
     getInitPage = () => {
         let thisPage = menuItems.length ? menuItems[0].index : 0;
         
-        const pathName = window.location.pathname.trim().toLocaleLowerCase().replace(/^\//, '');
+        const pathName = window.location.pathname.trim().toLocaleLowerCase().replace(/^\/baybayin-pilipinas/, '').replace(/^\//, '');
         if (pathName === '') return thisPage;
         
         const menu = menuItems.find(m => m.name === pathName);
