@@ -16,7 +16,7 @@ export default class App extends React.Component {
             windowWidth: '0',
             windowHeight: '0',
             page: menItems.length ? menItems[0].index : 0,
-            menuLeft: -300,
+            menuLeft: 0,
             opaque: 0
         };
         
