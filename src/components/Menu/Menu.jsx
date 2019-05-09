@@ -66,7 +66,10 @@ export default class Menu extends React.Component {
             style={{
                 left: `${menuLeft}px`
             }} className={'menu'}>
-            <div className={'menu-header'}/>
+            <div
+                className={'menu-header'}
+                onClick={this.onHandleClick}
+            />
             
             {
                 this.props.menu.map(m => <MenuItems

@@ -3,6 +3,7 @@
 
 .menu {
     position: fixed;
+    z-index: 1;
     width: 300px;
     height: 100%;
     background-color: $menu-bg;
@@ -15,6 +16,7 @@
         height: 100px;
         background: transparent url("../../images/baybayin-pilipinas.png") no-repeat center;
         background-size: cover;
+        cursor: pointer;
     }
     
     .menu-item {
@@ -67,7 +69,6 @@
     
     .page-title {
         position: absolute;
-        z-index: 1;
         top: 0;
         left: 385px;
         width: 200%;
