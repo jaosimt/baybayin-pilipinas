@@ -60,8 +60,6 @@ export default class Menu extends React.Component {
             initSelected: selected
         } = this.props;
         
-        console.log(selected);
-        
         return <div
             ref={node => this.node = node}
             style={{

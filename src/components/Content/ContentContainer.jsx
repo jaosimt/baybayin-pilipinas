@@ -19,8 +19,6 @@ export default class ContentContainer extends React.Component {
             <h2>{this.props.menuItem.label}</h2>
         </Fragment>;
         
-        console.log(this.props.menuItem.name);
-        
         switch (this.props.menuItem.name) {
             case 'baybayin':
                 contents = <BaybayinTranslator/>;
