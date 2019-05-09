@@ -4,14 +4,15 @@ import ancientPhScripts from './images/carousel/theAncientPhScripts.jpg';
 import bambooBaybayin from './images/carousel/Baybayin-Carved-on-Bamboo-Stem.jpg';
 import baybayinConferenceProgram from './images/carousel/Baybayin-conference-program.jpg';
 import hashTag from './images/carousel/hashTagFilipinoAncientWriting.jpg';
-import kultura from './images/carousel/927ac4bcedcbac58491f335cb67e4a87.jpg';
+import kultura from './images/carousel/kultura.jpg';
 import chars from './images/carousel/baybayinCharacters.png';
+import saligUgOras from './images/carousel/saligUgOras.jpg';
 
 import keyboard from './images/homeItems/baybayin_QWERTY_keys-1080x500.jpg';
 import baybayinDotCom from './images/homeItems/baybayinDotCom.jpg';
 import natMuseum from './images/homeItems/national-museum-baybayin-gc_4503.jpg';
 import baybayinPinas from './images/homeItems/baybayinPinas.jpg';
-import baybayinBuhayin from './images/homeItems/baybayinBuhayin.png';
+import baybayinBuhayin from './images/homeItems/baybayinBuhayin.jpg';
 import nordenx from './images/homeItems/nordenx.jpg';
 import baybayinScript from './images/homeItems/baybayinScript.jpg';
 
@@ -73,6 +74,9 @@ export const carouselImages = [
         image: theRules,
         name: '',
         link: 'https://www.facebook.com/baybayinpinas/'
+    },
+    {
+        image: saligUgOras,
     },
     {
         image: phNativeScrips,
