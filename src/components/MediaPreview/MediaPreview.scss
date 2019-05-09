@@ -21,3 +21,12 @@
         background-size: contain !important;
     }
 }
+
+@media (max-width: 767px) {
+    .media-preview-overlay {
+        .preview {
+            width: calc(100% - 28px);
+            height: 70%;
+        }
+    }
+}

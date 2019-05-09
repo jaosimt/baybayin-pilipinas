@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import "./Menu.scss";
 import MenuItems from "./MenuItems";
 import {
-    isFunction
+    isFunction, isMobile
 } from "../../utils";
 
 export default class Menu extends React.Component {
@@ -37,9 +37,13 @@ export default class Menu extends React.Component {
     onMenuItemClick = (e) => {
         e.preventDefault();
         
-        this.setState({
+        let thisState = {
             selected: +e.currentTarget.dataset.index
-        }, () => this.props.onClick(this.state.selected));
+        };
+        
+        if (isMobile()) thisState.menuLeft = -300;
+        
+        this.setState(thisState, () => this.props.onClick(this.state.selected));
     };
     
     componentDidMount() {
@@ -80,7 +84,9 @@ export default class Menu extends React.Component {
             />
             
             <div className={'page-title'}>
-                {this.props.menu[this.state.selected].alt || this.props.menu[this.state.selected].label}
+                <div className={'center-page-title'}>
+                    {this.props.menu[this.state.selected].alt || this.props.menu[this.state.selected].label}
+                </div>
             </div>
         </div>
     }

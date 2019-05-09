@@ -4,31 +4,9 @@ import {
     carouselImages
 } from "../../data";
 import ImageSlider from "../ImageSlider/ImageSlider";
+import {isMobile} from "../../utils";
 
 export default class BaybayinTranslator extends React.Component {
-    //__tileVowels = [
-    //    {b: 'ᜀ', r: 'A'},
-    //    {b: 'ᜁ', r: 'E/I'},
-    //    {b: 'ᜂ', r: 'O/U'},
-    //];
-    //
-    //__tileConsonants = [
-    //    {b: 'ᜊ', r: 'BA'},
-    //    {b: 'ᜃ', r: 'KA'},
-    //    {b: 'ᜇ', r: 'DA/RA'},
-    //    {b: 'ᜄ', r: 'GA'},
-    //    {b: 'ᜑ', r: 'HA'},
-    //    {b: 'ᜎ', r: 'LA'},
-    //    {b: 'ᜋ', r: 'MA'},
-    //    {b: 'ᜈ', r: 'NA'},
-    //    {b: 'ᜅ', r: 'NGA'},
-    //    {b: 'ᜉ', r: 'PA'},
-    //    {b: 'ᜐ', r: 'SA'},
-    //    {b: 'ᜆ', r: 'TA'},
-    //    {b: 'ᜏ', r: 'WA'},
-    //    {b: 'ᜌ', r: 'YA'},
-    //];
-    
     ___bybyn = {
         a: 'ᜀ',
         e: 'ᜁ',
@@ -231,7 +209,7 @@ export default class BaybayinTranslator extends React.Component {
         "ᜌ": "ya"
     };
     
-    previewMessage = '← ← ← type or paste something there<br/><br/>and see the translation here. ↓';
+    previewMessage = `${isMobile() ? '↑↑↑' : '← ← ←'} type or paste something there<br/><br/>and see the translation here. ↓↓↓`;
     
     state = {
         baybayin: '',
@@ -267,13 +245,6 @@ export default class BaybayinTranslator extends React.Component {
         return ((normalize === true || this.state.simplify.checked) ? str.replace(/\[e\/i\]/g, 'i').replace(/\[o\/u\]/g, 'o') : str).replace(/(\[\w+\/\w+\])/gm, "<span class='dimmed'>$1</span>");
     };
     
-    //tile = (a, i) => {
-    //    return <div key={i}>
-    //        <div>{a.b}</div>
-    //        <div>{a.r}</div>
-    //    </div>
-    //};
-    
     componentDidMount() {
         if (this.node) this.node.focus();
     };
@@ -291,19 +262,6 @@ export default class BaybayinTranslator extends React.Component {
             <div className={'info'}>
                 <ImageSlider images={carouselImages}/>
             </div>
-            
-            {/*<div className={'chart'}>*/}
-            {/*<div className={'vowels'}>*/}
-            {/*{*/}
-            {/*this.__tileVowels.map((c, i) => this.tile(c, i))*/}
-            {/*}*/}
-            {/*</div>*/}
-            {/*<div className={'consonants'}>*/}
-            {/*{*/}
-            {/*this.__tileConsonants.map((c, i) => this.tile(c, i))*/}
-            {/*}*/}
-            {/*</div>*/}
-            {/*</div>*/}
         </div>;
     }
 }

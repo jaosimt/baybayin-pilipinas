@@ -58,7 +58,7 @@
         background-size: 70%;
         cursor: pointer;
         @include transition('ease-in-out', 0.3s);
-        @include blink(7)
+        @include blink(3)
     }
     
     .handle:hover:active {
@@ -68,8 +68,9 @@
     .page-title {
         position: absolute;
         top: 0;
-        left: 400px;
-        line-height: 100px;
+        left: 385px;
+        width: 200%;
+        height: 100px;
         font-size: 2vw;
         font-weight: bold;
         font-family: "American-Type-Writer", "Segoe UI", "Arial Narrow", sans-serif;
@@ -80,8 +81,34 @@
         color: white;
         text-shadow: 0 0 3px $babayi;
         text-decoration: underline;
-        @include ellipsis;
+        //@include ellipsis;
         @include transition('linear', 0.7s);
     
+        .center-page-title {
+            @include vcenter-transform;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .menu {
+        .handle {
+            height: 70px;
+            width: 70px;
+            background-size: 60%;
+            right: -70px;
+        }
+    
+        .menu-item {
+            font-size: 21px;
+            padding: 14px 7px;
+        }
+        
+        .page-title {
+            width: 50%;
+            height: 70px;
+            left: 365px;
+            font-size: 14px;
+        }
     }
 }

@@ -36,3 +36,10 @@
         }
     }
 }
+
+@media (max-width: 767px) {
+    .content-container {
+        padding: 14px;
+        top: 70px;
+    }
+}

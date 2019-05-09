@@ -2,7 +2,7 @@
 
 .home-tile-items {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: auto auto auto;
     grid-gap: 28px;
     @include transition(ease-out, 0.7s);
     
@@ -15,7 +15,7 @@
         border-radius: 14px;
         cursor: pointer;
         @include transition(ease-out, 0.3s);
-    
+        
         > div {
             @include transition(ease-out, 0.3s);
         }
@@ -41,5 +41,29 @@
     
     .tiles:hover {
         transform: scale(1.07);
+    }
+}
+
+@media (max-width: 767px) {
+    .home-tile-items {
+        grid-template-columns: auto;
+        grid-gap: 14px;
+    
+        .tiles {
+            padding: 14px;
+    
+            .title {
+                font-size: 1.2em;
+            }
+            
+            .image {
+                height: 170px;
+            }
+    
+            .description {
+                text-align: justify;
+                font-size: 0.9em;
+            }
+        }
     }
 }

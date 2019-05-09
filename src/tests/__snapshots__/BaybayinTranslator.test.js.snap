@@ -12,7 +12,7 @@ exports[`renders correctly 1`] = `
     className="preview"
     dangerouslySetInnerHTML={
       Object {
-        "__html": "← ← ← type or paste something there<br/><br/>and see the translation here. ↓",
+        "__html": "← ← ← type or paste something there<br/><br/>and see the translation here. ↓↓↓",
       }
     }
   />

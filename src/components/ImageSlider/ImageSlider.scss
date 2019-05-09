@@ -98,3 +98,19 @@
         opacity: 0.3;
     }
 }
+
+@media (max-width: 767px) {
+    .slider-container {
+        .btn {
+            opacity:1;
+        }
+        
+        .btn.left {
+            left: calc(15% - 35px);
+        }
+        
+        .btn.right {
+            right: calc(15% - 35px);
+        }
+    }
+}
