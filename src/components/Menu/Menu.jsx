@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import "./Menu.scss";
 import MenuItems from "./MenuItems";
 import {
-    isFunction, isMobile, isNumber
+    isFunction, isMobile
 } from "../../utils";
 
 export default class Menu extends React.Component {
@@ -58,7 +58,7 @@ export default class Menu extends React.Component {
         
         const {
             initSelected: selected,
-            initLeft,
+            //initLeft,
         } = this.props;
         
         return <div

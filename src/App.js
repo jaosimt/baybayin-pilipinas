@@ -5,7 +5,7 @@ import Menu from "./components/Menu/Menu";
 import {
     isMobile, isNumber,
     menuItems,
-    socialMedia
+    //socialMedia
 } from './utils';
 import ContentContainer from "./components/Content/ContentContainer";
 
