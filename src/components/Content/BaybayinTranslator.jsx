@@ -275,7 +275,7 @@ export default class BaybayinTranslator extends React.Component {
     //};
     
     componentDidMount() {
-        this.node.focus();
+        if (this.node) this.node.focus();
     };
     
     render() {

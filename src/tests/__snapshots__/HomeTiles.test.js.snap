@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="home-tile-items"
+>
+  <div
+    className="tiles"
+    key="0"
+    onClick={[Function]}
+  >
+    <div
+      className="title"
+    >
+      How to use the Baybayin keyboard
+    </div>
+    <div
+      className="image"
+      style={
+        Object {
+          "background": "black url(baybayin_QWERTY_keys-1080x500.jpg) no-repeat center",
+        }
+      }
+    />
+    <div
+      className="description"
+    >
+      Typing using a baybayin keyboard is not as simple as how we know typing is.  There are certain typing behaviours that we need to pay attention to.  For instance, typing a vowel character needs to be typed in with the caps lock on.
+    </div>
+  </div>
+</div>
+`;
