@@ -35,6 +35,11 @@ export const menuItems = [
         index: 2,
         name: 'about',
         label: 'about'
+    },
+    {
+        index: 99,
+        name: 'page-not-found',
+        label: 'page not found'
     }
 ];
 
@@ -178,6 +183,7 @@ export const download = (href, fileName) => {
 };
 
 export const isFunction = (arg) => typeof arg === "function";
+export const isNumber = (arg) => typeof arg === "number" && !Number.isNaN(arg);
 
 export const isVisible = (htmlElement) => {
     if (!htmlElement) return false; // ???

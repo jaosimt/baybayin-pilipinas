@@ -60,6 +60,8 @@ export default class Menu extends React.Component {
             initSelected: selected
         } = this.props;
         
+        console.log(selected);
+        
         return <div
             ref={node => this.node = node}
             style={{
@@ -71,13 +73,16 @@ export default class Menu extends React.Component {
             />
             
             {
-                this.props.menu.map(m => <MenuItems
-                    key={m.index}
-                    menuItem={m}
-                    selected={selected}
-                    onClick={this.onMenuItemClick}
-                
-                />)
+                this.props.menu.map(m => {
+                    if (m.index === 99 && selected !== 99) return null;
+                    return <MenuItems
+                        key={m.index}
+                        menuItem={m}
+                        selected={selected}
+                        onClick={this.onMenuItemClick}
+
+                    />
+                })
             }
             
             <div
@@ -87,7 +92,7 @@ export default class Menu extends React.Component {
             
             <div className={'page-title'}>
                 <div className={'center-page-title'}>
-                    {this.props.menu[selected].alt || this.props.menu[selected].label}
+                    {this.props.menu.find(m => m.index === selected).alt || this.props.menu.find(m => m.index === selected).label}
                 </div>
             </div>
         </div>

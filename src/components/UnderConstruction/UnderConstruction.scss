@@ -1,9 +1,17 @@
 @import "../../common";
 
+.no-page {
+    background: rgba(0, 0, 0, 0.97) url("./page404.png") no-repeat center;
+}
+
+.under-construction {
+    background: rgba(0, 0, 0, 0.97) url("./underconstruction.png") no-repeat center;
+}
+
+.no-page,
 .under-construction {
     width: 500px;
     height: 406px;
-    background: black url("./underconstruction.png") no-repeat center;
     background-size: cover;
     border-radius: 14px;
     @include middle-transform;

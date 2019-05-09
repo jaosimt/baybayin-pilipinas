@@ -19,6 +19,8 @@ export default class ContentContainer extends React.Component {
             <h2>{this.props.menuItem.label}</h2>
         </Fragment>;
         
+        console.log(this.props.menuItem.name);
+        
         switch (this.props.menuItem.name) {
             case 'baybayin':
                 contents = <BaybayinTranslator/>;
@@ -26,9 +28,12 @@ export default class ContentContainer extends React.Component {
             case 'about':
                 contents = <UnderConstruction/>;
                 break;
-            default:
+            case 'home':
                 thisStyle.backgroundColor = `transparent`;
-                contents = <HomeTiles data={homeItems}/>
+                contents = <HomeTiles data={homeItems}/>;
+                break;
+            default:
+                contents = <UnderConstruction is404={true}/>
         }
         
         return <div

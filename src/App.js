@@ -3,7 +3,7 @@ import './app.scss';
 import {debounce} from 'lodash'
 import Menu from "./components/Menu/Menu";
 import {
-    isMobile,
+    isMobile, isNumber,
     menuItems,
     socialMedia
 } from './utils';
@@ -16,7 +16,7 @@ export default class App extends React.Component {
         this.state = {
             windowWidth: '0',
             windowHeight: '0',
-            page: menuItems.length ? menuItems[0].index : 0,
+            page: this.getInitPage(),
             menuLeft: isMobile() ? -300 : 0,
             opaque: 0
         };
@@ -24,6 +24,18 @@ export default class App extends React.Component {
         this.initComponentResizeHandler = this.componentResizeHandler.bind(this);
         this.componentResizeHandler = debounce(this.componentResizeHandler.bind(this));
     }
+    
+    getInitPage = () => {
+        let thisPage = menuItems.length ? menuItems[0].index : 0;
+        
+        const pathName = window.location.pathname.trim().toLocaleLowerCase().replace(/^\//, '');
+        if (pathName === '') return thisPage;
+        
+        const menu = menuItems.find(m => m.name === pathName);
+        thisPage = menu && isNumber(menu.index) ? menu.index : 99;
+        
+        return thisPage;
+    };
     
     componentResizeHandler = () => this.setState({windowWidth: window.innerWidth, windowHeight: window.innerHeight});
     
