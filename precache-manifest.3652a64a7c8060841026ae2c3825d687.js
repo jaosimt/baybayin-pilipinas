@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "b19bff33852334eecab30ec5e7d6443b",
+    "revision": "6c750a0f47acec1334b9843d49393f03",
     "url": "/baybayin-pilipinas/index.html"
   },
   {
-    "revision": "86cb8cb3b776382a0e97",
-    "url": "/baybayin-pilipinas/static/css/main.d2438a06.chunk.css"
+    "revision": "81a1facbd38de474614b",
+    "url": "/baybayin-pilipinas/static/css/main.aa7489ce.chunk.css"
   },
   {
     "revision": "b32637b0a974ed069453",
     "url": "/baybayin-pilipinas/static/js/2.0b99ad3f.chunk.js"
   },
   {
-    "revision": "86cb8cb3b776382a0e97",
-    "url": "/baybayin-pilipinas/static/js/main.37fa136c.chunk.js"
+    "revision": "81a1facbd38de474614b",
+    "url": "/baybayin-pilipinas/static/js/main.a92d4914.chunk.js"
   },
   {
     "revision": "bfd27539ba100a7d531e",
@@ -100,7 +100,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/baybayin-pilipinas/static/media/theRules.8b1871aa.jpg"
   },
   {
-    "revision": "d241697b26f2ab21947aa8a594fce964",
-    "url": "/baybayin-pilipinas/static/media/under-construction-kkk.d241697b.png"
+    "revision": "16021617ce3bc71e8846fbfa37169e03",
+    "url": "/baybayin-pilipinas/static/media/underconstruction.16021617.png"
   }
 ]);

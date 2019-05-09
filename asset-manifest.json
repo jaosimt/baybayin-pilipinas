@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/baybayin-pilipinas/static/css/main.d2438a06.chunk.css",
-    "main.js": "/baybayin-pilipinas/static/js/main.37fa136c.chunk.js",
-    "main.js.map": "/baybayin-pilipinas/static/js/main.37fa136c.chunk.js.map",
+    "main.css": "/baybayin-pilipinas/static/css/main.aa7489ce.chunk.css",
+    "main.js": "/baybayin-pilipinas/static/js/main.a92d4914.chunk.js",
+    "main.js.map": "/baybayin-pilipinas/static/js/main.a92d4914.chunk.js.map",
     "runtime~main.js": "/baybayin-pilipinas/static/js/runtime~main.3be3e604.js",
     "runtime~main.js.map": "/baybayin-pilipinas/static/js/runtime~main.3be3e604.js.map",
     "static/js/2.0b99ad3f.chunk.js": "/baybayin-pilipinas/static/js/2.0b99ad3f.chunk.js",
     "static/js/2.0b99ad3f.chunk.js.map": "/baybayin-pilipinas/static/js/2.0b99ad3f.chunk.js.map",
     "index.html": "/baybayin-pilipinas/index.html",
-    "precache-manifest.8ba549df791416fa8e5eaab1123ec3c5.js": "/baybayin-pilipinas/precache-manifest.8ba549df791416fa8e5eaab1123ec3c5.js",
+    "precache-manifest.3652a64a7c8060841026ae2c3825d687.js": "/baybayin-pilipinas/precache-manifest.3652a64a7c8060841026ae2c3825d687.js",
     "service-worker.js": "/baybayin-pilipinas/service-worker.js",
-    "static/css/main.d2438a06.chunk.css.map": "/baybayin-pilipinas/static/css/main.d2438a06.chunk.css.map",
+    "static/css/main.aa7489ce.chunk.css.map": "/baybayin-pilipinas/static/css/main.aa7489ce.chunk.css.map",
     "static/media/Menu.scss": "/baybayin-pilipinas/static/media/baybayin-pilipinas.0b5ef25d.png",
     "static/media/Baybayin-Carved-on-Bamboo-Stem.jpg": "/baybayin-pilipinas/static/media/Baybayin-Carved-on-Bamboo-Stem.0a279b26.jpg",
     "static/media/Baybayin-conference-program.jpg": "/baybayin-pilipinas/static/media/Baybayin-conference-program.38e5b3be.jpg",
@@ -29,6 +29,6 @@
     "static/media/saligUgOras.jpg": "/baybayin-pilipinas/static/media/saligUgOras.a31c5b2a.jpg",
     "static/media/theAncientPhScripts.jpg": "/baybayin-pilipinas/static/media/theAncientPhScripts.388b2801.jpg",
     "static/media/theRules.jpg": "/baybayin-pilipinas/static/media/theRules.8b1871aa.jpg",
-    "static/media/ContentContainer.scss": "/baybayin-pilipinas/static/media/under-construction-kkk.d241697b.png"
+    "static/media/UnderConstruction.scss": "/baybayin-pilipinas/static/media/underconstruction.16021617.png"
   }
 }
