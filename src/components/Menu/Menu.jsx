@@ -11,8 +11,7 @@ export default class Menu extends React.Component {
         super(props);
         
         this.state = {
-            menuLeft: this.props.initLeft,
-            selected: this.props.menu[0].index
+            menuLeft: this.props.initLeft
         };
         
         this.onComponentClick.bind(this);
@@ -37,13 +36,10 @@ export default class Menu extends React.Component {
     onMenuItemClick = (e) => {
         e.preventDefault();
         
-        let thisState = {
-            selected: +e.currentTarget.dataset.index
-        };
+        const selected = +e.currentTarget.dataset.index;
         
-        if (isMobile()) thisState.menuLeft = -300;
-        
-        this.setState(thisState, () => this.props.onClick(this.state.selected));
+        if (isMobile()) this.setState({ menuLeftL: -300 });
+        if (!Number.isNaN(selected) && isFunction(this.props.onClick)) this.props.onClick(selected);
     };
     
     componentDidMount() {
@@ -58,8 +54,11 @@ export default class Menu extends React.Component {
     render() {
         const {
             menuLeft,
-            selected
         } = this.state;
+        
+        const {
+            initSelected: selected
+        } = this.props;
         
         return <div
             ref={node => this.node = node}
@@ -88,7 +87,7 @@ export default class Menu extends React.Component {
             
             <div className={'page-title'}>
                 <div className={'center-page-title'}>
-                    {this.props.menu[this.state.selected].alt || this.props.menu[this.state.selected].label}
+                    {this.props.menu[selected].alt || this.props.menu[selected].label}
                 </div>
             </div>
         </div>
@@ -97,6 +96,7 @@ export default class Menu extends React.Component {
 
 Menu.propTypes = {
     initLeft: PropTypes.number,
+    initSelected: PropTypes.number.isRequired,
     menu: PropTypes.arrayOf(
         PropTypes.shape({
             name: PropTypes.string,

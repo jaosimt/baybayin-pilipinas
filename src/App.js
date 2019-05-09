@@ -100,6 +100,7 @@ export default class App extends React.Component {
             <Menu
                 menu={menuItems}
                 initLeft={menuLeft}
+                initSelected={page}
                 onClick={this.onMenuSelected}
                 onSetLeft={this.onMenuSetLeft}
                 clickExcludesRegEx={/slider-container|info/}
