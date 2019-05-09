@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import "./Menu.scss";
 import MenuItems from "./MenuItems";
 import {
-    isFunction, isMobile
+    isFunction, isMobile, isNumber
 } from "../../utils";
 
 export default class Menu extends React.Component {
@@ -38,7 +38,7 @@ export default class Menu extends React.Component {
         
         const selected = +e.currentTarget.dataset.index;
         
-        if (isMobile()) this.setState({ menuLeftL: -300 });
+        if (isMobile()) this.setState({ menuLeft: -300 });
         if (!Number.isNaN(selected) && isFunction(this.props.onClick)) this.props.onClick(selected);
     };
     
@@ -57,7 +57,8 @@ export default class Menu extends React.Component {
         } = this.state;
         
         const {
-            initSelected: selected
+            initSelected: selected,
+            initLeft,
         } = this.props;
         
         return <div
