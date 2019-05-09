@@ -2,7 +2,7 @@ import React from 'react';
 import './BaybayinTranslator.scss';
 import {
     carouselImages
-} from "../../utils";
+} from "../../data";
 import ImageSlider from "../ImageSlider/ImageSlider";
 
 export default class BaybayinTranslator extends React.Component {

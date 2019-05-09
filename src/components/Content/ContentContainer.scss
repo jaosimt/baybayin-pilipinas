@@ -13,6 +13,9 @@
     
     .under-construction {
         height: 100%;
+        -webkit-border-radius: 14px;
+        -moz-border-radius: 14px;
+        border-radius: 14px;
         
         .image {
             @include middle-transform;
@@ -21,8 +24,6 @@
             height: 420px;
             background: rgba(255, 255, 255, 0.9) url("../../images/under-construction-kkk.png") no-repeat bottom;
             background-size: contain;
-            -webkit-border-radius: 14px;
-            -moz-border-radius: 14px;
             border: 1px solid gainsboro;
             
             .label {

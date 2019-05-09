@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import "./ContentContainer.scss";
 import BaybayinTranslator from "./BaybayinTranslator";
 import HomeTiles from "./HomeTiles/HomeTiles";
-import {homeItems} from "../../utils";
+import { homeItems } from "../../data";
 
 export default class ContentContainer extends React.Component {
     render() {
