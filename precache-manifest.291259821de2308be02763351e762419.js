@@ -1,18 +1,18 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "1146bd37576cda84ad2a561c1be21990",
+    "revision": "643b31f5dd2c2590720faf7132fa8766",
     "url": "/baybayin-pilipinas/index.html"
   },
   {
-    "revision": "ca15f8aa92e9d35085e5",
-    "url": "/baybayin-pilipinas/static/css/main.a91d29c6.chunk.css"
+    "revision": "5bdb9dd4cc99d1b49333",
+    "url": "/baybayin-pilipinas/static/css/main.45ea5a89.chunk.css"
   },
   {
     "revision": "c147aebf9343fb54b1a2",
     "url": "/baybayin-pilipinas/static/js/2.1304a68e.chunk.js"
   },
   {
-    "revision": "ca15f8aa92e9d35085e5",
+    "revision": "5bdb9dd4cc99d1b49333",
     "url": "/baybayin-pilipinas/static/js/main.29f4054e.chunk.js"
   },
   {
@@ -72,8 +72,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/baybayin-pilipinas/static/media/baybayin_QWERTY_keys-1080x500.2b6fff2b.jpg"
   },
   {
-    "revision": "8819b48524b0addd383c5140c6d766e8",
-    "url": "/baybayin-pilipinas/static/media/bg.8819b485.jpg"
+    "revision": "75b8e7a6453c9ca895ec38e944b00db3",
+    "url": "/baybayin-pilipinas/static/media/bg.75b8e7a6.jpg"
   },
   {
     "revision": "42dea76ae81495a15bf1d857b5fe3684",
