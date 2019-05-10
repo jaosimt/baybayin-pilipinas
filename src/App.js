@@ -79,6 +79,8 @@ export default class App extends React.Component {
                      height: `${windowHeight}px`
                  }}
             >
+                <div className={'menu-area-strip'}/>
+                
                 <div className={'social'}>
                     <SocialMediaLinks iconSize={isMobile() ? 21 : 35}/>
                 </div>
