@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "b5cba5b009516d43a3c32f0c4054230d",
+    "revision": "16255472905ccc687661aee6482ed9b5",
     "url": "/baybayin-pilipinas/index.html"
   },
   {
-    "revision": "cdac0f243cdd297aa251",
-    "url": "/baybayin-pilipinas/static/css/main.7d48b2d5.chunk.css"
+    "revision": "1b69f0f10f9d08bfb6c4",
+    "url": "/baybayin-pilipinas/static/css/main.1667ee0f.chunk.css"
   },
   {
-    "revision": "b92e89d0aa04b6a237cf",
-    "url": "/baybayin-pilipinas/static/js/2.3a80cd86.chunk.js"
+    "revision": "2727811a131b1273eb93",
+    "url": "/baybayin-pilipinas/static/js/2.850efeb0.chunk.js"
   },
   {
-    "revision": "cdac0f243cdd297aa251",
-    "url": "/baybayin-pilipinas/static/js/main.7c38ce3f.chunk.js"
+    "revision": "1b69f0f10f9d08bfb6c4",
+    "url": "/baybayin-pilipinas/static/js/main.590427b3.chunk.js"
   },
   {
     "revision": "bfd27539ba100a7d531e",
@@ -60,16 +60,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/baybayin-pilipinas/static/media/baybayinPinas.9037f727.jpg"
   },
   {
-    "revision": "c09d2cf13c3b016786a1d7df851b096f",
-    "url": "/baybayin-pilipinas/static/media/baybayin_QWERTY_keys-1080x500.c09d2cf1.jpg"
+    "revision": "2acadbec30516f642b67735f07626cd6",
+    "url": "/baybayin-pilipinas/static/media/baybayin_QWERTY_keys-1080x500.2acadbec.jpg"
   },
   {
     "revision": "6df51dca3367d5df6a893a1dc25378f5",
     "url": "/baybayin-pilipinas/static/media/baychart.6df51dca.jpg"
   },
   {
-    "revision": "4c2ef08c6cf6930b9da5e163f33a9962",
-    "url": "/baybayin-pilipinas/static/media/baylogo2.4c2ef08c.png"
+    "revision": "f219cd1335a74211c2a0ff6386785ef4",
+    "url": "/baybayin-pilipinas/static/media/baylogo2.f219cd13.png"
   },
   {
     "revision": "75b8e7a6453c9ca895ec38e944b00db3",
@@ -98,6 +98,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "e396ea8ca22b64e7ef89d1fde87850e2",
     "url": "/baybayin-pilipinas/static/media/page404.e396ea8c.png"
+  },
+  {
+    "revision": "51fb3bce958a3faca8001c4bb9b2c948",
+    "url": "/baybayin-pilipinas/static/media/phWritingSystem.51fb3bce.jpg"
   },
   {
     "revision": "a31c5b2abfc8d93ce003a426194033aa",
