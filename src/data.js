@@ -78,7 +78,7 @@ export const homeItems = [
         title: 'Nordenx Blogspot',
         url: 'http://nordenx.blogspot.com/',
         image: nordenx,
-        description: 'I am a graphic designer and Philippine Script (Baybayin, Kulitan, Surat Mangyan, etc.) font developer. I do workshops and academic presentations about Philippine writing systems; its history and modern day applications.'
+        description: 'I am a graphic designer and Philippine Script (Baybayin, Kulitan, Surat Mangyan, etc.) font developer. I do workshops and academic presentations about Philippine writing systems; its history and modern day applications.<br/><br/>Baybáyin Script is the Native Writing System in the Philippines, this web blog is a part of Nordenx\'s Anak Bathala Project.'
     }
 ];
 

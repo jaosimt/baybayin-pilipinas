@@ -44,8 +44,6 @@ export default class App extends React.Component {
             page: page
         };
         
-        console.log(isMobile());
-        
         if (isMobile()) thisState.menuLeft = -300;
         
         this.setState(thisState);

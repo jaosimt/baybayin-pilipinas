@@ -14,15 +14,13 @@
     .info,
     textarea,
     .preview {
-        border: 1px solid #777;
+        border: 1px solid $babayi;
     }
     
     textarea,
     .preview {
         background-color: white;
-        -webkit-border-radius: 14px;
-        -moz-border-radius: 14px;
-        border-radius: 14px;
+        border-radius: $border-radius;
         min-height: 200px;
     }
     
@@ -55,9 +53,7 @@
 
     .info {
         grid-area: info;
-        -webkit-border-radius: 14px;
-        -moz-border-radius: 14px;
-        border-radius: 14px;
+        border-radius: $border-radius;
         overflow: hidden;
         position: relative;
         min-height: 300px;

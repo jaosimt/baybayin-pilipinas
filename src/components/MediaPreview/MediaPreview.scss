@@ -9,16 +9,96 @@
     height: 100%;
     background-color: rgba(0, 0, 0, 0.9);
     
-    .preview {
+    .preview,
+    .article-preview {
         @include middle-transform;
+        border-radius: $border-radius;
+        box-shadow: 0 0 14px 1px #777;
+    }
+    
+    .preview {
         width: 70%;
         height: 70%;
-        -webkit-border-radius: 14px;
-        -moz-border-radius: 14px;
-        border-radius: 14px;
-        box-shadow: 0 0 7px 3px white;
-        -webkit-background-size: contain !important;
         background-size: contain !important;
+    }
+    
+    .article-preview {
+        width: 97%;
+        height: 93%;
+        
+        position: relative;
+        display: grid;
+        grid-template-columns: 70% auto;
+        grid-template-areas: 'image info';
+        overflow: hidden;
+        border: 1px solid $babayi;
+        
+        .image {
+            grid-area: image;
+            background-size: contain !important;
+        }
+        
+        .info {
+            grid-area: info;
+            background-color: white;
+            color: #777;
+            padding: 14px;
+            
+            .title {
+                width: calc(100% - 70px);
+                font-size: 28px;
+                font-weight: bold;
+                margin-bottom: 14px;
+                color: $babayi;
+            }
+            
+            .description {
+                border-top: 1px solid gainsboro;
+                border-bottom: 1px solid gainsboro;
+                text-align: justify;
+                line-height: 1.3;
+                padding: 14px 0;
+                margin-bottom: 14px;
+            }
+            
+            .read-more {
+                float: left;
+                padding: 14px;
+                background-color: $babayi;
+                color: white;
+                cursor: pointer;
+                border: 1px solid transparent;
+            }
+            
+            .read-more:hover {
+                opacity: 0.7;
+            }
+    
+            .read-more:hover:active {
+                opacity: 0.3;
+            }
+        }
+        
+        .close {
+            opacity: 0.7;
+            position: fixed;
+            top: 14px;
+            right: 14px;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            cursor: pointer;
+            background: gainsboro url("../../images/x.png") no-repeat center;
+            background-size: 50%;
+        }
+        
+        .close:hover {
+            opacity: 1;
+        }
+        
+        .close:hover:active {
+            opacity: 0.7;
+        }
     }
 }
 

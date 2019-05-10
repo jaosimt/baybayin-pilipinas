@@ -13,7 +13,8 @@
     width: 500px;
     height: 406px;
     background-size: cover;
-    border-radius: 14px;
+    border-radius: $border-radius;
+    border: 1px solid $babayi;
     @include middle-transform;
 }
 

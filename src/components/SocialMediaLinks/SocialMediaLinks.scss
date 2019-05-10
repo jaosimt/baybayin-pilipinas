@@ -12,7 +12,9 @@
         -webkit-box-shadow: 0 0 7px white;
         -moz-box-shadow: 0 0 7px white;
         box-shadow: 0 0 7px white;
-        border-radius: 21%;
+        border-radius: $border-radius;
+        border: 1px solid $babayi;
+        overflow: hidden;
     }
     
     > div:hover {

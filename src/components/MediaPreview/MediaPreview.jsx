@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Fragment} from 'react';
 import PropTypes from 'prop-types';
 import "./MediaPreview.scss";
 
@@ -6,56 +6,100 @@ export default class MediaPreview extends React.Component {
     constructor(props) {
         super(props);
         
-        // Component Click Handler
         this.componentClickHandler.bind(this);
-        
-        // Component Keypress Handler
         this.componentKeyPressHandler.bind(this);
+        
+        this.propType = typeof this.props.media === 'object' ? 'article' : 'image';
+        
+        this.menuNode = document.querySelector('.app > .menu');
+        if (this.menuNode) this.menuNode.style.zIndex = -1;
+        
+        this.socialNode = document.querySelector('.app > .wrapper > .social');
+        if (this.socialNode) this.socialNode.style.zIndex = -1;
     }
     
     componentKeyPressHandler = ({keyCode}) => {
         if (keyCode === 27) this.props.onClose();
     };
     
-    // Component Click Handler
     componentClickHandler = (e) => {
         if (!this.node.contains(e.target)) this.props.onClose();
     };
     
+    getDescription = (desc) => {
+        const arr = desc.split(/\n|<[/]*br[/]*>/);
+        return <p>{
+            arr.map((p, i) => {
+                if (i === 0) return p;
+                return <Fragment>
+                    <br/>
+                    {p}
+                </Fragment>
+            })
+        }</p>
+    };
+    
     componentDidMount() {
-        this.menuNode = document.querySelector('.app > .menu');
-        if (this.menuNode) this.menuNode.style.zIndex = -1;
-        
-        // Component Click Handler
         document.addEventListener('mousedown', this.componentClickHandler, false);
-        
-        // Component Keypress Handler
         document.addEventListener('keyup', this.componentKeyPressHandler, false);
     }
     
     componentWillUnmount() {
         if (this.menuNode) this.menuNode.style.zIndex = '';
+        if (this.socialNode) this.socialNode.style.zIndex = '';
         
         document.removeEventListener('mousedown', this.componentClickHandler, false);
         document.removeEventListener('keyup', this.componentKeyPressHandler, false);
     }
     
     render() {
-        return <div className='media-preview-overlay'>
+        let contents = this.propType === 'image' ? <div
+            ref={node => this.node = node}
+            className={'preview'}
+            style={{
+                background: `white url(${this.props.media}) no-repeat center`
+            }}
+        /> : <div
+            ref={node => this.node = node}
+            className={'article-preview'}
+        >
             <div
-                className={'preview'}
-                ref={node => this.node = node}
+                className={'image'}
                 style={{
-                    background: `white url(${this.props.media}) no-repeat center`
+                    background: `black url(${this.props.media.image}) no-repeat center`
                 }}
-            >
+            />
             
+            <div className={'info'}>
+                <div className={'title'}>{this.props.media.title}</div>
+                <div className={'description'}>{this.getDescription(this.props.media.description)}</div>
+                
+                <div
+                    className={'read-more'}
+                    onClick={() => window.open(this.props.media.url, '_blank')}
+                >
+                    read more
+                </div>
             </div>
+            
+            <div className={'close'} onClick={this.props.onClose}/>
         </div>;
+        
+        return <div className='media-preview-overlay'>
+            {contents}
+        </div>
     }
 }
 
 MediaPreview.propTypes = {
-    media: PropTypes.string.isRequired,
+    media: PropTypes.oneOfType([
+        PropTypes.string,
+        PropTypes.shape({
+            title: PropTypes.string,
+            url: PropTypes.string,
+            image: PropTypes.string,
+            description: PropTypes.string
+        })
+    ]).isRequired,
     onClose: PropTypes.func.isRequired
 };

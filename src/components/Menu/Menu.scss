@@ -9,8 +9,8 @@
     background-color: $menu-bg;
     font-weight: 500;
     color: $menu-fg;
+    border-right: 1px solid $babayi;
     @include transition('ease-in-out', 0.3s);
-    border-right: 1px solid white;
     
     .menu-header {
         height: 100px;
@@ -60,7 +60,6 @@
         background-size: 70%;
         cursor: pointer;
         @include transition('ease-in-out', 0.3s);
-        @include blink(3)
     }
     
     .handle:hover:active {
@@ -83,7 +82,6 @@
         color: white;
         text-shadow: 0 0 3px $babayi;
         text-decoration: underline;
-        //@include ellipsis;
         @include transition('linear', 0.7s);
     
         .center-page-title {

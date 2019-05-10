@@ -197,7 +197,7 @@ export const ellipses = (string, length) => {
     
     let ret = [],
         ctr = 0;
-    for (let w of string.split(' ')) {
+    for (let w of string.split(/[ ]*\n[ ]*|[ ]*<br[/]>[ ]*| /)) {
         if (ctr < length) {
             ret.push(w);
             ctr += w.length;
