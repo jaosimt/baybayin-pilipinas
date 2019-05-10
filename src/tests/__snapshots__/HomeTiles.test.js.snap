@@ -10,7 +10,6 @@ exports[`renders correctly 1`] = `
   >
     <div
       className="title"
-      onClick={[Function]}
     >
       How to use the Baybayin keyboard
     </div>

@@ -1,5 +1,6 @@
 import { articles } from "./HomeArticles";
 import theRules from './images/carousel/theRules.jpg';
+import theRules01 from './images/carousel/theRules01.jpg';
 import phNativeScrips from './images/carousel/Philippine-scripts-Interaksyon.jpg';
 import ancientPhScripts from './images/carousel/theAncientPhScripts.jpg';
 import bambooBaybayin from './images/carousel/Baybayin-Carved-on-Bamboo-Stem.jpg';
@@ -25,6 +26,11 @@ export const carouselImages = [
     },
     {
         image: theRules,
+        name: '',
+        link: 'https://www.facebook.com/baybayinpinas/'
+    },
+    {
+        image: theRules01,
         name: '',
         link: 'https://www.facebook.com/baybayinpinas/'
     },

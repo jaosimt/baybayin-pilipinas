@@ -6,6 +6,7 @@
     padding: 28px;
     background-color: $content-bg;
     color: $content-fg;
+    text-align: justify;
     
     .language-settings {
         font-size: 10px;
@@ -46,8 +47,12 @@
         }
     }
     
+    h1, h2, h3, h4, h5, h6 {
+        margin-bottom: 0;
+    }
+    
+    .h1,
     .title {
-        margin-bottom: 7px;
         color: $babayi;
     }
     
@@ -55,9 +60,47 @@
         margin-top: 14px;
     }
     
-    .uc {
+    .p1dot1 {
+        font-style: italic;
+    }
+    
+    
+    
+    .bc {
         height: 300px;
-        background: black url("../UnderConstruction/underconstruction.png") no-repeat center;
-        background-size: auto 300px;
+        background: transparent url("../../images/baybayinCharacters.png") no-repeat center;
+        background-size: contain;
+    }
+}
+
+@media (max-width: 767px) {
+    .content-container > .about {
+        padding: 14px;
+        
+        .language-settings {
+            font-size: 7px;
+            float: right;
+            
+            > span:not(:last-child) {
+                margin-right: 1px;
+            }
+            
+            .btn {
+                padding: 3px;
+            }
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            margin-bottom: 0;
+        }
+        
+        .title {
+            margin-top: 28px;
+            font-size: 21px;
+        }
+        
+        .p1 {
+            margin-top: 14px;
+        }
     }
 }

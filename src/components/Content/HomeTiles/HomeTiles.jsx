@@ -22,7 +22,6 @@ export default class HomeTiles extends React.Component {
                     >
                         <div
                             className={'title'}
-                            onClick={() => window.open(d.url, '_blank')}
                         >
                             {d.title}
                         </div>

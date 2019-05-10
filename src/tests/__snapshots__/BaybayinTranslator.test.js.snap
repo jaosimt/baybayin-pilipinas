@@ -77,19 +77,46 @@ exports[`renders correctly 1`] = `
         onClick={[Function]}
         style={
           Object {
-            "background": "transparent url(saligUgOras.jpg) no-repeat center",
+            "background": "transparent url(theRules01.jpg) no-repeat center",
             "left": "155%",
           }
         }
-      />
+      >
+        <div
+          className="label"
+        >
+          <div
+            className="link"
+          >
+            <a
+              href="https://www.facebook.com/baybayinpinas/"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              https://www.facebook.com/baybayinpinas/
+            </a>
+          </div>
+        </div>
+      </div>
       <div
         className="img blurred"
         key="4"
         onClick={[Function]}
         style={
           Object {
-            "background": "transparent url(Philippine-scripts-Interaksyon.jpg) no-repeat center",
+            "background": "transparent url(saligUgOras.jpg) no-repeat center",
             "left": "225%",
+          }
+        }
+      />
+      <div
+        className="img blurred"
+        key="5"
+        onClick={[Function]}
+        style={
+          Object {
+            "background": "transparent url(Philippine-scripts-Interaksyon.jpg) no-repeat center",
+            "left": "295%",
           }
         }
       >
@@ -111,12 +138,12 @@ exports[`renders correctly 1`] = `
       </div>
       <div
         className="img blurred"
-        key="5"
+        key="6"
         onClick={[Function]}
         style={
           Object {
             "background": "transparent url(theAncientPhScripts.jpg) no-repeat center",
-            "left": "295%",
+            "left": "365%",
           }
         }
       >
@@ -143,38 +170,11 @@ exports[`renders correctly 1`] = `
       </div>
       <div
         className="img blurred"
-        key="6"
-        onClick={[Function]}
-        style={
-          Object {
-            "background": "transparent url(Baybayin-Carved-on-Bamboo-Stem.jpg) no-repeat center",
-            "left": "365%",
-          }
-        }
-      >
-        <div
-          className="label"
-        >
-          <div
-            className="link"
-          >
-            <a
-              href="https://www.endangeredalphabets.net/alphabets/baybayin/"
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              https://www.endangeredalphabets.net/alphabets/baybayin/
-            </a>
-          </div>
-        </div>
-      </div>
-      <div
-        className="img blurred"
         key="7"
         onClick={[Function]}
         style={
           Object {
-            "background": "transparent url(Baybayin-conference-program.jpg) no-repeat center",
+            "background": "transparent url(Baybayin-Carved-on-Bamboo-Stem.jpg) no-repeat center",
             "left": "435%",
           }
         }
@@ -201,8 +201,35 @@ exports[`renders correctly 1`] = `
         onClick={[Function]}
         style={
           Object {
-            "background": "transparent url(hashTagFilipinoAncientWriting.jpg) no-repeat center",
+            "background": "transparent url(Baybayin-conference-program.jpg) no-repeat center",
             "left": "505%",
+          }
+        }
+      >
+        <div
+          className="label"
+        >
+          <div
+            className="link"
+          >
+            <a
+              href="https://www.endangeredalphabets.net/alphabets/baybayin/"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              https://www.endangeredalphabets.net/alphabets/baybayin/
+            </a>
+          </div>
+        </div>
+      </div>
+      <div
+        className="img blurred"
+        key="9"
+        onClick={[Function]}
+        style={
+          Object {
+            "background": "transparent url(hashTagFilipinoAncientWriting.jpg) no-repeat center",
+            "left": "575%",
           }
         }
       >
