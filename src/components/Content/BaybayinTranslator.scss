@@ -93,6 +93,9 @@
             margin-top: 0;
             margin-bottom: 16px;
             min-height: 150px;
+            margin-left: -14px;
+            width: calc(100% + 28px);
+            border-radius: 0;
         }
     }
 }

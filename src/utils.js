@@ -8,8 +8,8 @@ export const menuItems = [
     {
         index: 1,
         name: 'baybayin',
-        label: 'baybayin keyboard & translator',
-        alt: 'assisted baybayin keyboard & translator'
+        label: 'baybayin translator',
+        alt: 'baybayin translator'
     },
     {
         index: 2,

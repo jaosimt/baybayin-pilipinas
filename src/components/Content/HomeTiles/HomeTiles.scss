@@ -7,8 +7,8 @@
     @include transition(ease-out, 0.7s);
     
     .tiles {
-        background-color: white;
-        color: #777;
+        background-color: $content-bg;
+        color: $content-fg;
         padding: 28px;
         border-radius: $border-radius;
         cursor: pointer;

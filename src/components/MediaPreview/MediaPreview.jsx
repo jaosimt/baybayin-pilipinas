@@ -26,17 +26,20 @@ export default class MediaPreview extends React.Component {
         if (!this.node.contains(e.target)) this.props.onClose();
     };
     
-    getDescription = (desc) => {
-        const arr = desc.split(/\n|<[/]*br[/]*>/);
-        return <p>{
-            arr.map((p, i) => {
-                if (i === 0) return p;
-                return <Fragment>
-                    <br/>
-                    {p}
-                </Fragment>
-            })
-        }</p>
+    getDescription = (media) => {
+        const arr = media.description.split(/\n|<[/]*br[/]*>/);
+        return <div>
+            {
+                arr.map((p, i) => {
+                    if (i === 0) return p;
+                    return <Fragment>
+                        <br/>
+                        {p}
+                    </Fragment>
+                })
+                
+            }
+        </div>
     };
     
     componentDidMount() {
@@ -71,8 +74,17 @@ export default class MediaPreview extends React.Component {
             />
             
             <div className={'info'}>
-                <div className={'title'}>{this.props.media.title}</div>
-                <div className={'description'}>{this.getDescription(this.props.media.description)}</div>
+                <div
+                    className={'title'}
+                >
+                    <div>{this.props.media.title}</div>
+                </div>
+                
+                <div
+                    className={'description'}
+                >
+                    {this.getDescription(this.props.media)}
+                </div>
                 
                 <div
                     className={'read-more'}

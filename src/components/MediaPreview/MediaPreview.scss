@@ -25,31 +25,38 @@
     .article-preview {
         width: 97%;
         height: 93%;
-        
-        position: relative;
-        display: grid;
-        grid-template-columns: 70% auto;
-        grid-template-areas: 'image info';
+        display: block;
         overflow: hidden;
         border: 1px solid $babayi;
         
         .image {
-            grid-area: image;
+            float: left;
+            width: 70%;
+            height: 100%;
             background-size: contain !important;
         }
         
         .info {
-            grid-area: info;
+            float: right;
+            width: 30%;
+            height: 100%;
             background-color: white;
             color: #777;
             padding: 14px;
-            
+            overflow: hidden;
+    
             .title {
-                width: calc(100% - 70px);
+                width: calc(100% - 50px);
+                height: 70px;
                 font-size: 28px;
                 font-weight: bold;
                 margin-bottom: 14px;
                 color: $babayi;
+                position: relative;
+                
+                > div {
+                    @include vcenter-transform;
+                }
             }
             
             .description {
@@ -59,6 +66,8 @@
                 line-height: 1.3;
                 padding: 14px 0;
                 margin-bottom: 14px;
+                overflow: auto;
+                max-height: calc(100% - 147px);
             }
             
             .read-more {
@@ -107,6 +116,37 @@
         .preview {
             width: calc(100% - 28px);
             height: 70%;
+        }
+    
+        .article-preview {
+            .image {
+                height: 40%;
+                width: 100%;
+                float: none;
+            }
+            
+            .info {
+                float: none;
+                width: 100%;
+                height: 60%;
+    
+                .title {
+                    height: 35px;
+                    font-size: 14px;
+                    font-weight: bold;
+                    margin-bottom: 14px;
+                    color: $babayi;
+                }
+            
+                .description {
+                    max-height: calc(100% - 110px);
+                }
+            }
+            
+            .close {
+                top: calc(40% + 14px);
+            }
+            
         }
     }
 }

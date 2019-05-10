@@ -5,6 +5,7 @@ import BaybayinTranslator from "./BaybayinTranslator";
 import HomeTiles from "./HomeTiles/HomeTiles";
 import { homeItems } from "../../data";
 import UnderConstruction from "../UnderConstruction/UnderConstruction";
+import About from "./About";
 
 export default class ContentContainer extends React.Component {
     render() {
@@ -24,7 +25,7 @@ export default class ContentContainer extends React.Component {
                 contents = <BaybayinTranslator/>;
                 break;
             case 'about':
-                contents = <UnderConstruction/>;
+                contents = <About/> //<UnderConstruction/>;
                 break;
             case 'home':
                 thisStyle.backgroundColor = `transparent`;

@@ -17,7 +17,7 @@ export default class App extends React.Component {
             windowWidth: '0',
             windowHeight: '0',
             page: this.getInitPage(),
-            menuLeft: isMobile() ? -300 : 0,
+            menuLeft: 0,
             opaque: 0
         };
         

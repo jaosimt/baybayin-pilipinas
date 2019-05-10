@@ -1,0 +1,63 @@
+@import "../../common";
+
+.content-container > .about {
+    border: 1px solid $babayi;
+    border-radius: $border-radius;
+    padding: 28px;
+    background-color: $content-bg;
+    color: $content-fg;
+    
+    .language-settings {
+        font-size: 10px;
+        float: right;
+        
+        > span:not(:last-child) {
+            margin-right: 7px;
+        }
+        
+        .btn {
+            padding: 7px 14px;
+            border-radius: $border-radius;
+            cursor: pointer;
+            background-color: gainsboro;
+            border: 1px solid #777;
+            color: #777;
+        }
+    
+        .btn.selected {
+            background-color: $babayi;
+            border: 1px solid white;
+            color: white;
+            cursor: unset;
+        }
+    
+        .btn.disabled {
+            opacity: 0.1;
+            cursor: unset;
+        }
+        
+        .btn:not(.selected):not(.disabled):hover {
+            border: 1px solid $babayi;
+            color: $babayi;
+        }
+        
+        .btn:not(.selected):not(.disabled):hover:active {
+            opacity: 0.7;
+        }
+    }
+    
+    .title {
+        margin-bottom: 7px;
+        color: $babayi;
+    }
+    
+    .p1 {
+        margin-top: 14px;
+    }
+    
+    .uc {
+        height: 300px;
+        background: black url("../UnderConstruction/underconstruction.png") no-repeat center;
+        background-size: auto 300px;
+    }
+}
