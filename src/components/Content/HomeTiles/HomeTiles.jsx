@@ -19,6 +19,9 @@ export default class HomeTiles extends React.Component {
                     return <div
                         key={i}
                         className={'tiles'}
+                        onClick={() => this.setState({
+                            mediaPreview: d
+                        })}
                     >
                         <div
                             className={'title'}
@@ -31,16 +34,10 @@ export default class HomeTiles extends React.Component {
                             style={{
                                 background: `black url(${d.image}) no-repeat center`
                             }}
-                            onClick={() => this.setState({
-                                mediaPreview: d
-                            })}
                         />
                         
                         <div
                             className={'description'}
-                            onClick={() => this.setState({
-                                mediaPreview: d
-                            })}
                         >
                             {ellipses(d.description, 100)}
                         </div>

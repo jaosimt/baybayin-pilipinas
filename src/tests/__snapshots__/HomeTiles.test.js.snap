@@ -7,6 +7,7 @@ exports[`renders correctly 1`] = `
   <div
     className="tiles"
     key="0"
+    onClick={[Function]}
   >
     <div
       className="title"
@@ -15,7 +16,6 @@ exports[`renders correctly 1`] = `
     </div>
     <div
       className="image"
-      onClick={[Function]}
       style={
         Object {
           "background": "black url(baybayin_QWERTY_keys-1080x500.jpg) no-repeat center",
@@ -24,7 +24,6 @@ exports[`renders correctly 1`] = `
     />
     <div
       className="description"
-      onClick={[Function]}
     >
       Typing using a baybayin keyboard is not as simple as how we know typing is.  There are certain typing behaviours that we need...
     </div>
