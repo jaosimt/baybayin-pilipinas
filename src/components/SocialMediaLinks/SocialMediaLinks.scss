@@ -1,0 +1,50 @@
+@import "../../common";
+
+.social-media-links {
+    float: left;
+    display: block;
+    
+    > div {
+        display: inline-block;
+        margin: 7px;
+        @include transition(linear, 0.3s);
+        float: left;
+        -webkit-box-shadow: 0 0 7px white;
+        -moz-box-shadow: 0 0 7px white;
+        box-shadow: 0 0 7px white;
+        border-radius: 21%;
+    }
+    
+    > div:hover {
+        transform: scale(1.2);
+        cursor: pointer;
+    }
+    
+    .facebook {
+        background: transparent url("./facebook.jpg") no-repeat center;
+    }
+    
+    .instagram {
+        background: transparent url("./instagram.jpg") no-repeat center;
+    }
+    
+    .twitter {
+        background: transparent url("./twitter.jpg") no-repeat center;
+    }
+    
+    .linkedin {
+        background: transparent url("./linkedin.jpg") no-repeat center;
+    }
+    
+    .youtube {
+        background: transparent url("./youtube.jpg") no-repeat center;
+    }
+    
+    .facebook,
+    .instagram,
+    .twitter,
+    .youtube,
+    .linkedin {
+        background-size: 100%;
+    }
+}

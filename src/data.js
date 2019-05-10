@@ -17,6 +17,7 @@ import nordenx from './images/homeItems/nordenx.jpg';
 import baybayinScript from './images/homeItems/baybayinScript.jpg';
 import bayLogo from './images/homeItems/baylogo2.png';
 import baybayinChart from './images/homeItems/baychart.jpg';
+import phWritingSystem from './images/homeItems/phWritingSystem.jpg';
 
 export const homeItems = [
     {
@@ -54,6 +55,12 @@ export const homeItems = [
         url: 'https://news.abs-cbn.com/life/04/25/18/5-things-to-know-about-phs-pre-hispanic-writing-system',
         image: natMuseum,
         description: 'The House Committee on Basic Education and Culture has recently approved a bill seeking to declare Baybayin, a pre-Hispanic writing system used in the Philippines, as the country\'s national writing system.'
+    },
+    {
+        title: 'Baybayin - Philippine National Writing System',
+        url: 'https://www.facebook.com/groups/Baybayin.PhilippineNationalWritingSystem/',
+        image: phWritingSystem,
+        description: 'Spread Modern Baybayin script to all Filipinos. A unique Filipino writing system \'Astig\'. Kulitan baybayin, Tagalog baybayin, Zambal, baybayin, Ibarita Baybayin, Bikol baybayin, Basahan baybayin,Hanunuo baybayin, Subanen Baybayin atbpa.'
     },
     {
         title: 'Baybayin Pinas',

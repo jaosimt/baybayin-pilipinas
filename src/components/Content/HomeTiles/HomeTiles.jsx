@@ -1,6 +1,7 @@
 import React from 'react';
 import "./HomeTiles.scss";
 import PropTypes from 'prop-types';
+import {ellipses} from "../../../utils";
 
 export default class HomeTiles extends React.Component {
     render() {
@@ -21,7 +22,7 @@ export default class HomeTiles extends React.Component {
                             }}
                         />
                         
-                        <div className={'description'}>{d.description}</div>
+                        <div className={'description'}>{ellipses(d.description, 100)}</div>
                     </div>
                 })
             }

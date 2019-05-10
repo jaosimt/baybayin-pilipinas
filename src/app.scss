@@ -19,43 +19,7 @@
             height: 100px;
             float: right;
             margin-right: 7px;
-    
-            .facebook {
-                background: transparent url("./images/facebook.jpg") no-repeat center;
-            }
-    
-            .instagram {
-                background: transparent url("./images/instagram.jpg") no-repeat center;
-            }
-    
-            .twitter {
-                background: transparent url("./images/twitter.jpg") no-repeat center;
-            }
-            
-            .linkedin {
-                background: transparent url("./images/linkedin.jpg") no-repeat center;
-            }
-            
-            .facebook,
-            .instagram,
-            .twitter,
-            .linkedin {
-                @include transition(linear, 0.3s);
-                margin: 29px 14px 0 0;
-                float: right;
-                width: 40px;
-                height: 40px;
-                -webkit-box-shadow: 0 0 7px white;
-                -moz-box-shadow: 0 0 7px white;
-                box-shadow: 0 0 7px white;
-                background-size: 100%;
-                border-radius: 7px;
-                cursor: pointer;
-            }
-            
-            > div:hover {
-                transform: scale(1.2);
-            }
+            @include middle-flex;
         };
         
         .slogan {
@@ -91,20 +55,6 @@
                 height: 70px;
                 float: right;
                 margin-right: 0;
-        
-                .facebook,
-                .instagram,
-                .twitter,
-                .linkedin {
-                    margin: 7px 7px 0 0;
-                    width: 21px;
-                    height: 21px;
-                    border-radius: 3px;
-                }
-        
-                > div:hover {
-                    transform: scale(1.2);
-                }
             };
         }
     }

@@ -1,6 +1,6 @@
-
 import HomeTiles from "../components/Content/HomeTiles/HomeTiles";
 import keyboard from '../images/homeItems/baybayin_QWERTY_keys-1080x500.jpg';
+import {ellipses} from "../utils";
 
 const tileData = {
     title: 'How to use the Baybayin keyboard',
@@ -26,5 +26,5 @@ it('renders the image', () => {
 });
 
 it('renders the description', () => {
-    expect(wrapper.find('.description').text()).toBe(tileData.description);
+    expect(wrapper.find('.description').text()).toBe(ellipses(tileData.description, 100));
 });
