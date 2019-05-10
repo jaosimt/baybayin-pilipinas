@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/baybayin-pilipinas/precache-manifest.1a4aeb1b882909009c7aa33515bd3428.js"
+  "/baybayin-pilipinas/precache-manifest.a74293ca953b0cc2531e45c9a4bb8185.js"
 );
 
 self.addEventListener('message', (event) => {
