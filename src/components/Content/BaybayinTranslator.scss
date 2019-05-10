@@ -40,9 +40,11 @@
         grid-area: preview;
         color: #777;
         font-size: 21px;
+        overflow: auto;
         
         .dimmed {
             color: gainsboro;
+            font-size: small;
         }
     }
     
