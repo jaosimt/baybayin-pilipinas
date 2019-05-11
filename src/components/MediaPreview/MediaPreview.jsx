@@ -32,7 +32,7 @@ export default class MediaPreview extends React.Component {
             {
                 arr.map((p, i) => {
                     if (i === 0) return p;
-                    return <Fragment>
+                    return <Fragment key={i}>
                         <br/>
                         {p}
                     </Fragment>

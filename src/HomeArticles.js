@@ -17,6 +17,12 @@ export const articles = [
         description: 'Typing using a baybayin keyboard is not as simple as how we know typing is.  There are certain typing behaviours that we need to pay attention to.  For instance, typing a vowel character needs to be typed in with the caps lock on.'
     },
     {
+        title: 'Modified Baybayin',
+        url: 'https://blog.baybayin.com/tutorials/modified/',
+        image: baybayinDotCom,
+        description: 'There have been a few attempts to alter the original Baybayin for modern use. One of the first attempts to “reform” the Baybayin was in 1620 when Fr. Francisco Lopez was about to publish the Ilokano Doctrina. Seeing the “limitations” of Baybayin, he invented a new kudlit in the shape of a cross. When placed under a consonant, it would cancel the “a” vowel after the consonant.\n\nI personally don’t like it due to it’s colonial origins and overall artistic look but I do see the purpose of it putting my cultural preference aside. If you look at Baybayin as purely a writing system, this mutation is a natural process. Thanks a surge of Baybayin tattoos, the Spanish kudlit has made a comeback due people wanting a “complete” translation.'
+    },
+    {
         title: 'Baybayin - The Ancient Script of the Philippines',
         url: 'http://paulmorrow.ca/bayeng1.htm',
         image: bayLogo,
