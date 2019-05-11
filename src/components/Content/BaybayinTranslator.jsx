@@ -242,7 +242,7 @@ export default class BaybayinTranslator extends React.Component {
             if (this.___ynbyby.hasOwnProperty(b)) str = str.replace(new RegExp(b, 'igm'), this.___ynbyby[b]);
         }
         
-        return ((normalize === true || this.state.simplify.checked) ? str.replace(/\[e\/i\]/g, 'i').replace(/\[o\/u\]/g, 'o') : str).replace(/(\[\w+\/\w+\])/gm, "<span class='dimmed'>$1</span>");
+        return ((normalize === true || this.state.simplify.checked) ? str.replace(/\[e\/i\]/g, 'i').replace(/\[o\/u\]/g, 'o') : str).replace(/(\[\w\/\w\])/gm, "<span class='dimmed'>$1</span>").replace(/\n/gm, '<br/>');
     };
     
     componentDidMount() {

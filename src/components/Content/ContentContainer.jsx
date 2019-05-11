@@ -25,7 +25,7 @@ export default class ContentContainer extends React.Component {
                 contents = <BaybayinTranslator/>;
                 break;
             case 'about':
-                contents = <About/> //<UnderConstruction/>;
+                contents = <About/>;
                 break;
             case 'home':
                 thisStyle.backgroundColor = `transparent`;
