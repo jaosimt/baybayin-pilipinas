@@ -1,9 +1,5 @@
 import React from 'react';
 import './BaybayinTranslator.scss';
-import {
-    carouselImages
-} from "../../data";
-import ImageSlider from "../ImageSlider/ImageSlider";
 import {isMobile} from "../../utils";
 
 export default class BaybayinTranslator extends React.Component {
@@ -209,7 +205,7 @@ export default class BaybayinTranslator extends React.Component {
         "ᜌ": "ya"
     };
     
-    previewMessage = `${isMobile() ? '↑↑↑' : '← ← ←'} type or paste something there<br/><br/>and see the translation here. ↓↓↓`;
+    previewMessage = `${isMobile() ? '↑↑↑' : '← ← ←'} type or paste something there<br/>and see the translation here. ↓↓↓`;
     
     state = {
         baybayin: '',
@@ -260,7 +256,6 @@ export default class BaybayinTranslator extends React.Component {
             <div className={'preview'} dangerouslySetInnerHTML={{__html: this.state.translation}}/>
             
             <div className={'info'}>
-                <ImageSlider images={carouselImages}/>
             </div>
         </div>;
     }

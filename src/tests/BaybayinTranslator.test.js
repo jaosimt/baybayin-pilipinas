@@ -15,10 +15,6 @@ it('renders a textarea, a div preview and a div info', () => {
     expect(wrapper.find('.info').length).toBe(1);
 });
 
-it('renders an image slider', () => {
-    expect(wrapper.find('ImageSlider').length).toBe(1);
-});
-
 it('has a working baybayin unicode keyboard with a working translation', () => {
     wrapper.find('textarea').simulate('keyUp', {
         target: { value: 'baybayin' }

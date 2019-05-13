@@ -32,16 +32,16 @@
     
     .img {
         position: absolute;
-        background-size: cover !important;
         @include transition(ease-in-out, 0.7s);
         
         .label {
             @include blocked;
-            padding: 7px;
+            padding: 14px;
             width: 100%;
             bottom: 0;
             background: rgba(0, 0, 0, 0.7);
             @include ellipsis;
+            color: white;
             
             .name {
                 margin-bottom: 7px;

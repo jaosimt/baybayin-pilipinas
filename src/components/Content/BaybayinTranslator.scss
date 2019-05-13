@@ -4,12 +4,11 @@
 .baybayin-translator {
     position: relative;
     display: grid;
-    grid-template-columns: 50% 50% auto;
+    grid-template-columns: 50%;
     grid-template-areas:
         'text-area preview'
         'info info';
     grid-column-gap: $grid-gap;
-    height: 100%;
     
     .info,
     textarea,
@@ -27,6 +26,7 @@
     textarea,
     .preview {
         padding: 14px;
+        height: 300px;
     }
     
     textarea {

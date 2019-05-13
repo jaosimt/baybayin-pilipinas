@@ -58,7 +58,7 @@ export default class ImageSlider extends React.Component {
             hasRight
         } = this.state;
         
-        const {images} = this.props;
+        const {images, backgroundSize} = this.props;
         
         return <Fragment>
             <div
@@ -77,7 +77,8 @@ export default class ImageSlider extends React.Component {
                             onClick={this.onCarouselImageClick}
                             style={{
                                 left: `${thisLeft}%`,
-                                background: `transparent url(${img.image}) no-repeat center`
+                                background: `black url(${img.image}) no-repeat center`,
+                                backgroundSize: backgroundSize
                             }}
                         >
                             <HideIf condition={(!img.name && !img.link) || (img.name.trim() === '' && img.link.trim() === '')}>
@@ -133,5 +134,10 @@ ImageSlider.propTypes = {
             name: PropTypes.string,
             link: PropTypes.string
         })
-    )
+    ).isRequired,
+    backgroundSize: PropTypes.string
+};
+
+ImageSlider.defaultProps = {
+    backgroundSize: 'cover'
 };
