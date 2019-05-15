@@ -210,12 +210,13 @@ export default class BaybayinTranslator extends React.Component {
     };
     
     previewMessage = `${isMobile() ? '↑↑↑' : '← ← ←'} type or paste something there<br/>and see the translation here. ↓↓↓<br/><br/><i style="color: #ff00ff"><b>Note:</b><br/>This is an assisted and automatic translator as you type.  No need to worry on the convention of typing on a baybayin keyboard.  Just type normally as you would.</i>`;
+    manualKeyboardMessage = `<i style="color: #ff00ff"><b>Note:</b><br/>Follow typing pattern to/off characters indicated on the keyboard.</i>`;
     
     state = {
         baybayin: '',
         translation: this.previewMessage,
         simplify: true,
-        auto: true,
+        auto: false,
         capslock: false,
         shift: false
     };
@@ -236,6 +237,8 @@ export default class BaybayinTranslator extends React.Component {
                 baybayin: e.target.value,
                 translation: this.translate(e.target.value) || this.previewMessage
             })
+        } else if (this.state.manualKeyboardMessage !== this.manualKeyboardMessage){
+            this.setState({translation: this.translate(e.target.value) || this.manualKeyboardMessage})
         }
     };
     
@@ -252,6 +255,23 @@ export default class BaybayinTranslator extends React.Component {
     
     onCapslockClick = () => this.setState({capslock: !this.state.capslock, shift: false});
     onShiftClick = () => this.setState({shift: !this.state.shift});
+    
+    onKeyClick = (e) => {
+        const ds = e.currentTarget.dataset,
+            { capslock, shift } = this.state;
+        
+        if (ds.up || ds.down) {
+            this.textAreaNode.value += capslock || shift ? ds.up : ds.down;
+            this.dispatchKeyPressEvent();
+        }
+    };
+    
+    dispatchKeyPressEvent = () => {
+        const evt = new Event("keyup", {bubbles: true, cancelable: false});
+        this.textAreaNode.dispatchEvent(evt);
+        
+        if (this.state.shift) this.setState({shift: !this.state.shift});
+    };
     
     componentDidMount() {
         if (this.textAreaNode) this.textAreaNode.focus();
@@ -276,6 +296,9 @@ export default class BaybayinTranslator extends React.Component {
                 <div className={'keyboard'}>
                     <div
                         className={'key-tilde'}
+                        data-up='ᜈ᜔ᜌ'
+                        data-down='`'
+                        onClick={this.onKeyClick}
                     >
                         <div>~<span className={'green-fg'}>ᜈ᜔ᜌ</span></div>
                         <div>`</div>
@@ -283,6 +306,9 @@ export default class BaybayinTranslator extends React.Component {
     
                     <div
                         className={'key-1'}
+                        data-up='!'
+                        data-down='1'
+                        onClick={this.onKeyClick}
                     >
                         <div>!</div>
                         <div>1</div>
@@ -290,6 +316,9 @@ export default class BaybayinTranslator extends React.Component {
     
                     <div
                         className={'key-2'}
+                        data-up='@'
+                        data-down='2'
+                        onClick={this.onKeyClick}
                     >
                         <div>@</div>
                         <div>2</div>
@@ -297,6 +326,9 @@ export default class BaybayinTranslator extends React.Component {
     
                     <div
                         className={'key-3'}
+                        data-up='#'
+                        data-down='3'
+                        onClick={this.onKeyClick}
                     >
                         <div>#</div>
                         <div>3</div>
@@ -304,6 +336,9 @@ export default class BaybayinTranslator extends React.Component {
     
                     <div
                         className={'key-4'}
+                        data-up='₱'
+                        data-down='4'
+                        onClick={this.onKeyClick}
                     >
                         <div>$<span className={'red-fg'}>₱</span></div>
                         <div>4</div>
@@ -311,6 +346,9 @@ export default class BaybayinTranslator extends React.Component {
     
                     <div
                         className={'key-5'}
+                        data-up='%'
+                        data-down='5'
+                        onClick={this.onKeyClick}
                     >
                         <div>%</div>
                         <div>5</div>
@@ -318,6 +356,9 @@ export default class BaybayinTranslator extends React.Component {
     
                     <div
                         className={'key-6'}
+                        data-up='^'
+                        data-down='6'
+                        onClick={this.onKeyClick}
                     >
                         <div>^</div>
                         <div>6</div>
@@ -325,6 +366,9 @@ export default class BaybayinTranslator extends React.Component {
     
                     <div
                         className={'key-7'}
+                        data-up='&'
+                        data-down='7'
+                        onClick={this.onKeyClick}
                     >
                         <div>&</div>
                         <div>7</div>
@@ -332,6 +376,9 @@ export default class BaybayinTranslator extends React.Component {
     
                     <div
                         className={'key-8'}
+                        data-up='*'
+                        data-down='8'
+                        onClick={this.onKeyClick}
                     >
                         <div>*</div>
                         <div>8</div>
@@ -339,6 +386,9 @@ export default class BaybayinTranslator extends React.Component {
     
                     <div
                         className={'key-9'}
+                        data-up='('
+                        data-down='9'
+                        onClick={this.onKeyClick}
                     >
                         <div>(</div>
                         <div>9</div>
@@ -346,6 +396,9 @@ export default class BaybayinTranslator extends React.Component {
     
                     <div
                         className={'key-0'}
+                        data-up=')'
+                        data-down='0'
+                        onClick={this.onKeyClick}
                     >
                         <div>)</div>
                         <div>0</div>
@@ -353,6 +406,9 @@ export default class BaybayinTranslator extends React.Component {
     
                     <div
                         className={'key-dash'}
+                        data-up='_'
+                        data-down='-'
+                        onClick={this.onKeyClick}
                     >
                         <div>_</div>
                         <div>-</div>
@@ -360,6 +416,9 @@ export default class BaybayinTranslator extends React.Component {
     
                     <div
                         className={'key-equal'}
+                        data-up='+'
+                        data-down='='
+                        onClick={this.onKeyClick}
                     >
                         <div>+</div>
                         <div>=</div>
@@ -381,6 +440,9 @@ export default class BaybayinTranslator extends React.Component {
                     
                     <div
                         className={'key-q'}
+                        data-up='ᜃ᜔ᜏ'
+                        data-down='ᜃᜓᜏ'
+                        onClick={this.onKeyClick}
                     >
                         <div>Q<span className={'green-fg'}>ᜃ᜔ᜏ</span></div>
                         <div>q<span className={'green-fg'}>ᜃᜓᜏ</span></div>
@@ -388,6 +450,9 @@ export default class BaybayinTranslator extends React.Component {
                     
                     <div
                         className={'key-w'}
+                        data-up='ᜏ'
+                        data-down='ᜏ'
+                        onClick={this.onKeyClick}
                     >
                         <div>W</div>
                         <div>w<span className={'green-fg'}>ᜏ</span></div>
@@ -395,9 +460,12 @@ export default class BaybayinTranslator extends React.Component {
                     
                     <div
                         className={'key-e'}
+                        data-up='ᜁ'
+                        data-down='e'
+                        onClick={this.onKeyClick}
                     >
                         <div>E<span className={'green-fg'}>ᜁ</span></div>
-                        <div>e<img src={kudlitE}/></div>
+                        <div>e<img alt='' src={kudlitE}/></div>
                     </div>
                     
                     <div
@@ -425,21 +493,21 @@ export default class BaybayinTranslator extends React.Component {
                         className={'key-u'}
                     >
                         <div>U<span className={'green-fg'}>ᜂ</span></div>
-                        <div>u<img src={kudlitU}/></div>
+                        <div>u<img alt='' src={kudlitU}/></div>
                     </div>
                     
                     <div
                         className={'key-i'}
                     >
                         <div>I<span className={'green-fg'}>ᜁ</span></div>
-                        <div>i<img src={kudlitI}/></div>
+                        <div>i<img alt='' src={kudlitI}/></div>
                     </div>
                     
                     <div
                         className={'key-o'}
                     >
                         <div>O<span className={'green-fg'}>ᜂ</span></div>
-                        <div>o<img src={kudlitO}/></div>
+                        <div>o<img alt='' src={kudlitO}/></div>
                     </div>
                     
                     <div
@@ -586,6 +654,9 @@ export default class BaybayinTranslator extends React.Component {
                     
                     <div
                         className={'key-c'}
+                        data-up='ᜆ᜔ᜐ'
+                        data-down='ᜃ'
+                        onClick={this.onKeyClick}
                     >
                         <div>C<span className={'green-fg'}>ᜆ᜔ᜐ</span></div>
                         <div>c<span className={'green-fg'}>ᜃ</span></div>
