@@ -470,6 +470,9 @@ export default class BaybayinTranslator extends React.Component {
                     
                     <div
                         className={'key-r'}
+                        data-up='ᜍ'
+                        data-down='ᜍ'
+                        onClick={this.onKeyClick}
                     >
                         <div>R</div>
                         <div>r<span className={'green-fg'}>ᜍ</span></div>
@@ -477,6 +480,9 @@ export default class BaybayinTranslator extends React.Component {
                     
                     <div
                         className={'key-t'}
+                        data-up='ᜆ'
+                        data-down='ᜆ'
+                        onClick={this.onKeyClick}
                     >
                         <div>T</div>
                         <div>t<span className={'green-fg'}>ᜆ</span></div>
@@ -484,6 +490,9 @@ export default class BaybayinTranslator extends React.Component {
                     
                     <div
                         className={'key-y'}
+                        data-up='ᜌ'
+                        data-down='ᜌ'
+                        onClick={this.onKeyClick}
                     >
                         <div>Y</div>
                         <div>y<span className={'green-fg'}>ᜌ</span></div>
@@ -491,6 +500,9 @@ export default class BaybayinTranslator extends React.Component {
                     
                     <div
                         className={'key-u'}
+                        data-up='ᜂ'
+                        data-down='u'
+                        onClick={this.onKeyClick}
                     >
                         <div>U<span className={'green-fg'}>ᜂ</span></div>
                         <div>u<img alt='' src={kudlitU}/></div>
