@@ -96,10 +96,10 @@ $border-radius: 7px;
     padding: 7px;
 }
 
-@mixin blink($icount) {
-    -webkit-animation: blinker 1s linear $icount;
-    -o-animation: blinker 1s linear $icount;
-    animation: blinker 1s linear $icount;
+@mixin blink($icount, $duration) {
+    -webkit-animation: blinker $duration linear $icount;
+    -o-animation: blinker $duration linear $icount;
+    animation: blinker $duration linear $icount;
 }
 
 @mixin spin {

@@ -14,11 +14,13 @@ export default class App extends React.Component {
     };
     
     onMenuClick = (e) => {
-        if (this.node) {
-            console.log(this.node);
-        }
-        
-        this.setState({selected: e.target.getAttribute('name')})
+        this.setState({selected: e.target.getAttribute('name')});
+        window.scrollTo({top: 500, behavior: 'smooth'});
+    };
+    
+    onBPClick = (e) => {
+        this.setState({selected: 'home'});
+        window.scrollTo({top: 0, behavior: 'smooth'});
     };
     
     componentDidMount() {
@@ -34,7 +36,14 @@ export default class App extends React.Component {
         return <div className={'app'} style={{opacity: opaque}}>
             <div className={'header'}>
                 <div className={'logo'}/>
-                <div className={'app-name'}>BAYBAYIN PILIPINAS</div>
+                
+                <div
+                    className={'app-name'}
+                    onClick={this.onBPClick}
+                >
+                    BAYBAYIN PILIPINAS
+                </div>
+                
                 <div className={'social'}>
                     <SocialMediaLinks iconSize={23}/>
                 </div>
@@ -44,7 +53,7 @@ export default class App extends React.Component {
                     <ImageSlider images={carouselImages}/>
                 </div>
                 
-                <div ref={node => this.node = node} className={'page-content'} style={{
+                <div className={'page-content'} style={{
                     minHeight: window.innerHeight
                 }}>
                     <div className={'menu'}>
@@ -75,7 +84,7 @@ export default class App extends React.Component {
                         </ul>
                     </div>
                     
-                    <div className={'content-area'}>
+                    <div ref={node => this.node = node} className={'content-area'}>
                         {
                             selected === 'about' ?
                                 <About/> :

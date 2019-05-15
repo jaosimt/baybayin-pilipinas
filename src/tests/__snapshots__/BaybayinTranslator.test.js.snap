@@ -12,12 +12,631 @@ exports[`renders correctly 1`] = `
     className="preview"
     dangerouslySetInnerHTML={
       Object {
-        "__html": "← ← ← type or paste something there<br/>and see the translation here. ↓↓↓",
+        "__html": "← ← ← type or paste something there<br/>and see the translation here. ↓↓↓<br/><br/><i><b>Note:</b><br/>This is an assisted and automatic translator as you type.  No need to worry on the convention of typing on a baybayin keyboard.  Just type normally as you would.</i>",
       }
     }
   />
   <div
     className="info"
-  />
+  >
+    <div
+      className="keyboard"
+    >
+      <div
+        className="row-1"
+      >
+        <div
+          className="key-tilde"
+          style={
+            Object {
+              "height": "0px",
+            }
+          }
+        >
+          <div>
+            ~  
+            <span
+              className="green-fg"
+            >
+              ᜈ᜔ᜌ
+            </span>
+          </div>
+          <div>
+            \`
+          </div>
+        </div>
+        <div
+          className="key-1"
+          style={
+            Object {
+              "height": "0px",
+            }
+          }
+        >
+          <div>
+            !
+          </div>
+          <div>
+            1
+          </div>
+        </div>
+        <div
+          className="key-2"
+          style={
+            Object {
+              "height": "0px",
+            }
+          }
+        >
+          <div>
+            @
+          </div>
+          <div>
+            2
+          </div>
+        </div>
+        <div
+          className="key-3"
+          style={
+            Object {
+              "height": "0px",
+            }
+          }
+        >
+          <div>
+            #
+          </div>
+          <div>
+            3
+          </div>
+        </div>
+        <div
+          className="key-4"
+          style={
+            Object {
+              "height": "0px",
+            }
+          }
+        >
+          <div>
+            $  
+            <span
+              className="red-fg"
+            >
+              ₱
+            </span>
+          </div>
+          <div>
+            4
+          </div>
+        </div>
+        <div
+          className="key-5"
+          style={
+            Object {
+              "height": "0px",
+            }
+          }
+        >
+          <div>
+            %
+          </div>
+          <div>
+            5
+          </div>
+        </div>
+        <div
+          className="key-6"
+          style={
+            Object {
+              "height": "0px",
+            }
+          }
+        >
+          <div>
+            ^
+          </div>
+          <div>
+            6
+          </div>
+        </div>
+        <div
+          className="key-7"
+          style={
+            Object {
+              "height": "0px",
+            }
+          }
+        >
+          <div>
+            &
+          </div>
+          <div>
+            7
+          </div>
+        </div>
+        <div
+          className="key-8"
+          style={
+            Object {
+              "height": "0px",
+            }
+          }
+        >
+          <div>
+            *
+          </div>
+          <div>
+            8
+          </div>
+        </div>
+        <div
+          className="key-9"
+          style={
+            Object {
+              "height": "0px",
+            }
+          }
+        >
+          <div>
+            (
+          </div>
+          <div>
+            9
+          </div>
+        </div>
+        <div
+          className="key-0"
+          style={
+            Object {
+              "height": "0px",
+            }
+          }
+        >
+          <div>
+            )
+          </div>
+          <div>
+            0
+          </div>
+        </div>
+        <div
+          className="key-dash"
+          style={
+            Object {
+              "height": "0px",
+            }
+          }
+        >
+          <div>
+            _
+          </div>
+          <div>
+            -
+          </div>
+        </div>
+        <div
+          className="key-equal"
+          style={
+            Object {
+              "height": "0px",
+            }
+          }
+        >
+          <div>
+            +
+          </div>
+          <div>
+            =
+          </div>
+        </div>
+        <div
+          className="key-backspace gray-bg"
+          style={
+            Object {
+              "height": "0px",
+            }
+          }
+        >
+          <div />
+          <div>
+            BackSpace
+          </div>
+        </div>
+      </div>
+      <div
+        className="row-2"
+      >
+        <div
+          className="key-tab gray-bg"
+          style={
+            Object {
+              "height": "0px",
+            }
+          }
+        />
+        <div
+          className="key-"
+          style={
+            Object {
+              "height": "0px",
+            }
+          }
+        />
+        <div
+          className="key-"
+          style={
+            Object {
+              "height": "0px",
+            }
+          }
+        />
+        <div
+          className="key-"
+          style={
+            Object {
+              "height": "0px",
+            }
+          }
+        />
+        <div
+          className="key-"
+          style={
+            Object {
+              "height": "0px",
+            }
+          }
+        />
+        <div
+          className="key-"
+          style={
+            Object {
+              "height": "0px",
+            }
+          }
+        />
+        <div
+          className="key-"
+          style={
+            Object {
+              "height": "0px",
+            }
+          }
+        />
+        <div
+          className="key-"
+          style={
+            Object {
+              "height": "0px",
+            }
+          }
+        />
+        <div
+          className="key-"
+          style={
+            Object {
+              "height": "0px",
+            }
+          }
+        />
+        <div
+          className="key-"
+          style={
+            Object {
+              "height": "0px",
+            }
+          }
+        />
+        <div
+          className="key-"
+          style={
+            Object {
+              "height": "0px",
+            }
+          }
+        />
+        <div
+          className="key-"
+          style={
+            Object {
+              "height": "0px",
+            }
+          }
+        />
+        <div
+          className="key-"
+          style={
+            Object {
+              "height": "0px",
+            }
+          }
+        />
+        <div
+          className="key-backslash"
+          style={
+            Object {
+              "height": "0px",
+            }
+          }
+        />
+      </div>
+      <div
+        className="row-3"
+      >
+        <div
+          className="key-empty gray-bg"
+          style={
+            Object {
+              "height": "0px",
+            }
+          }
+        />
+        <div
+          className="key-"
+          style={
+            Object {
+              "height": "0px",
+            }
+          }
+        />
+        <div
+          className="key-"
+          style={
+            Object {
+              "height": "0px",
+            }
+          }
+        />
+        <div
+          className="key-"
+          style={
+            Object {
+              "height": "0px",
+            }
+          }
+        />
+        <div
+          className="key-"
+          style={
+            Object {
+              "height": "0px",
+            }
+          }
+        />
+        <div
+          className="key-"
+          style={
+            Object {
+              "height": "0px",
+            }
+          }
+        />
+        <div
+          className="key-"
+          style={
+            Object {
+              "height": "0px",
+            }
+          }
+        />
+        <div
+          className="key-"
+          style={
+            Object {
+              "height": "0px",
+            }
+          }
+        />
+        <div
+          className="key-"
+          style={
+            Object {
+              "height": "0px",
+            }
+          }
+        />
+        <div
+          className="key-"
+          style={
+            Object {
+              "height": "0px",
+            }
+          }
+        />
+        <div
+          className="key-"
+          style={
+            Object {
+              "height": "0px",
+            }
+          }
+        />
+        <div
+          className="key-"
+          style={
+            Object {
+              "height": "0px",
+            }
+          }
+        />
+        <div
+          className="key-enter gray-bg"
+          style={
+            Object {
+              "height": "0px",
+            }
+          }
+        />
+      </div>
+      <div
+        className="row-4"
+      >
+        <div
+          className="key-leftshift gray-bg"
+          style={
+            Object {
+              "height": "0px",
+            }
+          }
+        />
+        <div
+          className="key-"
+          style={
+            Object {
+              "height": "0px",
+            }
+          }
+        />
+        <div
+          className="key-"
+          style={
+            Object {
+              "height": "0px",
+            }
+          }
+        />
+        <div
+          className="key-"
+          style={
+            Object {
+              "height": "0px",
+            }
+          }
+        />
+        <div
+          className="key-"
+          style={
+            Object {
+              "height": "0px",
+            }
+          }
+        />
+        <div
+          className="key-"
+          style={
+            Object {
+              "height": "0px",
+            }
+          }
+        />
+        <div
+          className="key-"
+          style={
+            Object {
+              "height": "0px",
+            }
+          }
+        />
+        <div
+          className="key-"
+          style={
+            Object {
+              "height": "0px",
+            }
+          }
+        />
+        <div
+          className="key-"
+          style={
+            Object {
+              "height": "0px",
+            }
+          }
+        />
+        <div
+          className="key-"
+          style={
+            Object {
+              "height": "0px",
+            }
+          }
+        />
+        <div
+          className="key-"
+          style={
+            Object {
+              "height": "0px",
+            }
+          }
+        />
+        <div
+          className="key-rightshift gray-bg"
+          style={
+            Object {
+              "height": "0px",
+            }
+          }
+        />
+      </div>
+      <div
+        className="row-5"
+      >
+        <div
+          className="key-leftctrl gray-bg"
+          style={
+            Object {
+              "height": "0px",
+            }
+          }
+        />
+        <div
+          className="key-empty gray-bg"
+          style={
+            Object {
+              "height": "0px",
+            }
+          }
+        />
+        <div
+          className="key-leftalt gray-bg"
+          style={
+            Object {
+              "height": "0px",
+            }
+          }
+        />
+        <div
+          className="key-"
+          style={
+            Object {
+              "height": "0px",
+            }
+          }
+        />
+        <div
+          className="key-rightalt gray-bg"
+          style={
+            Object {
+              "height": "0px",
+            }
+          }
+        />
+        <div
+          className="key-empty gray-bg"
+          style={
+            Object {
+              "height": "0px",
+            }
+          }
+        />
+        <div
+          className="key-menu gray-bg"
+          style={
+            Object {
+              "height": "0px",
+            }
+          }
+        />
+        <div
+          className="key-rightctrl gray-bg"
+          style={
+            Object {
+              "height": "0px",
+            }
+          }
+        />
+      </div>
+    </div>
+  </div>
 </div>
 `;
