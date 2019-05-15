@@ -215,24 +215,28 @@ export default class BaybayinTranslator extends React.Component {
         baybayin: '',
         translation: this.previewMessage,
         simplify: true,
-        keyHeight: 70
+        auto: true,
+        capslock: false,
+        shift: false
     };
     
     onTextAreaChange = (e) => {
-        //e.target.value = e.target.value.toLowerCase().replace(/(ᜊ᜔|ᜃ᜔|ᜇ᜔|ᜄ᜔|ᜑ᜔|ᜎ᜔|ᜋ᜔|ᜈ᜔|ᜅ᜔|ᜉ᜔|ᜍ᜔|ᜐ᜔|ᜆ᜔|ᜏ᜔|ᜌ᜔)([aieoug])/ig, (x, y, z) => {
-        //    return this.___bybyn[this.___ynbyby[y] + z] || x
-        //}).replace(/ng([aieou])*/ig, (x) => {
-        //    return this.___bybyn[x] || x;
-        //}).replace(/([bkdghlmnprstwy])([aieou])/ig, (x) => {
-        //    return this.___bybyn[x] || x;
-        //}).replace(/[a-z]/ig, (x) => {
-        //    return this.___bybyn[x] || x;
-        //});
-        //
-        //this.setState({
-        //    baybayin: e.target.value,
-        //    translation: this.translate(e.target.value) || this.previewMessage
-        //})
+        if (this.state.auto) {
+            e.target.value = e.target.value.toLowerCase().replace(/(ᜊ᜔|ᜃ᜔|ᜇ᜔|ᜄ᜔|ᜑ᜔|ᜎ᜔|ᜋ᜔|ᜈ᜔|ᜅ᜔|ᜉ᜔|ᜍ᜔|ᜐ᜔|ᜆ᜔|ᜏ᜔|ᜌ᜔)([aieoug])/ig, (x, y, z) => {
+                return this.___bybyn[this.___ynbyby[y] + z] || x
+            }).replace(/ng([aieou])*/ig, (x) => {
+                return this.___bybyn[x] || x;
+            }).replace(/([bkdghlmnprstwy])([aieou])/ig, (x) => {
+                return this.___bybyn[x] || x;
+            }).replace(/[a-z]/ig, (x) => {
+                return this.___bybyn[x] || x;
+            });
+    
+            this.setState({
+                baybayin: e.target.value,
+                translation: this.translate(e.target.value) || this.previewMessage
+            })
+        }
     };
     
     translate = (str, normalize) => {
@@ -246,13 +250,18 @@ export default class BaybayinTranslator extends React.Component {
         return ((normalize === true || this.state.simplify.checked) ? str.replace(/\[e\/i\]/g, 'i').replace(/\[o\/u\]/g, 'o') : str).replace(/(\[\w\/\w\])/gm, "<span class='dimmed'>$1</span>").replace(/\n/gm, '<br/>');
     };
     
+    onCapslockClick = () => this.setState({capslock: !this.state.capslock, shift: false});
+    onShiftClick = () => this.setState({shift: !this.state.shift});
+    
     componentDidMount() {
         if (this.textAreaNode) this.textAreaNode.focus();
-        if (this.tildeNode) this.setState({keyHeight: this.tildeNode.getBoundingClientRect().width});
     };
     
     render() {
-        const {keyHeight} = this.state;
+        const {
+            capslock,
+            shift
+        } = this.state;
         
         return <div className={'baybayin-translator'}>
             <textarea
@@ -265,482 +274,417 @@ export default class BaybayinTranslator extends React.Component {
             
             <div className={'info'}>
                 <div className={'keyboard'}>
-                    <div className={'row-1'}>
-                        <div
-                            ref={node => this.tildeNode = node}
-                            className={'key-tilde'}
-                            style={{height: keyHeight + 'px'}}
-                        >
-                            <div>~<span className={'green-fg'}>ᜈ᜔ᜌ</span></div>
-                            <div>`</div>
-                        </div>
-                        
-                        <div
-                            style={{height: keyHeight + 'px'}}
-                            className={'key-1'}
-                        >
-                            <div>!</div>
-                            <div>1</div>
-                        </div>
-                        
-                        <div
-                            style={{height: keyHeight + 'px'}}
-                            className={'key-2'}
-                        >
-                            <div>@</div>
-                            <div>2</div>
-                        </div>
-                        
-                        <div
-                            style={{height: keyHeight + 'px'}}
-                            className={'key-3'}
-                        >
-                            <div>#</div>
-                            <div>3</div>
-                        </div>
-                        
-                        <div
-                            style={{height: keyHeight + 'px'}}
-                            className={'key-4'}
-                        >
-                            <div>$<span className={'red-fg'}>₱</span></div>
-                            <div>4</div>
-                        </div>
-                        
-                        <div
-                            style={{height: keyHeight + 'px'}}
-                            className={'key-5'}
-                        >
-                            <div>%</div>
-                            <div>5</div>
-                        </div>
-                        
-                        <div
-                            style={{height: keyHeight + 'px'}}
-                            className={'key-6'}
-                        >
-                            <div>^</div>
-                            <div>6</div>
-                        </div>
-                        
-                        <div
-                            style={{height: keyHeight + 'px'}}
-                            className={'key-7'}
-                        >
-                            <div>&</div>
-                            <div>7</div>
-                        </div>
-                        
-                        <div
-                            style={{height: keyHeight + 'px'}}
-                            className={'key-8'}
-                        >
-                            <div>*</div>
-                            <div>8</div>
-                        </div>
-                        
-                        <div
-                            style={{height: keyHeight + 'px'}}
-                            className={'key-9'}
-                        >
-                            <div>(</div>
-                            <div>9</div>
-                        </div>
-                        
-                        <div
-                            style={{height: keyHeight + 'px'}}
-                            className={'key-0'}
-                        >
-                            <div>)</div>
-                            <div>0</div>
-                        </div>
-                        
-                        <div
-                            style={{height: keyHeight + 'px'}}
-                            className={'key-dash'}
-                        >
-                            <div>_</div>
-                            <div>-</div>
-                        </div>
-                        
-                        <div
-                            style={{height: keyHeight + 'px'}}
-                            className={'key-equal'}
-                        >
-                            <div>+</div>
-                            <div>=</div>
-                        </div>
-                        
-                        <div
-                            style={{height: keyHeight + 'px'}}
-                            className={'key-backspace gray-bg'}
-                        >
-                            <div/>
-                            <div>BackSpace</div>
-                        </div>
+                    <div
+                        className={'key-tilde'}
+                    >
+                        <div>~<span className={'green-fg'}>ᜈ᜔ᜌ</span></div>
+                        <div>`</div>
+                    </div>
+    
+                    <div
+                        className={'key-1'}
+                    >
+                        <div>!</div>
+                        <div>1</div>
+                    </div>
+    
+                    <div
+                        className={'key-2'}
+                    >
+                        <div>@</div>
+                        <div>2</div>
+                    </div>
+    
+                    <div
+                        className={'key-3'}
+                    >
+                        <div>#</div>
+                        <div>3</div>
+                    </div>
+    
+                    <div
+                        className={'key-4'}
+                    >
+                        <div>$<span className={'red-fg'}>₱</span></div>
+                        <div>4</div>
+                    </div>
+    
+                    <div
+                        className={'key-5'}
+                    >
+                        <div>%</div>
+                        <div>5</div>
+                    </div>
+    
+                    <div
+                        className={'key-6'}
+                    >
+                        <div>^</div>
+                        <div>6</div>
+                    </div>
+    
+                    <div
+                        className={'key-7'}
+                    >
+                        <div>&</div>
+                        <div>7</div>
+                    </div>
+    
+                    <div
+                        className={'key-8'}
+                    >
+                        <div>*</div>
+                        <div>8</div>
+                    </div>
+    
+                    <div
+                        className={'key-9'}
+                    >
+                        <div>(</div>
+                        <div>9</div>
+                    </div>
+    
+                    <div
+                        className={'key-0'}
+                    >
+                        <div>)</div>
+                        <div>0</div>
+                    </div>
+    
+                    <div
+                        className={'key-dash'}
+                    >
+                        <div>_</div>
+                        <div>-</div>
+                    </div>
+    
+                    <div
+                        className={'key-equal'}
+                    >
+                        <div>+</div>
+                        <div>=</div>
+                    </div>
+    
+                    <div
+                        className={'key-backspace gray-bg'}
+                    >
+                        <div/>
+                        <div>BackSpace</div>
+                    </div>
+    
+                    <div
+                        className={'key-tab gray-bg'}
+                    >
+                        <div/>
+                        <div>Tab</div>
                     </div>
                     
-                    <div className={'row-2'}>
-                        <div
-                            style={{height: keyHeight + 'px'}}
-                            className={'key-tab gray-bg'}
-                        >
-                            <div/>
-                            <div>Tab</div>
-                        </div>
-                        
-                        <div
-                            style={{height: keyHeight + 'px'}}
-                            className={'key-q'}
-                        >
-                            <div>Q<span className={'green-fg'}>ᜃ᜔ᜏ</span></div>
-                            <div>q<span className={'green-fg'}>ᜃᜓᜏ</span></div>
-                        </div>
-                        
-                        <div
-                            style={{height: keyHeight + 'px'}}
-                            className={'key-w'}
-                        >
-                            <div>W</div>
-                            <div>w<span className={'green-fg'}>ᜏ</span></div>
-                        </div>
-                        
-                        <div
-                            style={{height: keyHeight + 'px'}}
-                            className={'key-e'}
-                        >
-                            <div>E<span className={'green-fg'}>ᜁ</span></div>
-                            <div>e<img src={kudlitE}/></div>
-                        </div>
-                        
-                        <div
-                            style={{height: keyHeight + 'px'}}
-                            className={'key-r'}
-                        >
-                            <div>R</div>
-                            <div>r<span className={'green-fg'}>ᜍ</span></div>
-                        </div>
-                        
-                        <div
-                            style={{height: keyHeight + 'px'}}
-                            className={'key-t'}
-                        >
-                            <div>T</div>
-                            <div>t<span className={'green-fg'}>ᜆ</span></div>
-                        </div>
-                        
-                        <div
-                            style={{height: keyHeight + 'px'}}
-                            className={'key-y'}
-                        >
-                            <div>Y</div>
-                            <div>y<span className={'green-fg'}>ᜌ</span></div>
-                        </div>
-                        
-                        <div
-                            style={{height: keyHeight + 'px'}}
-                            className={'key-u'}
-                        >
-                            <div>U<span className={'green-fg'}>ᜂ</span></div>
-                            <div>u<img src={kudlitU}/></div>
-                        </div>
-                        
-                        <div
-                            style={{height: keyHeight + 'px'}}
-                            className={'key-i'}
-                        >
-                            <div>I<span className={'green-fg'}>ᜁ</span></div>
-                            <div>i<img src={kudlitI}/></div>
-                        </div>
-                        
-                        <div
-                            style={{height: keyHeight + 'px'}}
-                            className={'key-o'}
-                        >
-                            <div>O<span className={'green-fg'}>ᜂ</span></div>
-                            <div>o<img src={kudlitO}/></div>
-                        </div>
-                        
-                        <div
-                            style={{height: keyHeight + 'px'}}
-                            className={'key-p'}
-                        >
-                            <div>P</div>
-                            <div>p<span className={'green-fg'}>ᜉ</span></div>
-                        </div>
-                        
-                        <div
-                            style={{height: keyHeight + 'px'}}
-                            className={'key-leftbracket'}
-                        >
-                            <div>{"{"}</div>
+                    <div
+                        className={'key-q'}
+                    >
+                        <div>Q<span className={'green-fg'}>ᜃ᜔ᜏ</span></div>
+                        <div>q<span className={'green-fg'}>ᜃᜓᜏ</span></div>
+                    </div>
+                    
+                    <div
+                        className={'key-w'}
+                    >
+                        <div>W</div>
+                        <div>w<span className={'green-fg'}>ᜏ</span></div>
+                    </div>
+                    
+                    <div
+                        className={'key-e'}
+                    >
+                        <div>E<span className={'green-fg'}>ᜁ</span></div>
+                        <div>e<img src={kudlitE}/></div>
+                    </div>
+                    
+                    <div
+                        className={'key-r'}
+                    >
+                        <div>R</div>
+                        <div>r<span className={'green-fg'}>ᜍ</span></div>
+                    </div>
+                    
+                    <div
+                        className={'key-t'}
+                    >
+                        <div>T</div>
+                        <div>t<span className={'green-fg'}>ᜆ</span></div>
+                    </div>
+                    
+                    <div
+                        className={'key-y'}
+                    >
+                        <div>Y</div>
+                        <div>y<span className={'green-fg'}>ᜌ</span></div>
+                    </div>
+                    
+                    <div
+                        className={'key-u'}
+                    >
+                        <div>U<span className={'green-fg'}>ᜂ</span></div>
+                        <div>u<img src={kudlitU}/></div>
+                    </div>
+                    
+                    <div
+                        className={'key-i'}
+                    >
+                        <div>I<span className={'green-fg'}>ᜁ</span></div>
+                        <div>i<img src={kudlitI}/></div>
+                    </div>
+                    
+                    <div
+                        className={'key-o'}
+                    >
+                        <div>O<span className={'green-fg'}>ᜂ</span></div>
+                        <div>o<img src={kudlitO}/></div>
+                    </div>
+                    
+                    <div
+                        className={'key-p'}
+                    >
+                        <div>P</div>
+                        <div>p<span className={'green-fg'}>ᜉ</span></div>
+                    </div>
+                    
+                    <div
+                        className={'key-leftbracket'}
+                    >
+                        <div>{"{"}</div>
                             <div>[</div>
-                        </div>
-                        
-                        <div
-                            style={{height: keyHeight + 'px'}}
+                            </div>
+                    
+                            <div
                             className={'key-rightbracket'}
-                        >
+                            >
                             <div>}</div>
-                            <div>]</div>
-                        </div>
-                        
-                        <div
-                            style={{height: keyHeight + 'px'}}
-                            className={'key-backslash'}
-                        >
-                            <div>|</div>
-                            <div>\</div>
-                        </div>
+                        <div>]</div>
                     </div>
                     
-                    <div className={'row-3'}>
-                        <div
-                            style={{height: keyHeight + 'px'}}
-                            className={'key-capslock gray-bg'}
-                        >
-                            <div style={{color: 'white'}}>•</div>
-                            <div>Capslock</div>
-                        </div>
-                        
-                        <div
-                            style={{height: keyHeight + 'px'}}
-                            className={'key-a'}
-                        >
-                            <div>A<span className={'green-fg'}>ᜀ</span></div>
-                            <div>a</div>
-                        </div>
-                        
-                        <div
-                            style={{height: keyHeight + 'px'}}
-                            className={'key-s'}
-                        >
-                            <div>S</div>
-                            <div>s<span className={'green-fg'}>ᜐ</span></div>
-                        </div>
-                        
-                        <div
-                            style={{height: keyHeight + 'px'}}
-                            className={'key-d'}
-                        >
-                            <div>D</div>
-                            <div>d<span className={'green-fg'}>ᜇ</span></div>
-                        </div>
-                        
-                        <div
-                            style={{height: keyHeight + 'px'}}
-                            className={'key-f'}
-                        >
-                            <div>F</div>
-                            <div>f<span className={'green-fg'}>ᜉ</span></div>
-                        </div>
-                        
-                        <div
-                            style={{height: keyHeight + 'px'}}
-                            className={'key-g'}
-                        >
-                            <div>G</div>
-                            <div>g<span className={'green-fg'}>ᜄ</span></div>
-                        </div>
-                        
-                        <div
-                            style={{height: keyHeight + 'px'}}
-                            className={'key-h'}
-                        >
-                            <div>H</div>
-                            <div>h<span className={'green-fg'}>ᜑ</span></div>
-                        </div>
-                        
-                        <div
-                            style={{height: keyHeight + 'px'}}
-                            className={'key-j'}
-                        >
-                            <div>J<span className={'green-fg'}>ᜇ᜔ᜌ</span></div>
-                            <div>j<span className={'green-fg'}>ᜇᜒᜌ</span></div>
-                        </div>
-                        
-                        <div
-                            style={{height: keyHeight + 'px'}}
-                            className={'key-k'}
-                        >
-                            <div>K</div>
-                            <div>k<span className={'green-fg'}>ᜃ</span></div>
-                        </div>
-                        
-                        <div
-                            style={{height: keyHeight + 'px'}}
-                            className={'key-l'}
-                        >
-                            <div>L</div>
-                            <div>l<span className={'green-fg'}>ᜎ</span></div>
-                        </div>
-                        
-                        <div
-                            style={{height: keyHeight + 'px'}}
-                            className={'key-colon'}
-                        >
-                            <div>:</div>
-                            <div>;</div>
-                        </div>
-                        
-                        <div
-                            style={{height: keyHeight + 'px'}}
-                            className={'key-quote'}
-                        >
-                            <div>"</div>
-                            <div>'</div>
-                        </div>
-                        
-                        <div
-                            style={{height: keyHeight + 'px'}}
-                            className={'key-enter gray-bg'}
-                        >
-                            <div/>
-                            <div>Enter</div>
-                        </div>
+                    <div
+                        className={'key-backslash'}
+                    >
+                        <div>|</div>
+                        <div>\</div>
+                    </div>
+    
+                    <div
+                        className={'key-capslock gray-bg'}
+                        onClick={this.onCapslockClick}
+                    >
+                        <div className={'capslight'} style={{color: capslock ? '#ff00ff' : '#fff'}}>•</div>
+                        <div>Capslock</div>
                     </div>
                     
-                    <div className={'row-4'}>
-                        <div
-                            style={{height: keyHeight + 'px'}}
-                            className={'key-leftshift gray-bg'}
-                        >
-                            <div/>
-                            <div>Shift</div>
-                        </div>
-                        
-                        <div
-                            style={{height: keyHeight + 'px'}}
-                            className={'key-z'}
-                        >
-                            <div>Z</div>
-                            <div>z<span className={'green-fg'}>ᜐ</span></div>
-                        </div>
-                        
-                        <div
-                            style={{height: keyHeight + 'px'}}
-                            className={'key-x'}
-                        >
-                            <div>X</div>
-                            <div>x<span className={'green-fg'}>ᜃ᜔ᜐ</span></div>
-                        </div>
-    
-                        <div
-                            style={{height: keyHeight + 'px'}}
-                            className={'key-c'}
-                        >
-                            <div>C<span className={'green-fg'}>ᜆ᜔ᜐ</span></div>
-                            <div>c<span className={'green-fg'}>ᜃ</span></div>
-                        </div>
-    
-                        <div
-                            style={{height: keyHeight + 'px'}}
-                            className={'key-v'}
-                        >
-                            <div>V</div>
-                            <div>v</div>
-                        </div>
-    
-                        <div
-                            style={{height: keyHeight + 'px'}}
-                            className={'key-b'}
-                        >
-                            <div>B</div>
-                            <div>b<span className={'green-fg'}>ᜊ</span></div>
-                        </div>
-    
-                        <div
-                            style={{height: keyHeight + 'px'}}
-                            className={'key-n'}
-                        >
-                            <div>N</div>
-                            <div>n<span className={'green-fg'}>ᜈ</span></div>
-                        </div>
-    
-                        <div
-                            style={{height: keyHeight + 'px'}}
-                            className={'key-m'}
-                        >
-                            <div>M</div>
-                            <div>m<span className={'green-fg'}>ᜋ</span></div>
-                        </div>
-    
-                        <div
-                            style={{height: keyHeight + 'px'}}
-                            className={'key-comma'}
-                        >
-                            <div>{"<"}</div>
-                            <div>,</div>
-                        </div>
-    
-                        <div
-                            style={{height: keyHeight + 'px'}}
-                            className={'key-period'}
-                        >
-                            <div>{">"}</div>
-                            <div>.</div>
-                        </div>
-                        
-                        <div
-                            style={{height: keyHeight + 'px'}}
-                            className={'key-slash'}
-                        >
-                            <div>?</div>
-                            <div>/</div>
-                        </div>
-    
-                        <div
-                            style={{height: keyHeight + 'px'}}
-                            className={'key-rightshift gray-bg'}
-                        >
-                            <div/>
-                            <div>Shift</div>
-                        </div>
+                    <div
+                        className={'key-a'}
+                    >
+                        <div>A<span className={'green-fg'}>ᜀ</span></div>
+                        <div>a</div>
                     </div>
                     
-                    <div className={'row-5'}>
-                        <div
-                            style={{height: keyHeight + 'px'}}
-                            className={'key-leftctrl gray-bg'}
-                        >
-                            <div/>
-                            <div>Control</div>
-                        </div>
-                        
-                        <div
-                            style={{height: keyHeight + 'px'}}
-                            className={'key-empty gray-bg'}
-                        />
-                        <div
-                            style={{height: keyHeight + 'px'}}
-                            className={'key-leftalt gray-bg'}
-                        >
-                            <div/>
-                            <div>Alt</div>
-                        </div>
-                        
-                        <div style={{height: keyHeight + 'px'}}
-                             className={'key-spacebar'}/>
-                        <div
-                            style={{height: keyHeight + 'px'}}
-                            className={'key-rightalt gray-bg'}
-                        >
-                            <div/>
-                            <div>Alt</div>
-                        </div>
-                        
-                        <div
-                            style={{height: keyHeight + 'px'}}
-                            className={'key-empty gray-bg'}
-                        />
-                        
-                        <div
-                            style={{height: keyHeight + 'px'}}
-                            className={'key-rightctrl gray-bg'}
-                        >
-                            <div/>
-                            <div>Control</div>
-                        </div>
+                    <div
+                        className={'key-s'}
+                    >
+                        <div>S</div>
+                        <div>s<span className={'green-fg'}>ᜐ</span></div>
+                    </div>
+                    
+                    <div
+                        className={'key-d'}
+                    >
+                        <div>D</div>
+                        <div>d<span className={'green-fg'}>ᜇ</span></div>
+                    </div>
+                    
+                    <div
+                        className={'key-f'}
+                    >
+                        <div>F</div>
+                        <div>f<span className={'green-fg'}>ᜉ</span></div>
+                    </div>
+                    
+                    <div
+                        className={'key-g'}
+                    >
+                        <div>G</div>
+                        <div>g<span className={'green-fg'}>ᜄ</span></div>
+                    </div>
+                    
+                    <div
+                        className={'key-h'}
+                    >
+                        <div>H</div>
+                        <div>h<span className={'green-fg'}>ᜑ</span></div>
+                    </div>
+                    
+                    <div
+                        className={'key-j'}
+                    >
+                        <div>J<span className={'green-fg'}>ᜇ᜔ᜌ</span></div>
+                        <div>j<span className={'green-fg'}>ᜇᜒᜌ</span></div>
+                    </div>
+                    
+                    <div
+                        className={'key-k'}
+                    >
+                        <div>K</div>
+                        <div>k<span className={'green-fg'}>ᜃ</span></div>
+                    </div>
+                    
+                    <div
+                        className={'key-l'}
+                    >
+                        <div>L</div>
+                        <div>l<span className={'green-fg'}>ᜎ</span></div>
+                    </div>
+                    
+                    <div
+                        className={'key-colon'}
+                    >
+                        <div>:</div>
+                        <div>;</div>
+                    </div>
+                    
+                    <div
+                        className={'key-quote'}
+                    >
+                        <div>"</div>
+                        <div>'</div>
+                    </div>
+                    
+                    <div
+                        className={'key-enter gray-bg'}
+                    >
+                        <div/>
+                        <div>Enter</div>
+                    </div>
+                    
+                    <div
+                        className={'key-leftshift gray-bg' + (shift ? ' pressed' : '')}
+                        onClick={this.onShiftClick}
+                    >
+                        <div/>
+                        <div>Shift</div>
+                    </div>
+                    
+                    <div
+                        className={'key-z'}
+                    >
+                        <div>Z</div>
+                        <div>z<span className={'green-fg'}>ᜐ</span></div>
+                    </div>
+                    
+                    <div
+                        className={'key-x'}
+                    >
+                        <div>X</div>
+                        <div>x<span className={'green-fg'}>ᜃ᜔ᜐ</span></div>
+                    </div>
+                    
+                    <div
+                        className={'key-c'}
+                    >
+                        <div>C<span className={'green-fg'}>ᜆ᜔ᜐ</span></div>
+                        <div>c<span className={'green-fg'}>ᜃ</span></div>
+                    </div>
+                    
+                    <div
+                        className={'key-v'}
+                    >
+                        <div>V</div>
+                        <div>v</div>
+                    </div>
+                    
+                    <div
+                        className={'key-b'}
+                    >
+                        <div>B</div>
+                        <div>b<span className={'green-fg'}>ᜊ</span></div>
+                    </div>
+                    
+                    <div
+                        className={'key-n'}
+                    >
+                        <div>N</div>
+                        <div>n<span className={'green-fg'}>ᜈ</span></div>
+                    </div>
+                    
+                    <div
+                        className={'key-m'}
+                    >
+                        <div>M</div>
+                        <div>m<span className={'green-fg'}>ᜋ</span></div>
+                    </div>
+                    
+                    <div
+                        className={'key-comma'}
+                    >
+                        <div>{"<"}</div>
+                        <div>,</div>
+                    </div>
+                    
+                    <div
+                        className={'key-period'}
+                    >
+                        <div>{">"}</div>
+                        <div>.</div>
+                    </div>
+                    
+                    <div
+                        className={'key-slash'}
+                    >
+                        <div>?</div>
+                        <div>/</div>
+                    </div>
+                    
+                    <div
+                        className={'key-rightshift gray-bg' + (shift ? ' pressed' : '')}
+                        onClick={this.onShiftClick}
+                    >
+                        <div/>
+                        <div>Shift</div>
+                    </div>
+                    
+                    <div
+                        className={'key-leftctrl gray-bg'}
+                    >
+                        <div/>
+                        <div>Control</div>
+                    </div>
+                    
+                    <div
+                        className={'key-empty1 gray-bg'}
+                    />
+                    <div
+                        className={'key-leftalt gray-bg'}
+                    >
+                        <div/>
+                        <div>Alt</div>
+                    </div>
+                    
+                    <div
+                         className={'key-spacebar'}
+                    />
+                    
+                    <div
+                        className={'key-rightalt gray-bg'}
+                    >
+                        <div/>
+                        <div>Alt</div>
+                    </div>
+                    
+                    <div
+                        className={'key-empty2 gray-bg'}
+                    />
+                    
+                    <div
+                        className={'key-rightctrl gray-bg'}
+                    >
+                        <div/>
+                        <div>Control</div>
                     </div>
                 </div>
             </div>

@@ -7,7 +7,7 @@
 }
 
 .green-fg {
-    color: green;
+    color: #ff00ff;
 }
 
 .red-fg {
@@ -64,70 +64,120 @@
     .info {
         grid-area: info;
         border-radius: $border-radius;
-        overflow: hidden;
         position: relative;
-        padding: 3px;
-        
+        padding: 7px;
+        overflow: auto;
         .keyboard {
-            > div:not(:last-child) {
-                margin-bottom: 2px;
-            }
+            display: grid;
+            grid-gap: 7px;
+            grid-template:
+            'tilde tilde one one two two three three four four five five six six seven seven eight eight nine nine zero zero dash dash equal equal backspace backspace backspace backspace'
+            'tab tab tab q q w w e e r r t t y y u u i i o o p p leftbracket leftbracket rightbracket rightbracket backslash backslash backslash'
+            'capslock capslock capslock capslock a a s s d d f f g g h h j j k k l l colon colon quote quote enter enter enter enter'
+            'leftshift leftshift leftshift leftshift leftshift z z x x c c v v b b n n m m comma comma period period slash slash rightshift rightshift rightshift rightshift rightshift'
+            'leftctrl leftctrl leftctrl empty1 empty1 leftalt leftalt leftalt spacebar spacebar spacebar spacebar spacebar spacebar spacebar spacebar spacebar spacebar spacebar spacebar spacebar rightalt rightalt rightalt empty2 empty2 rightctrl rightctrl rightctrl rightctrl';
             
             > div {
-                display: grid;
-                grid-auto-flow: row;
-                grid-gap: 2px;
+                height: 70px;
+                min-width: 70px;
+                border: 1px solid blue;
+                border-radius: 3px;
+                padding: 0 7px;
+                cursor: pointer;
     
                 > div {
-                    border: 1px solid $babayi;
-                    border-radius: 3px;
-                    cursor: pointer;
+                    height: 50%;
+                    line-height: 2;
                     
-                    > div {
-                        height: 50%;
-                        padding: 5px;
-                        font-weight: 500;
-                        font-size: 1.3em;
-    
-                        > img {
-                            height: 70%;
-                        }
-                        
-                        > span,
-                        > img {
-                            float: right;
-                        }
+                    img {
+                        height: 70%;
+                    }
+                    
+                    img,
+                    span {
+                        float: right;
                     }
                 }
     
-                > div:not(.key-empty):hover {
-                    opacity: 0.7;
-                }
-                
-                > div:not(.key-empty):hover:active {
-                    opacity: 0.3;
+                .capslight {
+                    font-size: 21px;
                 }
             }
             
-            .row-1 {
-                grid-template-columns: 6% 6% 6% 6% 6% 6% 6% 6% 6% 6% 6% 6% 6% 12%;
+            > div:not(.key-empty):hover {
+                opacity: 0.7;
             }
     
-            .row-2 {
-                grid-template-columns: 9% 6% 6% 6% 6% 6% 6% 6% 6% 6% 6% 6% 6% 9%;
+            > div:not(.key-empty):hover:active,
+            > div.pressed {
+                background-color: rgba(231, 7, 255, 0.36);
+                color: white;
             }
     
-            .row-3 {
-                grid-template-columns: 12% 6% 6% 6% 6% 6% 6% 6% 6% 6% 6% 6% 12%;
-            }
+            .key-tilde {grid-area: tilde}
+            .key-1 {grid-area: one}
+            .key-2 {grid-area: two}
+            .key-3 {grid-area: three}
+            .key-4 {grid-area: four}
+            .key-5 {grid-area: five}
+            .key-6 {grid-area: six}
+            .key-7 {grid-area: seven}
+            .key-8 {grid-area: eight}
+            .key-9 {grid-area: nine}
+            .key-0 {grid-area: zero}
+            .key-dash {grid-area: dash}
+            .key-equal {grid-area: equal}
+            .key-backspace {grid-area: backspace}
             
-            .row-4 {
-                grid-template-columns: 15% 6% 6% 6% 6% 6% 6% 6% 6% 6% 6% 15%;
-            }
-    
-            .row-5 {
-                grid-template-columns: 8% 6% 8% 47.5% 8% 6% 8%;
-            }
+            .key-tab {grid-area: tab}
+            .key-q {grid-area: q}
+            .key-w {grid-area: w}
+            .key-e {grid-area: e}
+            .key-r {grid-area: r}
+            .key-t {grid-area: t}
+            .key-y {grid-area: y}
+            .key-u {grid-area: u}
+            .key-i {grid-area: i}
+            .key-o {grid-area: o}
+            .key-p {grid-area: p}
+            .key-leftbracket {grid-area: leftbracket}
+            .key-rightbracket {grid-area: rightbracket}
+            .key-backslash {grid-area: backslash}
+            
+            .key-capslock {grid-area: capslock}
+            .key-a {grid-area: a}
+            .key-s {grid-area: s}
+            .key-d {grid-area: d}
+            .key-f {grid-area: f}
+            .key-g {grid-area: g}
+            .key-h {grid-area: h}
+            .key-j {grid-area: j}
+            .key-k {grid-area: k}
+            .key-l {grid-area: l}
+            .key-colon {grid-area: colon}
+            .key-quote {grid-area: quote}
+            .key-enter {grid-area: enter}
+            
+            .key-leftshift {grid-area: leftshift}
+            .key-z {grid-area: z}
+            .key-x {grid-area: x}
+            .key-c {grid-area: c}
+            .key-v {grid-area: v}
+            .key-b {grid-area: b}
+            .key-n {grid-area: n}
+            .key-m {grid-area: m}
+            .key-comma {grid-area: comma}
+            .key-period {grid-area: period}
+            .key-slash {grid-area: slash}
+            .key-rightshift {grid-area: rightshift}
+            
+            .key-leftctrl {grid-area: leftctrl}
+            .key-empty1 {grid-area: empty1}
+            .key-leftalt {grid-area: leftalt}
+            .key-spacebar {grid-area: spacebar}
+            .key-rightalt {grid-area: rightalt}
+            .key-empty2 {grid-area: empty2}
+            .key-rightctrl {grid-area: rightctrl}
         }
     }
 }
