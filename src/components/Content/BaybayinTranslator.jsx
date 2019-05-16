@@ -6,6 +6,7 @@ import kudlitI from './kudlit-i.png';
 import kudlitO from './kudlit-o.png';
 import kudlitU from './kudlit-u.png';
 import virama from './virama.png';
+import PropTypes from 'prop-types';
 
 export default class BaybayinTranslator extends React.Component {
     constructor(props) {
@@ -13,119 +14,119 @@ export default class BaybayinTranslator extends React.Component {
         
         this.componentKeyDownHandler.bind(this);
         this.componentKeyUpHandler.bind(this);
-    
+        
         this.___bybyn = {
             a: 'ᜀ',
             e: 'ᜁ',
             i: 'ᜁ',
             o: 'ᜂ',
             u: 'ᜂ',
-        
+            
             b: 'ᜊ᜔',
             ba: 'ᜊ',
             be: 'ᜊᜒ',
             bi: 'ᜊᜒ',
             bo: 'ᜊᜓ',
             bu: 'ᜊᜓ',
-        
+            
             k: 'ᜃ᜔',
             ka: 'ᜃ',
             ke: 'ᜃᜒ',
             ki: 'ᜃᜒ',
             ko: 'ᜃᜓ',
             ku: 'ᜃᜓ',
-        
+            
             d: 'ᜇ᜔',
             da: 'ᜇ',
             de: 'ᜇᜒ',
             di: 'ᜇᜒ',
             do: 'ᜇᜓ',
             du: 'ᜇᜓ',
-        
+            
             g: 'ᜄ᜔',
             ga: 'ᜄ',
             ge: 'ᜄᜒ',
             gi: 'ᜄᜒ',
             go: 'ᜄᜓ',
             gu: 'ᜄᜓ',
-        
+            
             h: 'ᜑ᜔',
             ha: 'ᜑ',
             he: 'ᜑᜒ',
             hi: 'ᜑᜒ',
             ho: 'ᜑᜓ',
             hu: 'ᜑᜓ',
-        
+            
             l: 'ᜎ᜔',
             la: 'ᜎ',
             le: 'ᜎᜒ',
             li: 'ᜎᜒ',
             lo: 'ᜎᜓ',
             lu: 'ᜎᜓ',
-        
+            
             m: 'ᜋ᜔',
             ma: 'ᜋ',
             me: 'ᜋᜒ',
             mi: 'ᜋᜒ',
             mo: 'ᜋᜓ',
             mu: 'ᜋᜓ',
-        
+            
             n: 'ᜈ᜔',
             na: 'ᜈ',
             ne: 'ᜈᜒ',
             ni: 'ᜈᜒ',
             no: 'ᜈᜓ',
             nu: 'ᜈᜓ',
-        
+            
             ng: 'ᜅ᜔',
             nga: 'ᜅ',
             nge: 'ᜅᜒ',
             ngi: 'ᜅᜒ',
             ngo: 'ᜅᜓ',
             ngu: 'ᜅᜓ',
-        
+            
             p: 'ᜉ᜔',
             pa: 'ᜉ',
             pe: 'ᜉᜒ',
             pi: 'ᜉᜒ',
             po: 'ᜉᜓ',
             pu: 'ᜉᜓ',
-        
+            
             r: 'ᜍ᜔',
             ra: 'ᜍ',
             re: 'ᜍᜒ',
             ri: 'ᜍᜒ',
             ro: 'ᜍᜓ',
             ru: 'ᜍᜓ',
-        
+            
             s: 'ᜐ᜔',
             sa: 'ᜐ',
             se: 'ᜐᜒ',
             si: 'ᜐᜒ',
             so: 'ᜐᜓ',
             su: 'ᜐᜓ',
-        
+            
             t: 'ᜆ᜔',
             ta: 'ᜆ',
             te: 'ᜆᜒ',
             ti: 'ᜆᜒ',
             to: 'ᜆᜓ',
             tu: 'ᜆᜓ',
-        
+            
             w: 'ᜏ᜔',
             wa: 'ᜏ',
             we: 'ᜏᜒ',
             wi: 'ᜏᜒ',
             wo: 'ᜏᜓ',
             wu: 'ᜏᜓ',
-        
+            
             y: 'ᜌ᜔',
             ya: 'ᜌ',
             ye: 'ᜌᜒ',
             yi: 'ᜌᜒ',
             yo: 'ᜌᜓ',
             yu: 'ᜌᜓ',
-        
+            
             c: 'c',
             f: 'f',
             j: 'j',
@@ -134,127 +135,155 @@ export default class BaybayinTranslator extends React.Component {
             x: 'x',
             z: 'z'
         };
-    
+        
         this.___ynbyby = {
             "ᜂ": "[o/u]",
             "ᜁ": "[i/e]",
             "ᜀ": "a",
-        
+            
             "ᜊᜓ": "b[o/u]",
             "ᜊᜒ": "b[i/e]",
             "ᜊ᜔": "b",
             "ᜊ": "ba",
-        
+            
             "ᜃᜓ": "k[o/u]",
             "ᜃᜒ": "k[i/e]",
             "ᜃ᜔": "k",
             "ᜃ": "ka",
-        
+            
             "ᜇᜓ": "d[o/u]",
             "ᜇᜒ": "d[i/e]",
             "ᜇ᜔": "d",
             "ᜇ": "da",
-        
+            
             "ᜄᜓ": "g[o/u]",
             "ᜄᜒ": "g[i/e]",
             "ᜄ᜔": "g",
             "ᜄ": "ga",
-        
+            
             "ᜑᜓ": "h[o/u]",
             "ᜑᜒ": "h[i/e]",
             "ᜑ᜔": "h",
             "ᜑ": "ha",
-        
+            
             "ᜎᜓ": "l[o/u]",
             "ᜎᜒ": "l[i/e]",
             "ᜎ᜔": "l",
             "ᜎ": "la",
-        
+            
             "ᜋᜓ": "m[o/u]",
             "ᜋᜒ": "m[i/e]",
             "ᜋ᜔": "m",
             "ᜋ": "ma",
-        
+            
             "ᜈᜓ": "n[o/u]",
             "ᜈᜒ": "n[i/e]",
             "ᜈ᜔": "n",
             "ᜈ": "na",
-        
+            
             "ᜅᜓ": "ng[o/u]",
             "ᜅᜒ": "ng[i/e]",
             "ᜅ᜔": "ng",
             "ᜅ": "nga",
-        
+            
             "ᜉᜓ": "p[o/u]",
             "ᜉᜒ": "p[i/e]",
             "ᜉ᜔": "p",
             "ᜉ": "pa",
-        
+            
             "ᜍᜓ": "r[o/u]",
             "ᜍᜒ": "r[i/e]",
             "ᜍ᜔": "r",
             "ᜍ": "ra",
-        
+            
             "ᜐᜓ": "s[o/u]",
             "ᜐᜒ": "s[i/e]",
             "ᜐ᜔": "s",
             "ᜐ": "sa",
-        
+            
             "ᜆᜓ": "t[o/u]",
             "ᜆᜒ": "t[i/e]",
             "ᜆ᜔": "t",
             "ᜆ": "ta",
-        
+            
             "ᜏᜓ": "w[o/u]",
             "ᜏᜒ": "w[i/e]",
             "ᜏ᜔": "w",
             "ᜏ": "wa",
-        
+            
             "ᜌᜓ": "y[o/u]",
             "ᜌᜒ": "y[i/e]",
             "ᜌ᜔": "y",
             "ᜌ": "ya"
         };
-    
+        
         this.previewMessage = `${isMobile() ? '↑↑↑' : '← ← ←'} type or paste something there<br/>and see the translation here. ↓↓↓<br/><br/><i style="color: #ff00ff"><b>Note:</b><br/>This is an assisted and automatic translator as you type.  No need to worry on the convention of typing on a baybayin keyboard.  Just type normally as you would.</i>`;
         this.manualKeyboardMessage = `<i style="color: #ff00ff"><b>Note:</b><br/>Follow typing pattern to/off characters indicated on the keyboard.</i>`;
-    
+        
         this.state = {
             baybayin: '',
-            translation: this.previewMessage,
+            translation: this.props.autoAssist ? this.previewMessage : this.manualKeyboardMessage,
             simplify: true,
-            auto: true,
             capslock: false,
             shift: false
         };
     }
     
     componentKeyDownHandler = ({keyCode}) => {
-        console.log('keyDown', keyCode);
+        //console.log('keyDown', keyCode);
+        if (keyCode === 20) {
+            this.setState({capslock: true});
+        } else if (keyCode === 16) {
+            this.setState({shift: true});
+        }
     };
     
     componentKeyUpHandler = ({keyCode}) => {
-        console.log('keyUp', keyCode);
+        //console.log('keyUp', keyCode);
+        if (keyCode === 20) {
+            this.setState({capslock: false});
+        } else if (keyCode === 16) {
+            this.setState({shift: false});
+        }
     };
     
     onTextAreaChange = (e) => {
-        if (this.state.auto) {
-            e.target.value = e.target.value.toLowerCase().replace(/(ᜊ᜔|ᜃ᜔|ᜇ᜔|ᜄ᜔|ᜑ᜔|ᜎ᜔|ᜋ᜔|ᜈ᜔|ᜅ᜔|ᜉ᜔|ᜍ᜔|ᜐ᜔|ᜆ᜔|ᜏ᜔|ᜌ᜔)([aieoug])/ig, (x, y, z) => {
-                return this.___bybyn[this.___ynbyby[y] + z] || x
-            }).replace(/ng([aieou])*/ig, (x) => {
-                return this.___bybyn[x] || x;
-            }).replace(/([bkdghlmnprstwy])([aieou])/ig, (x) => {
-                return this.___bybyn[x] || x;
-            }).replace(/[a-z]/ig, (x) => {
-                return this.___bybyn[x] || x;
-            });
+        if (this.props.autoAssist) {
+            e.target.value = e.target.value.toLowerCase()
+                .replace(/(ᜊ᜔|ᜃ᜔|ᜇ᜔|ᜄ᜔|ᜑ᜔|ᜎ᜔|ᜋ᜔|ᜈ᜔|ᜅ᜔|ᜉ᜔|ᜍ᜔|ᜐ᜔|ᜆ᜔|ᜏ᜔|ᜌ᜔)([aieoug])/igm, (x, y, z) => {
+                    return this.___bybyn[this.___ynbyby[y] + z] || x
+                })
+                .replace(/ng([aieou])*/igm, (x) => {
+                    return this.___bybyn[x] || x;
+                })
+                .replace(/([bkdghlmnprstwy])([aieou])/igm, (x) => {
+                    return this.___bybyn[x] || x;
+                })
+                .replace(/[a-z]/igm, (x) => {
+                    return this.___bybyn[x] || x;
+                });
             
             this.setState({
                 baybayin: e.target.value,
                 translation: this.translate(e.target.value) || this.previewMessage
             })
-        } else if (this.state.manualKeyboardMessage !== this.manualKeyboardMessage) {
-            this.setState({translation: this.translate(e.target.value) || this.manualKeyboardMessage})
+        } else {
+            e.target.value = e.target.value
+                .replace(/N/gm, this.___bybyn['nga'])
+                .replace(/([bkdghlmnprstwy])/gm, (x) => {
+                    return this.___bybyn[x+'a'] || x;
+                })
+                .replace(/([ᜊᜃᜇᜄᜑᜎᜋᜈᜅᜉᜍᜐᜆᜏᜌ])([aieoug])/gm, (x, y, z) => {
+                    return this.___bybyn[this.___ynbyby[y].replace(/[aeiou]/gm, '') + z] || x
+                })
+                .replace(/([ᜊᜃᜇᜄᜑᜎᜋᜈᜅᜉᜍᜐᜆᜏᜌ])(=)/gm, (x, y, z) => {
+                    return this.___bybyn[this.___ynbyby[y].replace(/[aeiou]/gm, '')] || x
+                });
+    
+            this.setState({
+                baybayin: e.target.value,
+                translation: (this.translate(e.target.value) || this.manualKeyboardMessage).toLowerCase()
+            })
         }
     };
     
@@ -283,12 +312,12 @@ export default class BaybayinTranslator extends React.Component {
     };
     
     onBackspaceClick = () => {
-      const ta = this.textAreaNode.value;
-      if (ta.length >= 1) {
-          this.textAreaNode.value = this.textAreaNode.value.slice(0, this.textAreaNode.value.length-1);
-          this.dispatchKeyPressEvent();
-      }
-      
+        const ta = this.textAreaNode.value;
+        if (ta.length >= 1) {
+            this.textAreaNode.value = this.textAreaNode.value.slice(0, this.textAreaNode.value.length - 1);
+            this.dispatchKeyPressEvent();
+        }
+        
     };
     
     dispatchKeyPressEvent = () => {
@@ -456,7 +485,7 @@ export default class BaybayinTranslator extends React.Component {
                     >
                         <div>+</div>
                         <div>=<img alt='' src={virama}/></div>
-
+                    
                     </div>
                     
                     <div
@@ -896,3 +925,11 @@ export default class BaybayinTranslator extends React.Component {
         </div>;
     }
 }
+
+BaybayinTranslator.propType = {
+    autoAssist: PropTypes.bool
+};
+
+BaybayinTranslator.defaultProps = {
+    autoAssist: true
+};

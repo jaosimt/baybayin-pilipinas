@@ -10,7 +10,8 @@ import BaybayinTranslator from "./components/Content/BaybayinTranslator";
 export default class App extends React.Component {
     state = {
         opaque: 0,
-        selected: 'home'
+        selected: 'home',
+        auto: true
     };
     
     onMenuClick = (e) => {
@@ -21,6 +22,13 @@ export default class App extends React.Component {
     onBPClick = (e) => {
         this.setState({selected: 'home'});
         window.scrollTo({top: 0, behavior: 'smooth'});
+    };
+    
+    onAutoNoClick = (e) => e.stopPropagation();
+    
+    onAutoClick = (e) => {
+        e.stopPropagation();
+        this.setState({auto: !this.state.auto});
     };
     
     componentDidMount() {
@@ -72,6 +80,19 @@ export default class App extends React.Component {
                                 onClick={this.onMenuClick}
                             >
                                 Baybayin Translator
+                                <span
+                                    style={{float: 'right'}}
+                                    onClick={this.onAutoClick}
+                                    title={'keyboard assist on/off'}
+                                >
+                                    <input
+                                        type={'checkbox'}
+                                        onChange={this.onAutoClick}
+                                        onClick={this.onAutoNoClick}
+                                        checked={this.state.auto}
+                                    />
+                                    auto
+                                </span>
                             </li>
                             
                             <li
@@ -89,7 +110,7 @@ export default class App extends React.Component {
                             selected === 'about' ?
                                 <About/> :
                                 selected === 'translator' ?
-                                    <BaybayinTranslator/> :
+                                    <BaybayinTranslator autoAssist={this.state.auto}/> :
                                     <HomeTiles data={homeItems}/>
                         }
                     </div>
