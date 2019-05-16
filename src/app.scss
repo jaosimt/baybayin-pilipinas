@@ -85,6 +85,20 @@
                 float: right;
                 width: 79%;
             }
+            
+            .youtube-videos {
+                border-top: 1px solid $babayi;
+                margin-top: 7px;
+                padding-top: 28px;
+                
+                iframe {
+                    border: none;
+                }
+                
+                iframe:not(:last-child) {
+                    margin-bottom: 7px;
+                }
+            }
         }
     }
     
@@ -151,6 +165,10 @@
                 .content-area {
                     float: unset;
                     width: 100%;
+                }
+    
+                .youtube-videos {
+                    display: none;
                 }
             }
         }

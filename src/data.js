@@ -1,4 +1,4 @@
-import { articles } from "./HomeArticles";
+import {articles} from "./HomeArticles";
 import theRules from './images/carousel/theRules.jpg';
 import theRules01 from './images/carousel/theRules01.jpg';
 import phNativeScrips from './images/carousel/Philippine-scripts-Interaksyon.jpg';
@@ -64,5 +64,30 @@ export const carouselImages = [
         image: hashTag,
         name: '',
         link: 'https://insta-stalker.com/tag/filipinoancientwriting/'
+    }
+];
+
+export const youtubeLinks = [
+    {
+        title: "How to Write Baybayin Tutorial",
+        url: "https://www.youtube.com/embed/FKHdYAn7QnQ"
+    }, {
+        title: 'Learn to Write in Baybayin',
+        url: 'https://www.youtube.com/embed/K-Sp9LYfWuw'
+    }, {
+        title: 'BAYBAYIN: Video Documentary about the Essence and Importance of the Baybayin Script',
+        url: 'https://www.youtube.com/embed/7GjeNO-KB8s&t=2s'
+    }, {
+        title: '3 Steps in Writing Baybayin',
+        url: 'https://www.youtube.com/embed/cTbX837DgZM'
+    }, {
+        title: "BATHALA Meaning in BAYBAYIN the Old Writing System in the Philippines",
+        url: "https://www.youtube.com/embed/XU1AkpQcfjc"
+    }, {
+        title: "Baybayin keyboard app, puwedeng i-download",
+        url: "https://www.youtube.com/embed/96wWecabkNU"
+    }, {
+        title: 'Baybayin Calligraffiti X Brush Calligraphy',
+        url: 'https://www.youtube.com/embed/58kZIIzfVDw'
     }
 ];

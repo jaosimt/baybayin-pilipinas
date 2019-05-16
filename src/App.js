@@ -2,7 +2,7 @@ import React from 'react';
 import './app.scss';
 import SocialMediaLinks from "./components/SocialMediaLinks/SocialMediaLinks";
 import ImageSlider from "./components/ImageSlider/ImageSlider";
-import {carouselImages, homeItems} from "./data";
+import {carouselImages, homeItems, youtubeLinks} from "./data";
 import HomeTiles from "./components/Content/HomeTiles/HomeTiles";
 import About from "./components/Content/About";
 import BaybayinTranslator from "./components/Content/BaybayinTranslator";
@@ -106,6 +106,11 @@ export default class App extends React.Component {
                                 About
                             </li>
                         </ul>
+                        <div className={'youtube-videos'}>
+                            {
+                                youtubeLinks.map((v, i) => <iframe key={i} title={v.title} width="100%" src={v.url}/>)
+                            }
+                        </div>
                     </div>
                     
                     <div ref={node => this.node = node} className={'content-area'}>
