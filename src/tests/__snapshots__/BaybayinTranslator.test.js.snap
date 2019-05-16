@@ -12,7 +12,7 @@ exports[`renders correctly 1`] = `
     className="preview"
     dangerouslySetInnerHTML={
       Object {
-        "__html": "← ← ← type or paste something there<br/>and see the translation here. ↓↓↓<br/><br/><i><b>Note:</b><br/>This is an assisted and automatic translator as you type.  No need to worry on the convention of typing on a baybayin keyboard.  Just type normally as you would.</i>",
+        "__html": "← ← ← type or paste something there<br/>and see the translation here. ↓↓↓<br/><br/><i style=\\"color: #ff00ff\\"><b>Note:</b><br/>This is an assisted and automatic translator as you type.  No need to worry on the convention of typing on a baybayin keyboard.  Just type normally as you would.</i>",
       }
     }
   />
@@ -23,618 +23,900 @@ exports[`renders correctly 1`] = `
       className="keyboard"
     >
       <div
-        className="row-1"
+        className="key-tilde"
+        data-down="\`"
+        data-up="~"
+        onClick={[Function]}
       >
-        <div
-          className="key-tilde"
-          style={
-            Object {
-              "height": "0px",
-            }
-          }
-        >
-          <div>
-            ~  
-            <span
-              className="green-fg"
-            >
-              ᜈ᜔ᜌ
-            </span>
-          </div>
-          <div>
-            \`
-          </div>
+        <div>
+          ~
+          <span
+            className="pink-fg"
+          >
+            ᜈ᜔ᜌ
+          </span>
         </div>
-        <div
-          className="key-1"
-          style={
-            Object {
-              "height": "0px",
-            }
-          }
-        >
-          <div>
-            !
-          </div>
-          <div>
-            1
-          </div>
-        </div>
-        <div
-          className="key-2"
-          style={
-            Object {
-              "height": "0px",
-            }
-          }
-        >
-          <div>
-            @
-          </div>
-          <div>
-            2
-          </div>
-        </div>
-        <div
-          className="key-3"
-          style={
-            Object {
-              "height": "0px",
-            }
-          }
-        >
-          <div>
-            #
-          </div>
-          <div>
-            3
-          </div>
-        </div>
-        <div
-          className="key-4"
-          style={
-            Object {
-              "height": "0px",
-            }
-          }
-        >
-          <div>
-            $  
-            <span
-              className="red-fg"
-            >
-              ₱
-            </span>
-          </div>
-          <div>
-            4
-          </div>
-        </div>
-        <div
-          className="key-5"
-          style={
-            Object {
-              "height": "0px",
-            }
-          }
-        >
-          <div>
-            %
-          </div>
-          <div>
-            5
-          </div>
-        </div>
-        <div
-          className="key-6"
-          style={
-            Object {
-              "height": "0px",
-            }
-          }
-        >
-          <div>
-            ^
-          </div>
-          <div>
-            6
-          </div>
-        </div>
-        <div
-          className="key-7"
-          style={
-            Object {
-              "height": "0px",
-            }
-          }
-        >
-          <div>
-            &
-          </div>
-          <div>
-            7
-          </div>
-        </div>
-        <div
-          className="key-8"
-          style={
-            Object {
-              "height": "0px",
-            }
-          }
-        >
-          <div>
-            *
-          </div>
-          <div>
-            8
-          </div>
-        </div>
-        <div
-          className="key-9"
-          style={
-            Object {
-              "height": "0px",
-            }
-          }
-        >
-          <div>
-            (
-          </div>
-          <div>
-            9
-          </div>
-        </div>
-        <div
-          className="key-0"
-          style={
-            Object {
-              "height": "0px",
-            }
-          }
-        >
-          <div>
-            )
-          </div>
-          <div>
-            0
-          </div>
-        </div>
-        <div
-          className="key-dash"
-          style={
-            Object {
-              "height": "0px",
-            }
-          }
-        >
-          <div>
-            _
-          </div>
-          <div>
-            -
-          </div>
-        </div>
-        <div
-          className="key-equal"
-          style={
-            Object {
-              "height": "0px",
-            }
-          }
-        >
-          <div>
-            +
-          </div>
-          <div>
-            =
-          </div>
-        </div>
-        <div
-          className="key-backspace gray-bg"
-          style={
-            Object {
-              "height": "0px",
-            }
-          }
-        >
-          <div />
-          <div>
-            BackSpace
-          </div>
+        <div>
+          \`
         </div>
       </div>
       <div
-        className="row-2"
+        className="key-1"
+        data-down="1"
+        data-up="!"
+        onClick={[Function]}
       >
-        <div
-          className="key-tab gray-bg"
-          style={
-            Object {
-              "height": "0px",
-            }
-          }
-        />
-        <div
-          className="key-"
-          style={
-            Object {
-              "height": "0px",
-            }
-          }
-        />
-        <div
-          className="key-"
-          style={
-            Object {
-              "height": "0px",
-            }
-          }
-        />
-        <div
-          className="key-"
-          style={
-            Object {
-              "height": "0px",
-            }
-          }
-        />
-        <div
-          className="key-"
-          style={
-            Object {
-              "height": "0px",
-            }
-          }
-        />
-        <div
-          className="key-"
-          style={
-            Object {
-              "height": "0px",
-            }
-          }
-        />
-        <div
-          className="key-"
-          style={
-            Object {
-              "height": "0px",
-            }
-          }
-        />
-        <div
-          className="key-"
-          style={
-            Object {
-              "height": "0px",
-            }
-          }
-        />
-        <div
-          className="key-"
-          style={
-            Object {
-              "height": "0px",
-            }
-          }
-        />
-        <div
-          className="key-"
-          style={
-            Object {
-              "height": "0px",
-            }
-          }
-        />
-        <div
-          className="key-"
-          style={
-            Object {
-              "height": "0px",
-            }
-          }
-        />
-        <div
-          className="key-"
-          style={
-            Object {
-              "height": "0px",
-            }
-          }
-        />
-        <div
-          className="key-"
-          style={
-            Object {
-              "height": "0px",
-            }
-          }
-        />
-        <div
-          className="key-backslash"
-          style={
-            Object {
-              "height": "0px",
-            }
-          }
-        />
+        <div>
+          !
+        </div>
+        <div>
+          1
+        </div>
       </div>
       <div
-        className="row-3"
+        className="key-2"
+        data-down="2"
+        data-up="@"
+        onClick={[Function]}
       >
-        <div
-          className="key-empty gray-bg"
-          style={
-            Object {
-              "height": "0px",
-            }
-          }
-        />
-        <div
-          className="key-"
-          style={
-            Object {
-              "height": "0px",
-            }
-          }
-        />
-        <div
-          className="key-"
-          style={
-            Object {
-              "height": "0px",
-            }
-          }
-        />
-        <div
-          className="key-"
-          style={
-            Object {
-              "height": "0px",
-            }
-          }
-        />
-        <div
-          className="key-"
-          style={
-            Object {
-              "height": "0px",
-            }
-          }
-        />
-        <div
-          className="key-"
-          style={
-            Object {
-              "height": "0px",
-            }
-          }
-        />
-        <div
-          className="key-"
-          style={
-            Object {
-              "height": "0px",
-            }
-          }
-        />
-        <div
-          className="key-"
-          style={
-            Object {
-              "height": "0px",
-            }
-          }
-        />
-        <div
-          className="key-"
-          style={
-            Object {
-              "height": "0px",
-            }
-          }
-        />
-        <div
-          className="key-"
-          style={
-            Object {
-              "height": "0px",
-            }
-          }
-        />
-        <div
-          className="key-"
-          style={
-            Object {
-              "height": "0px",
-            }
-          }
-        />
-        <div
-          className="key-"
-          style={
-            Object {
-              "height": "0px",
-            }
-          }
-        />
-        <div
-          className="key-enter gray-bg"
-          style={
-            Object {
-              "height": "0px",
-            }
-          }
-        />
+        <div>
+          @
+        </div>
+        <div>
+          2
+        </div>
       </div>
       <div
-        className="row-4"
+        className="key-3"
+        data-down="3"
+        data-up="#"
+        onClick={[Function]}
       >
-        <div
-          className="key-leftshift gray-bg"
-          style={
-            Object {
-              "height": "0px",
-            }
-          }
-        />
-        <div
-          className="key-"
-          style={
-            Object {
-              "height": "0px",
-            }
-          }
-        />
-        <div
-          className="key-"
-          style={
-            Object {
-              "height": "0px",
-            }
-          }
-        />
-        <div
-          className="key-"
-          style={
-            Object {
-              "height": "0px",
-            }
-          }
-        />
-        <div
-          className="key-"
-          style={
-            Object {
-              "height": "0px",
-            }
-          }
-        />
-        <div
-          className="key-"
-          style={
-            Object {
-              "height": "0px",
-            }
-          }
-        />
-        <div
-          className="key-"
-          style={
-            Object {
-              "height": "0px",
-            }
-          }
-        />
-        <div
-          className="key-"
-          style={
-            Object {
-              "height": "0px",
-            }
-          }
-        />
-        <div
-          className="key-"
-          style={
-            Object {
-              "height": "0px",
-            }
-          }
-        />
-        <div
-          className="key-"
-          style={
-            Object {
-              "height": "0px",
-            }
-          }
-        />
-        <div
-          className="key-"
-          style={
-            Object {
-              "height": "0px",
-            }
-          }
-        />
-        <div
-          className="key-rightshift gray-bg"
-          style={
-            Object {
-              "height": "0px",
-            }
-          }
-        />
+        <div>
+          #
+        </div>
+        <div>
+          3
+        </div>
       </div>
       <div
-        className="row-5"
+        className="key-4"
+        data-down="4"
+        data-up="₱"
+        onClick={[Function]}
+      >
+        <div>
+          $
+          <span
+            className="red-fg"
+          >
+            ₱
+          </span>
+        </div>
+        <div>
+          4
+        </div>
+      </div>
+      <div
+        className="key-5"
+        data-down="5"
+        data-up="%"
+        onClick={[Function]}
+      >
+        <div>
+          %
+        </div>
+        <div>
+          5
+        </div>
+      </div>
+      <div
+        className="key-6"
+        data-down="6"
+        data-up="^"
+        onClick={[Function]}
+      >
+        <div>
+          ^
+        </div>
+        <div>
+          6
+        </div>
+      </div>
+      <div
+        className="key-7"
+        data-down="7"
+        data-up="&"
+        onClick={[Function]}
+      >
+        <div>
+          &
+        </div>
+        <div>
+          7
+        </div>
+      </div>
+      <div
+        className="key-8"
+        data-down="8"
+        data-up="*"
+        onClick={[Function]}
+      >
+        <div>
+          *
+        </div>
+        <div>
+          8
+        </div>
+      </div>
+      <div
+        className="key-9"
+        data-down="9"
+        data-up="("
+        onClick={[Function]}
+      >
+        <div>
+          (
+        </div>
+        <div>
+          9
+        </div>
+      </div>
+      <div
+        className="key-0"
+        data-down="0"
+        data-up=")"
+        onClick={[Function]}
+      >
+        <div>
+          )
+        </div>
+        <div>
+          0
+        </div>
+      </div>
+      <div
+        className="key-dash"
+        data-down="-"
+        data-up="_"
+        onClick={[Function]}
+      >
+        <div>
+          _
+        </div>
+        <div>
+          -
+        </div>
+      </div>
+      <div
+        className="key-equal"
+        data-down="="
+        data-up="+"
+        onClick={[Function]}
+      >
+        <div>
+          +
+        </div>
+        <div>
+          =
+          <img
+            alt=""
+            src="virama.png"
+          />
+        </div>
+      </div>
+      <div
+        className="key-backspace gray-bg"
+        onClick={[Function]}
+      >
+        <div />
+        <div>
+          BackSpace
+        </div>
+      </div>
+      <div
+        className="key-tab gray-bg"
+      >
+        <div />
+        <div>
+          Tab
+        </div>
+      </div>
+      <div
+        className="key-q"
+        data-down="q"
+        data-up="Q"
+        onClick={[Function]}
+      >
+        <div>
+          Q
+          <span
+            className="pink-fg"
+          >
+            ᜃ᜔ᜏ
+          </span>
+        </div>
+        <div>
+          q
+          <span
+            className="pink-fg"
+          >
+            ᜃᜓᜏ
+          </span>
+        </div>
+      </div>
+      <div
+        className="key-w"
+        data-down="w"
+        data-up="W"
+        onClick={[Function]}
+      >
+        <div>
+          W
+        </div>
+        <div>
+          w
+          <span
+            className="pink-fg"
+          >
+            ᜏ
+          </span>
+        </div>
+      </div>
+      <div
+        className="key-e"
+        data-down="e"
+        data-up="E"
+        onClick={[Function]}
+      >
+        <div>
+          E
+          <span
+            className="pink-fg"
+          >
+            ᜁ
+          </span>
+        </div>
+        <div>
+          e
+          <img
+            alt=""
+            src="kudlit-e.png"
+          />
+        </div>
+      </div>
+      <div
+        className="key-r"
+        data-down="r"
+        data-up="R"
+        onClick={[Function]}
+      >
+        <div>
+          R
+        </div>
+        <div>
+          r
+          <span
+            className="pink-fg"
+          >
+            ᜍ
+          </span>
+        </div>
+      </div>
+      <div
+        className="key-t"
+        data-down="t"
+        data-up="T"
+        onClick={[Function]}
+      >
+        <div>
+          T
+        </div>
+        <div>
+          t
+          <span
+            className="pink-fg"
+          >
+            ᜆ
+          </span>
+        </div>
+      </div>
+      <div
+        className="key-y"
+        data-down="y"
+        data-up="Y"
+        onClick={[Function]}
+      >
+        <div>
+          Y
+        </div>
+        <div>
+          y
+          <span
+            className="pink-fg"
+          >
+            ᜌ
+          </span>
+        </div>
+      </div>
+      <div
+        className="key-u"
+        data-down="u"
+        data-up="U"
+        onClick={[Function]}
+      >
+        <div>
+          U
+          <span
+            className="pink-fg"
+          >
+            ᜂ
+          </span>
+        </div>
+        <div>
+          u
+          <img
+            alt=""
+            src="kudlit-u.png"
+          />
+        </div>
+      </div>
+      <div
+        className="key-i"
+        data-down="i"
+        data-up="I"
+        onClick={[Function]}
+      >
+        <div>
+          I
+          <span
+            className="pink-fg"
+          >
+            ᜁ
+          </span>
+        </div>
+        <div>
+          i
+          <img
+            alt=""
+            src="kudlit-i.png"
+          />
+        </div>
+      </div>
+      <div
+        className="key-o"
+        data-down="o"
+        data-up="O"
+        onClick={[Function]}
+      >
+        <div>
+          O
+          <span
+            className="pink-fg"
+          >
+            ᜂ
+          </span>
+        </div>
+        <div>
+          o
+          <img
+            alt=""
+            src="kudlit-o.png"
+          />
+        </div>
+      </div>
+      <div
+        className="key-p"
+        data-down="p"
+        data-up="P"
+        onClick={[Function]}
+      >
+        <div>
+          P
+        </div>
+        <div>
+          p
+          <span
+            className="pink-fg"
+          >
+            ᜉ
+          </span>
+        </div>
+      </div>
+      <div
+        className="key-leftbracket"
+        data-down="["
+        data-up="{"
+        onClick={[Function]}
+      >
+        <div>
+          {
+        </div>
+        <div>
+          [
+        </div>
+      </div>
+      <div
+        className="key-rightbracket"
+        data-down="]"
+        data-up="}"
+        onClick={[Function]}
+      >
+        <div>
+          }
+        </div>
+        <div>
+          ]
+        </div>
+      </div>
+      <div
+        className="key-backslash"
+        data-down="\\\\"
+        data-up="|"
+        onClick={[Function]}
+      >
+        <div>
+          |
+        </div>
+        <div>
+          \\
+        </div>
+      </div>
+      <div
+        className="key-capslock gray-bg"
+        onClick={[Function]}
       >
         <div
-          className="key-leftctrl gray-bg"
+          className="capslight"
           style={
             Object {
-              "height": "0px",
+              "color": "#fff",
             }
           }
-        />
-        <div
-          className="key-empty gray-bg"
-          style={
-            Object {
-              "height": "0px",
-            }
-          }
-        />
-        <div
-          className="key-leftalt gray-bg"
-          style={
-            Object {
-              "height": "0px",
-            }
-          }
-        />
-        <div
-          className="key-"
-          style={
-            Object {
-              "height": "0px",
-            }
-          }
-        />
-        <div
-          className="key-rightalt gray-bg"
-          style={
-            Object {
-              "height": "0px",
-            }
-          }
-        />
-        <div
-          className="key-empty gray-bg"
-          style={
-            Object {
-              "height": "0px",
-            }
-          }
-        />
-        <div
-          className="key-menu gray-bg"
-          style={
-            Object {
-              "height": "0px",
-            }
-          }
-        />
-        <div
-          className="key-rightctrl gray-bg"
-          style={
-            Object {
-              "height": "0px",
-            }
-          }
-        />
+        >
+          •
+        </div>
+        <div>
+          Capslock
+        </div>
+      </div>
+      <div
+        className="key-a"
+        data-down="a"
+        data-up="A"
+        onClick={[Function]}
+      >
+        <div>
+          A
+          <span
+            className="pink-fg"
+          >
+            ᜀ
+          </span>
+        </div>
+        <div>
+          a
+        </div>
+      </div>
+      <div
+        className="key-s"
+        data-down="s"
+        data-up="S"
+        onClick={[Function]}
+      >
+        <div>
+          S
+        </div>
+        <div>
+          s
+          <span
+            className="pink-fg"
+          >
+            ᜐ
+          </span>
+        </div>
+      </div>
+      <div
+        className="key-d"
+        data-down="d"
+        data-up="D"
+        onClick={[Function]}
+      >
+        <div>
+          D
+        </div>
+        <div>
+          d
+          <span
+            className="pink-fg"
+          >
+            ᜇ
+          </span>
+        </div>
+      </div>
+      <div
+        className="key-f"
+        data-down="f"
+        data-up="F"
+        onClick={[Function]}
+      >
+        <div>
+          F
+        </div>
+        <div>
+          f
+          <span
+            className="pink-fg"
+          >
+            ᜉ
+          </span>
+        </div>
+      </div>
+      <div
+        className="key-g"
+        data-down="g"
+        data-up="G"
+        onClick={[Function]}
+      >
+        <div>
+          G
+        </div>
+        <div>
+          g
+          <span
+            className="pink-fg"
+          >
+            ᜄ
+          </span>
+        </div>
+      </div>
+      <div
+        className="key-h"
+        data-down="h"
+        data-up="H"
+        onClick={[Function]}
+      >
+        <div>
+          H
+        </div>
+        <div>
+          h
+          <span
+            className="pink-fg"
+          >
+            ᜑ
+          </span>
+        </div>
+      </div>
+      <div
+        className="key-j"
+        data-down="j"
+        data-up="J"
+        onClick={[Function]}
+      >
+        <div>
+          J
+          <span
+            className="pink-fg"
+          >
+            ᜇ᜔ᜌ
+          </span>
+        </div>
+        <div>
+          j
+          <span
+            className="pink-fg"
+          >
+            ᜇᜒᜌ
+          </span>
+        </div>
+      </div>
+      <div
+        className="key-k"
+        data-down="k"
+        data-up="K"
+        onClick={[Function]}
+      >
+        <div>
+          K
+        </div>
+        <div>
+          k
+          <span
+            className="pink-fg"
+          >
+            ᜃ
+          </span>
+        </div>
+      </div>
+      <div
+        className="key-l"
+        data-down="l"
+        data-up="L"
+        onClick={[Function]}
+      >
+        <div>
+          L
+        </div>
+        <div>
+          l
+          <span
+            className="pink-fg"
+          >
+            ᜎ
+          </span>
+        </div>
+      </div>
+      <div
+        className="key-colon"
+        data-down=";"
+        data-up=":"
+        onClick={[Function]}
+      >
+        <div>
+          :
+        </div>
+        <div>
+          ;
+        </div>
+      </div>
+      <div
+        className="key-quote"
+        data-down="'"
+        data-up="\\""
+        onClick={[Function]}
+      >
+        <div>
+          "
+        </div>
+        <div>
+          '
+        </div>
+      </div>
+      <div
+        className="key-enter gray-bg"
+        data-down="
+"
+        data-up="
+"
+        onClick={[Function]}
+      >
+        <div />
+        <div>
+          Enter
+        </div>
+      </div>
+      <div
+        className="key-leftshift gray-bg"
+        onClick={[Function]}
+      >
+        <div />
+        <div>
+          Shift
+        </div>
+      </div>
+      <div
+        className="key-z"
+        data-down="z"
+        data-up="Z"
+        onClick={[Function]}
+      >
+        <div>
+          Z
+        </div>
+        <div>
+          z
+          <span
+            className="pink-fg"
+          >
+            ᜐ
+          </span>
+        </div>
+      </div>
+      <div
+        className="key-x"
+        data-down="x"
+        data-up="X"
+        onClick={[Function]}
+      >
+        <div>
+          X
+        </div>
+        <div>
+          x
+          <span
+            className="pink-fg"
+          >
+            ᜃ᜔ᜐ
+          </span>
+        </div>
+      </div>
+      <div
+        className="key-c"
+        data-down="c"
+        data-up="C"
+        onClick={[Function]}
+      >
+        <div>
+          C
+          <span
+            className="pink-fg"
+          >
+            ᜆ᜔ᜐ
+          </span>
+        </div>
+        <div>
+          c
+          <span
+            className="pink-fg"
+          >
+            ᜃ
+          </span>
+        </div>
+      </div>
+      <div
+        className="key-v"
+        data-down="v"
+        data-up="V"
+        onClick={[Function]}
+      >
+        <div>
+          V
+        </div>
+        <div>
+          v
+        </div>
+      </div>
+      <div
+        className="key-b"
+        data-down="b"
+        data-up="B"
+        onClick={[Function]}
+      >
+        <div>
+          B
+        </div>
+        <div>
+          b
+          <span
+            className="pink-fg"
+          >
+            ᜊ
+          </span>
+        </div>
+      </div>
+      <div
+        className="key-n"
+        data-down="n"
+        data-up="N"
+        onClick={[Function]}
+      >
+        <div>
+          N
+          <span
+            className="pink-fg"
+          >
+            ᜅ
+          </span>
+        </div>
+        <div>
+          n
+          <span
+            className="pink-fg"
+          >
+            ᜈ
+          </span>
+        </div>
+      </div>
+      <div
+        className="key-m"
+        data-down="m"
+        data-up="M"
+        onClick={[Function]}
+      >
+        <div>
+          M
+        </div>
+        <div>
+          m
+          <span
+            className="pink-fg"
+          >
+            ᜋ
+          </span>
+        </div>
+      </div>
+      <div
+        className="key-comma"
+        data-down=","
+        data-up="<"
+        onClick={[Function]}
+      >
+        <div>
+          &lt;
+        </div>
+        <div>
+          ,
+        </div>
+      </div>
+      <div
+        className="key-period"
+        data-down="."
+        data-up=">"
+        onClick={[Function]}
+      >
+        <div>
+          &gt;
+        </div>
+        <div>
+          .
+        </div>
+      </div>
+      <div
+        className="key-slash"
+        data-down="/"
+        data-up="?"
+        onClick={[Function]}
+      >
+        <div>
+          ?
+        </div>
+        <div>
+          /
+        </div>
+      </div>
+      <div
+        className="key-rightshift gray-bg"
+        onClick={[Function]}
+      >
+        <div />
+        <div>
+          Shift
+        </div>
+      </div>
+      <div
+        className="key-leftctrl gray-bg"
+      >
+        <div />
+        <div>
+          Control
+        </div>
+      </div>
+      <div
+        className="key-empty1 gray-bg"
+      />
+      <div
+        className="key-leftalt gray-bg"
+      >
+        <div />
+        <div>
+          Alt
+        </div>
+      </div>
+      <div
+        className="key-spacebar"
+        data-down=" "
+        data-up=" "
+        onClick={[Function]}
+      />
+      <div
+        className="key-rightalt gray-bg"
+      >
+        <div />
+        <div>
+          Alt
+        </div>
+      </div>
+      <div
+        className="key-empty2 gray-bg"
+      />
+      <div
+        className="key-rightctrl gray-bg"
+      >
+        <div />
+        <div>
+          Control
+        </div>
       </div>
     </div>
   </div>
