@@ -218,7 +218,7 @@ export default class BaybayinTranslator extends React.Component {
         };
         
         this.previewMessage = `${isMobile() ? '↑↑↑' : '← ← ←'} type or paste something there<br/>and see the translation here. ↓↓↓<br/><br/><i style="color: #ff00ff"><b>Note:</b><br/>This is an assisted and automatic translator as you type.  No need to worry on the convention of typing on a baybayin keyboard.  Just type normally as you would.</i>`;
-        this.manualKeyboardMessage = `<i style="color: #ff00ff"><b>Note:</b><br/>Follow typing pattern to/off characters indicated on the keyboard.</i>`;
+        this.manualKeyboardMessage = `<i style="color: #ff00ff"><b>Note:</b><br/>Follow typing pattern to/off characters indicated on the keyboard.<br/><br/>Do take note that...<ul><li>this is case sensitive</li><li>copy and paste will NOT work properly</li></ul> on this setting.  For more details, visit and read <a href='https://sim.portfolio.ph/howto/how-to-use-the-baybayin-keyboard/' target="_blank"}>this</a> article.</i>`;
         
         this.state = {
             baybayin: '',
@@ -282,7 +282,7 @@ export default class BaybayinTranslator extends React.Component {
     
             this.setState({
                 baybayin: e.target.value,
-                translation: (this.translate(e.target.value) || this.manualKeyboardMessage).toLowerCase()
+                translation: this.translate(e.target.value) ? this.translate(e.target.value).toLowerCase() : this.manualKeyboardMessage
             })
         }
     };
@@ -336,6 +336,10 @@ export default class BaybayinTranslator extends React.Component {
     componentWillUnmount() {
         document.removeEventListener('keydown', this.componentKeyDownHandler, false);
         document.removeEventListener('keyup', this.componentKeyUpHandler, false);
+    }
+    
+    componentDidUpdate(prevProps) {
+        if (prevProps.autoAssist !== this.props.autoAssist) this.onTextAreaChange({target: {value: this.textAreaNode.value}})
     }
     
     render() {
@@ -498,6 +502,9 @@ export default class BaybayinTranslator extends React.Component {
                     
                     <div
                         className={'key-tab gray-bg'}
+                        data-up='	'
+                        data-down='	'
+                        onClick={this.onKeyClick}
                     >
                         <div/>
                         <div>Tab</div>

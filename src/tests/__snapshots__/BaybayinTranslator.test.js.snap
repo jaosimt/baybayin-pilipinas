@@ -216,6 +216,9 @@ exports[`renders correctly 1`] = `
       </div>
       <div
         className="key-tab gray-bg"
+        data-down="	"
+        data-up="	"
+        onClick={[Function]}
       >
         <div />
         <div>

@@ -54,6 +54,12 @@
             color: gainsboro;
             font-size: small;
         }
+        
+        ul {
+            margin: 7px;
+            color: red;
+            font-size: smaller;
+        }
     }
     
     .info {
@@ -186,9 +192,9 @@
     .baybayin-translator {
         grid-template-columns: auto;
         grid-template-areas:
-            'info'
             'text-area'
-            'preview';
+            'preview'
+            'info';
         grid-column-gap: 14px;
         
         textarea,
@@ -199,6 +205,7 @@
         textarea,
         .preview {
             padding: 7px;
+            height: 180px;
         }
         
         textarea {
@@ -212,12 +219,9 @@
         }
         
         .info {
-            margin-top: 0;
-            margin-bottom: 16px;
-            min-height: 150px;
-            margin-left: -14px;
-            width: calc(100% + 28px);
+            padding: 0;
             border-radius: 0;
+            border: none;
         }
     }
 }

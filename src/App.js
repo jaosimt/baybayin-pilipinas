@@ -6,6 +6,7 @@ import {carouselImages, homeItems} from "./data";
 import HomeTiles from "./components/Content/HomeTiles/HomeTiles";
 import About from "./components/Content/About";
 import BaybayinTranslator from "./components/Content/BaybayinTranslator";
+import {isMobile} from "./utils";
 
 export default class App extends React.Component {
     state = {
@@ -16,7 +17,7 @@ export default class App extends React.Component {
     
     onMenuClick = (e) => {
         this.setState({selected: e.target.getAttribute('name')});
-        window.scrollTo({top: 500, behavior: 'smooth'});
+        window.scrollTo({top: isMobile() ? 200 : 500, behavior: 'smooth'});
     };
     
     onBPClick = (e) => {
@@ -82,17 +83,19 @@ export default class App extends React.Component {
                                 Baybayin Translator
                                 <span
                                     style={{float: 'right'}}
-                                    onClick={this.onAutoClick}
                                     title={'keyboard assist on/off'}
+                                    onClick={this.onAutoClick}
                                 >
-                                    <input
-                                        type={'checkbox'}
-                                        onChange={this.onAutoClick}
-                                        onClick={this.onAutoNoClick}
-                                        checked={this.state.auto}
-                                    />
                                     auto
                                 </span>
+                                <input
+                                    type={'checkbox'}
+                                    style={{float: 'right'}}
+                                    title={'keyboard assist on/off'}
+                                    onChange={this.onAutoClick}
+                                    onClick={this.onAutoNoClick}
+                                    checked={this.state.auto}
+                                />
                             </li>
                             
                             <li
