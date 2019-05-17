@@ -77,7 +77,7 @@ export default class ImageSlider extends React.Component {
                             onClick={this.onCarouselImageClick}
                             style={{
                                 left: `${thisLeft}%`,
-                                background: `black url(${img.image}) no-repeat center`,
+                                background: `#ff00ff url(${img.image}) no-repeat center`,
                                 backgroundSize: backgroundSize
                             }}
                         >
