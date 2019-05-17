@@ -8,7 +8,6 @@ import baybayinConferenceProgram from './images/carousel/Baybayin-conference-pro
 import hashTag from './images/carousel/hashTagFilipinoAncientWriting.jpg';
 import kultura from './images/carousel/kultura.jpg';
 import chars from './images/carousel/baybayinCharacters.png';
-import saligUgOras from './images/carousel/saligUgOras.jpg';
 
 
 export const homeItems = articles;
@@ -33,11 +32,6 @@ export const carouselImages = [
         image: theRules01,
         name: '',
         link: 'https://www.facebook.com/baybayinpinas/'
-    },
-    {
-        image: saligUgOras,
-        name: '',
-        link: ''
     },
     {
         image: phNativeScrips,

@@ -23,7 +23,7 @@ exports[`renders correctly 1`] = `
       className="keyboard"
     >
       <div
-        className="key-tilde"
+        className="key-tilde red-ish"
         data-down="\`"
         data-up="~"
         onClick={[Function]}
@@ -41,7 +41,7 @@ exports[`renders correctly 1`] = `
         </div>
       </div>
       <div
-        className="key-1"
+        className="key-1 gray-ish"
         data-down="1"
         data-up="!"
         onClick={[Function]}
@@ -54,7 +54,7 @@ exports[`renders correctly 1`] = `
         </div>
       </div>
       <div
-        className="key-2"
+        className="key-2 gray-ish"
         data-down="2"
         data-up="@"
         onClick={[Function]}
@@ -67,7 +67,7 @@ exports[`renders correctly 1`] = `
         </div>
       </div>
       <div
-        className="key-3"
+        className="key-3 gray-ish"
         data-down="3"
         data-up="#"
         onClick={[Function]}
@@ -80,7 +80,7 @@ exports[`renders correctly 1`] = `
         </div>
       </div>
       <div
-        className="key-4"
+        className="key-4 gray-ish"
         data-down="4"
         data-up="₱"
         onClick={[Function]}
@@ -98,7 +98,7 @@ exports[`renders correctly 1`] = `
         </div>
       </div>
       <div
-        className="key-5"
+        className="key-5 gray-ish"
         data-down="5"
         data-up="%"
         onClick={[Function]}
@@ -111,7 +111,7 @@ exports[`renders correctly 1`] = `
         </div>
       </div>
       <div
-        className="key-6"
+        className="key-6 gray-ish"
         data-down="6"
         data-up="^"
         onClick={[Function]}
@@ -124,7 +124,7 @@ exports[`renders correctly 1`] = `
         </div>
       </div>
       <div
-        className="key-7"
+        className="key-7 gray-ish"
         data-down="7"
         data-up="&"
         onClick={[Function]}
@@ -137,7 +137,7 @@ exports[`renders correctly 1`] = `
         </div>
       </div>
       <div
-        className="key-8"
+        className="key-8 gray-ish"
         data-down="8"
         data-up="*"
         onClick={[Function]}
@@ -150,7 +150,7 @@ exports[`renders correctly 1`] = `
         </div>
       </div>
       <div
-        className="key-9"
+        className="key-9 gray-ish"
         data-down="9"
         data-up="("
         onClick={[Function]}
@@ -163,7 +163,7 @@ exports[`renders correctly 1`] = `
         </div>
       </div>
       <div
-        className="key-0"
+        className="key-0 gray-ish"
         data-down="0"
         data-up=")"
         onClick={[Function]}
@@ -176,7 +176,7 @@ exports[`renders correctly 1`] = `
         </div>
       </div>
       <div
-        className="key-dash"
+        className="key-dash gray-ish"
         data-down="-"
         data-up="_"
         onClick={[Function]}
@@ -189,7 +189,7 @@ exports[`renders correctly 1`] = `
         </div>
       </div>
       <div
-        className="key-equal"
+        className="key-equal blue-ish"
         data-down="="
         data-up="+"
         onClick={[Function]}
@@ -226,7 +226,7 @@ exports[`renders correctly 1`] = `
         </div>
       </div>
       <div
-        className="key-q"
+        className="key-q red-ish"
         data-down="q"
         data-up="Q"
         onClick={[Function]}
@@ -249,7 +249,7 @@ exports[`renders correctly 1`] = `
         </div>
       </div>
       <div
-        className="key-w"
+        className="key-w green-ish"
         data-down="w"
         data-up="W"
         onClick={[Function]}
@@ -267,7 +267,7 @@ exports[`renders correctly 1`] = `
         </div>
       </div>
       <div
-        className="key-e"
+        className="key-e blue-ish"
         data-down="e"
         data-up="E"
         onClick={[Function]}
@@ -289,7 +289,7 @@ exports[`renders correctly 1`] = `
         </div>
       </div>
       <div
-        className="key-r"
+        className="key-r red-ish"
         data-down="r"
         data-up="R"
         onClick={[Function]}
@@ -307,7 +307,7 @@ exports[`renders correctly 1`] = `
         </div>
       </div>
       <div
-        className="key-t"
+        className="key-t green-ish"
         data-down="t"
         data-up="T"
         onClick={[Function]}
@@ -325,7 +325,7 @@ exports[`renders correctly 1`] = `
         </div>
       </div>
       <div
-        className="key-y"
+        className="key-y green-ish"
         data-down="y"
         data-up="Y"
         onClick={[Function]}
@@ -343,7 +343,7 @@ exports[`renders correctly 1`] = `
         </div>
       </div>
       <div
-        className="key-u"
+        className="key-u blue-ish"
         data-down="u"
         data-up="U"
         onClick={[Function]}
@@ -365,7 +365,7 @@ exports[`renders correctly 1`] = `
         </div>
       </div>
       <div
-        className="key-i"
+        className="key-i blue-ish"
         data-down="i"
         data-up="I"
         onClick={[Function]}
@@ -387,7 +387,7 @@ exports[`renders correctly 1`] = `
         </div>
       </div>
       <div
-        className="key-o"
+        className="key-o blue-ish"
         data-down="o"
         data-up="O"
         onClick={[Function]}
@@ -409,7 +409,7 @@ exports[`renders correctly 1`] = `
         </div>
       </div>
       <div
-        className="key-p"
+        className="key-p green-ish"
         data-down="p"
         data-up="P"
         onClick={[Function]}
@@ -427,7 +427,7 @@ exports[`renders correctly 1`] = `
         </div>
       </div>
       <div
-        className="key-leftbracket"
+        className="key-leftbracket gray-ish"
         data-down="["
         data-up="{"
         onClick={[Function]}
@@ -440,7 +440,7 @@ exports[`renders correctly 1`] = `
         </div>
       </div>
       <div
-        className="key-rightbracket"
+        className="key-rightbracket gray-ish"
         data-down="]"
         data-up="}"
         onClick={[Function]}
@@ -453,7 +453,7 @@ exports[`renders correctly 1`] = `
         </div>
       </div>
       <div
-        className="key-backslash"
+        className="key-backslash gray-ish"
         data-down="\\\\"
         data-up="|"
         onClick={[Function]}
@@ -484,7 +484,7 @@ exports[`renders correctly 1`] = `
         </div>
       </div>
       <div
-        className="key-a"
+        className="key-a blue-ish"
         data-down="a"
         data-up="A"
         onClick={[Function]}
@@ -502,7 +502,7 @@ exports[`renders correctly 1`] = `
         </div>
       </div>
       <div
-        className="key-s"
+        className="key-s green-ish"
         data-down="s"
         data-up="S"
         onClick={[Function]}
@@ -520,7 +520,7 @@ exports[`renders correctly 1`] = `
         </div>
       </div>
       <div
-        className="key-d"
+        className="key-d green-ish"
         data-down="d"
         data-up="D"
         onClick={[Function]}
@@ -538,7 +538,7 @@ exports[`renders correctly 1`] = `
         </div>
       </div>
       <div
-        className="key-f"
+        className="key-f red-ish"
         data-down="f"
         data-up="F"
         onClick={[Function]}
@@ -556,7 +556,7 @@ exports[`renders correctly 1`] = `
         </div>
       </div>
       <div
-        className="key-g"
+        className="key-g green-ish"
         data-down="g"
         data-up="G"
         onClick={[Function]}
@@ -574,7 +574,7 @@ exports[`renders correctly 1`] = `
         </div>
       </div>
       <div
-        className="key-h"
+        className="key-h green-ish"
         data-down="h"
         data-up="H"
         onClick={[Function]}
@@ -592,7 +592,7 @@ exports[`renders correctly 1`] = `
         </div>
       </div>
       <div
-        className="key-j"
+        className="key-j red-ish"
         data-down="j"
         data-up="J"
         onClick={[Function]}
@@ -615,7 +615,7 @@ exports[`renders correctly 1`] = `
         </div>
       </div>
       <div
-        className="key-k"
+        className="key-k green-ish"
         data-down="k"
         data-up="K"
         onClick={[Function]}
@@ -633,7 +633,7 @@ exports[`renders correctly 1`] = `
         </div>
       </div>
       <div
-        className="key-l"
+        className="key-l green-ish"
         data-down="l"
         data-up="L"
         onClick={[Function]}
@@ -651,7 +651,7 @@ exports[`renders correctly 1`] = `
         </div>
       </div>
       <div
-        className="key-colon"
+        className="key-colon gray-ish"
         data-down=";"
         data-up=":"
         onClick={[Function]}
@@ -664,7 +664,7 @@ exports[`renders correctly 1`] = `
         </div>
       </div>
       <div
-        className="key-quote"
+        className="key-quote gray-ish"
         data-down="'"
         data-up="\\""
         onClick={[Function]}
@@ -699,7 +699,7 @@ exports[`renders correctly 1`] = `
         </div>
       </div>
       <div
-        className="key-z"
+        className="key-z red-ish"
         data-down="z"
         data-up="Z"
         onClick={[Function]}
@@ -717,7 +717,7 @@ exports[`renders correctly 1`] = `
         </div>
       </div>
       <div
-        className="key-x"
+        className="key-x red-ish"
         data-down="x"
         data-up="X"
         onClick={[Function]}
@@ -735,7 +735,7 @@ exports[`renders correctly 1`] = `
         </div>
       </div>
       <div
-        className="key-c"
+        className="key-c red-ish"
         data-down="c"
         data-up="C"
         onClick={[Function]}
@@ -758,7 +758,7 @@ exports[`renders correctly 1`] = `
         </div>
       </div>
       <div
-        className="key-v"
+        className="key-v red-ish"
         data-down="v"
         data-up="V"
         onClick={[Function]}
@@ -771,7 +771,7 @@ exports[`renders correctly 1`] = `
         </div>
       </div>
       <div
-        className="key-b"
+        className="key-b green-ish"
         data-down="b"
         data-up="B"
         onClick={[Function]}
@@ -789,7 +789,7 @@ exports[`renders correctly 1`] = `
         </div>
       </div>
       <div
-        className="key-n"
+        className="key-n green-ish"
         data-down="n"
         data-up="N"
         onClick={[Function]}
@@ -812,7 +812,7 @@ exports[`renders correctly 1`] = `
         </div>
       </div>
       <div
-        className="key-m"
+        className="key-m green-ish"
         data-down="m"
         data-up="M"
         onClick={[Function]}
@@ -830,7 +830,7 @@ exports[`renders correctly 1`] = `
         </div>
       </div>
       <div
-        className="key-comma"
+        className="key-comma gray-ish"
         data-down=","
         data-up="<"
         onClick={[Function]}
@@ -843,7 +843,7 @@ exports[`renders correctly 1`] = `
         </div>
       </div>
       <div
-        className="key-period"
+        className="key-period gray-ish"
         data-down="."
         data-up=">"
         onClick={[Function]}
@@ -856,7 +856,7 @@ exports[`renders correctly 1`] = `
         </div>
       </div>
       <div
-        className="key-slash"
+        className="key-slash gray-ish"
         data-down="/"
         data-up="?"
         onClick={[Function]}
@@ -886,7 +886,7 @@ exports[`renders correctly 1`] = `
         </div>
       </div>
       <div
-        className="key-empty1 gray-bg"
+        className="key-empty one gray-bg"
       />
       <div
         className="key-leftalt gray-bg"
@@ -897,7 +897,7 @@ exports[`renders correctly 1`] = `
         </div>
       </div>
       <div
-        className="key-spacebar"
+        className="key-spacebar gray-ish"
         data-down=" "
         data-up=" "
         onClick={[Function]}
@@ -911,7 +911,7 @@ exports[`renders correctly 1`] = `
         </div>
       </div>
       <div
-        className="key-empty2 gray-bg"
+        className="key-empty two gray-bg"
       />
       <div
         className="key-rightctrl gray-bg"
