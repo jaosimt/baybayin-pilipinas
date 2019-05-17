@@ -1,47 +1,51 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "75d0691444be67802e1c5cb6558d22b1",
+    "revision": "898caa9566c0ecf6a4746521eee3cb7e",
     "url": "/baybayin-pilipinas/index.html"
   },
   {
-    "revision": "4c0edae90fe78d70434b",
-    "url": "/baybayin-pilipinas/static/css/main.bb11ec29.chunk.css"
+    "revision": "63ae08a7bec80007a7ce",
+    "url": "/baybayin-pilipinas/static/css/main.d558366e.chunk.css"
   },
   {
-    "revision": "6a2b1476f7d237856876",
-    "url": "/baybayin-pilipinas/static/js/2.fd79b5bb.chunk.js"
+    "revision": "26f1aef6708f79161966",
+    "url": "/baybayin-pilipinas/static/js/2.031d6a08.chunk.js"
   },
   {
-    "revision": "4c0edae90fe78d70434b",
-    "url": "/baybayin-pilipinas/static/js/main.3bf6aade.chunk.js"
+    "revision": "63ae08a7bec80007a7ce",
+    "url": "/baybayin-pilipinas/static/js/main.34bc9c43.chunk.js"
   },
   {
     "revision": "bfd27539ba100a7d531e",
     "url": "/baybayin-pilipinas/static/js/runtime~main.3be3e604.js"
   },
   {
-    "revision": "0a279b26abfdc968bf9b97921a01a8f2",
-    "url": "/baybayin-pilipinas/static/media/Baybayin-Carved-on-Bamboo-Stem.0a279b26.jpg"
+    "revision": "8302e208ba47a08c62257a08207a69f0",
+    "url": "/baybayin-pilipinas/static/media/Baybayin-Carved-on-Bamboo-Stem.8302e208.jpg"
   },
   {
-    "revision": "38e5b3bec3cce09f07a2ae0e4cc8bf71",
-    "url": "/baybayin-pilipinas/static/media/Baybayin-conference-program.38e5b3be.jpg"
+    "revision": "305c3294928af8968f320558e124a4e9",
+    "url": "/baybayin-pilipinas/static/media/Baybayin-conference-program.305c3294.jpg"
   },
   {
     "revision": "b6b3fe0e3e05409a1057fb9cd42db70c",
     "url": "/baybayin-pilipinas/static/media/Baybayin_Clu.b6b3fe0e.ttf"
   },
   {
-    "revision": "3a4d2c3ad22c961b01bd88075706e564",
-    "url": "/baybayin-pilipinas/static/media/Philippine-scripts-Interaksyon.3a4d2c3a.jpg"
+    "revision": "a2d609ed23e0c7380604d73833e317da",
+    "url": "/baybayin-pilipinas/static/media/Philippine-scripts-Interaksyon.a2d609ed.jpg"
   },
   {
     "revision": "15868e7b5e6b10426d29518907265165",
     "url": "/baybayin-pilipinas/static/media/baybayinBuhayin.15868e7b.jpg"
   },
   {
-    "revision": "e5954684892a0719245b2a65fe4c4cd8",
-    "url": "/baybayin-pilipinas/static/media/baybayinCharacters.e5954684.png"
+    "revision": "56b4a9077e900036ec19db5ccb4e3fad",
+    "url": "/baybayin-pilipinas/static/media/baybayinCharacters.56b4a907.png"
+  },
+  {
+    "revision": "7ee7dc7ed4c59a05ecb5c33dd6c03100",
+    "url": "/baybayin-pilipinas/static/media/baybayinCharacters.7ee7dc7e.jpg"
   },
   {
     "revision": "37ed98cf499432fe69a929aaa59b2694",
@@ -64,8 +68,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/baybayin-pilipinas/static/media/baylogo2.f219cd13.png"
   },
   {
-    "revision": "d64da002b9e816ad242e417dbea43e4b",
-    "url": "/baybayin-pilipinas/static/media/hashTagFilipinoAncientWriting.d64da002.jpg"
+    "revision": "ec1300f7b5fc3437be9c2cbcf39a2939",
+    "url": "/baybayin-pilipinas/static/media/hashTagFilipinoAncientWriting.ec1300f7.jpg"
+  },
+  {
+    "revision": "598ac82fc56fda998eff340d424b6ced",
+    "url": "/baybayin-pilipinas/static/media/icon-0.598ac82f.png"
   },
   {
     "revision": "badc979eb171288c92be9ba7bc40831e",
@@ -88,8 +96,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/baybayin-pilipinas/static/media/kudlit-u.9996ef3a.png"
   },
   {
-    "revision": "72636806f3fdc2a0fce09dca95ed871b",
-    "url": "/baybayin-pilipinas/static/media/kultura.72636806.jpg"
+    "revision": "d03f99c9e17ca363dddbc5360d72a3a8",
+    "url": "/baybayin-pilipinas/static/media/kultura.d03f99c9.jpg"
   },
   {
     "revision": "dbd2268bc293cf0f1fc7f559ffeb7c4e",
@@ -104,20 +112,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/baybayin-pilipinas/static/media/phWritingSystem.51fb3bce.jpg"
   },
   {
-    "revision": "a31c5b2abfc8d93ce003a426194033aa",
-    "url": "/baybayin-pilipinas/static/media/saligUgOras.a31c5b2a.jpg"
+    "revision": "332bc625cfb4030938f60d42a9e7be27",
+    "url": "/baybayin-pilipinas/static/media/theAncientPhScripts.332bc625.jpg"
   },
   {
-    "revision": "388b2801e0586e4338456a1e2f6a5f4f",
-    "url": "/baybayin-pilipinas/static/media/theAncientPhScripts.388b2801.jpg"
+    "revision": "fd7799c06f8ad1cbfcdcdfc4a566877a",
+    "url": "/baybayin-pilipinas/static/media/theRules.fd7799c0.jpg"
   },
   {
-    "revision": "e5c0d19313ba155999ac3f0ecd064cf1",
-    "url": "/baybayin-pilipinas/static/media/theRules.e5c0d193.jpg"
-  },
-  {
-    "revision": "9b76c831abe73cec6a932cc9f8b09177",
-    "url": "/baybayin-pilipinas/static/media/theRules01.9b76c831.jpg"
+    "revision": "ae8c176d7eed58d0273931984cccb958",
+    "url": "/baybayin-pilipinas/static/media/theRules01.ae8c176d.jpg"
   },
   {
     "revision": "87790ceb491e3856951d98d8fd112445",
