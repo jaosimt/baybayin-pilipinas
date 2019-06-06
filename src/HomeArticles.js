@@ -8,13 +8,27 @@ import baybayinScript from './images/homeItems/baybayinScript.jpg';
 import bayLogo from './images/homeItems/baylogo2.png';
 import baybayinChart from './images/homeItems/baychart.jpg';
 import phWritingSystem from './images/homeItems/phWritingSystem.jpg';
+import w10 from './images/homeItems/chari.jpg';
 
 export const articles = [
+    
     {
         title: 'How to use the Baybayin keyboard',
         url: 'https://sim.portfolio.ph/howto/how-to-use-the-baybayin-keyboard/',
         image: keyboard,
         description: 'Typing using a baybayin keyboard is not as simple as how we know typing is.  There are certain typing behaviours that we need to pay attention to.  For instance, typing a vowel character needs to be typed in with the caps lock on.'
+    },
+    {
+        title: 'Baybayin on Windows 10',
+        url: 'http://nordenx.blogspot.com/search/label/Windows%2010',
+        image: w10,
+        description: 'My desktop\'s transition to Windows 10 from Win8+ went smoothly. I was expecting a couple of old driver issues (my youngest son had to update his video drivers) but my old machine breezed through the auto installation process. The new OS and its new Internet browser Microsoft Edge has a lot of neat little features.\n' +
+        '\n' +
+        'Edge is simplified, clean, and performs well in most cases, but it’s lacking features you might expect of a modern browser. I noticed that downloads start automatically without giving me a choice of where the files are being stored. A lot of basic stuff feels surprisingly missing. To be fair, Microsoft noted that they started from scratch with Edge. ...it shows.\n' +
+        '\n' +
+        'A neat new feature: you can post little text notes and draw all over webpages and send a copy to friends. It’s useful if you want to quickly share a screenshot of a site with some annotation, but sadly it gets old quick.\n' +
+        '\n' +
+        'But as with most browsers, the one key thing I care about is performance, and Edge mostly delivers. Edge renders most popular websites smoothly, and load times are usually good. '
     },
     {
         title: 'Modified Baybayin',

@@ -80,7 +80,7 @@ export default class App extends React.Component {
                                 className={selected === 'translator' ? 'selected' : ''}
                                 onClick={this.onMenuClick}
                             >
-                                Baybayin Translator
+                                Baybayin Keyboard & Translator
                                 <span
                                     style={{float: 'right'}}
                                     title={'keyboard assist on/off'}
