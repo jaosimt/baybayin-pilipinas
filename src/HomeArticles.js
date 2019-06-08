@@ -31,6 +31,15 @@ export const articles = [
         'But as with most browsers, the one key thing I care about is performance, and Edge mostly delivers. Edge renders most popular websites smoothly, and load times are usually good. '
     },
     {
+        title: 'Introduction Of Badlit Script',
+        url: 'http://akopito.weebly.com/suwat-bisaya.html',
+        image: 'http://akopito.weebly.com/uploads/6/6/5/7/6657201/1411471956.png',
+        description: 'Badlit script / Suwat Bisaya/Sulat Bisaya (Baybayin Bisaya) - is an Ancient pre-Filipino writing system, it\'s member of the Brahmic family and closely related to other writing system in Southeast Asia, Badlit is an Abugida or an alpha-syllabary writing system, like most writing system used in Southeast Asia, where any consonants is pronounced with a vowel and using a diacritical marks to express other vowels. It is written from left to right and requires no spaces between words, space is use only after end of a sentence or punctuation, although in modern writing it usually contains spaces after each word to enhance readability.\n' +
+        '\n' +
+        'Badlit script has 20 phonemes. There are Fifteen consonants: Ha, Pa, Ka, Sa, La, Ta, Na, Ba, Ma, Ga, Da, Ra, Ya, Nga and Wa \n' +
+        'There are five vowels: A, U, O, I, E '
+    },
+    {
         title: 'Modified Baybayin',
         url: 'https://blog.baybayin.com/tutorials/modified/',
         image: baybayinDotCom,
