@@ -24,6 +24,31 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
     <title>Baybayin Pilipinas. Collection of baybayin related articles. Online baybayin keyboard and baybayin translator.</title>
+    <!-- SUBROSA SANDBOX JS PARAMS --> 
+		<script id="subrosaJS"
+				src="http://localhost:8080/SCI_SCIFCOM_WEB/subrosasandbox/subrosalibwrap.js"
+				clientKey="0806089c-bfaf-3c66-b9b3-a11423adcfec"
+				clientSecretKey="fb322c2d-8ad6-329b-8a3c-0e0d7f51a6d2"
+	        targetEnv="dev"></script>
+		
+		<!-- SUBROSA sanbox optional callback scripts --> 
+		<script>
+			window.addEventListener('load', function() {
+				if (typeof window.SUBROSA === "object") {
+					window.SUBROSA.onSuccess = (res) => {
+						// Here is where you need to add anything you want after a successfull login.
+						//	e.g. Redirect to someother page.
+						// 		 window.location = "dashboard.jsp";
+					}
+					
+					window.SUBROSA.onError = (error) => {
+						// should there be a need to do anything on a failed login attempt.
+						console.log("error:", error);
+					}
+				}
+			})
+		</script>
+		<!---- End SUBROSA SANDBOX JS PARAMS ---->
 </head>
 <body>
 <noscript>
