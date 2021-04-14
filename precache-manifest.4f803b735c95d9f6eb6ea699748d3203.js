@@ -1,18 +1,18 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "e59ed1e680dca489714d63d4de26d35f",
+    "revision": "4d303d695f680d66e92cb950d6cbb8e7",
     "url": "/baybayin-pilipinas/index.html"
   },
   {
-    "revision": "afe37da9177c6bcc1d32",
-    "url": "/baybayin-pilipinas/static/css/main.29acbee6.chunk.css"
+    "revision": "df483cba3d973b93a7d0",
+    "url": "/baybayin-pilipinas/static/css/main.86bbbb15.chunk.css"
   },
   {
     "revision": "444ecf001d225e3bd91c",
     "url": "/baybayin-pilipinas/static/js/2.5999c18b.chunk.js"
   },
   {
-    "revision": "afe37da9177c6bcc1d32",
+    "revision": "df483cba3d973b93a7d0",
     "url": "/baybayin-pilipinas/static/js/main.67c902bc.chunk.js"
   },
   {
