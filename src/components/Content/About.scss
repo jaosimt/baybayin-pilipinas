@@ -1,4 +1,9 @@
 @import "../../common";
+@import "../../fonts/Baybayin.css";
+
+.about.baybayin {
+    font-family: "Baybayin-Modern-Club", serif;
+}
 
 .about {
     border: 1px solid $babayi;

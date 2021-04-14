@@ -71,7 +71,7 @@ export default class About extends React.Component {
             language
         } = this.state;
         
-        return <div className={'about'}>
+        return <div className={ `about ${writing}` }>
             <div className={'language-settings'}>
                 <span>Writing System:</span>
                 
