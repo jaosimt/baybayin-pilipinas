@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/baybayin-pilipinas/static/css/main.da0d1dfe.chunk.css",
+    "main.css": "/baybayin-pilipinas/static/css/main.29acbee6.chunk.css",
     "main.js": "/baybayin-pilipinas/static/js/main.67c902bc.chunk.js",
     "main.js.map": "/baybayin-pilipinas/static/js/main.67c902bc.chunk.js.map",
     "runtime~main.js": "/baybayin-pilipinas/static/js/runtime~main.3be3e604.js",
@@ -8,9 +8,9 @@
     "static/js/2.5999c18b.chunk.js": "/baybayin-pilipinas/static/js/2.5999c18b.chunk.js",
     "static/js/2.5999c18b.chunk.js.map": "/baybayin-pilipinas/static/js/2.5999c18b.chunk.js.map",
     "index.html": "/baybayin-pilipinas/index.html",
-    "precache-manifest.4a36fc439766dc4932b6fa7e511db274.js": "/baybayin-pilipinas/precache-manifest.4a36fc439766dc4932b6fa7e511db274.js",
+    "precache-manifest.cfd1c570a60ffb5ab536f34a12a546f9.js": "/baybayin-pilipinas/precache-manifest.cfd1c570a60ffb5ab536f34a12a546f9.js",
     "service-worker.js": "/baybayin-pilipinas/service-worker.js",
-    "static/css/main.da0d1dfe.chunk.css.map": "/baybayin-pilipinas/static/css/main.da0d1dfe.chunk.css.map",
+    "static/css/main.29acbee6.chunk.css.map": "/baybayin-pilipinas/static/css/main.29acbee6.chunk.css.map",
     "static/media/Baybayin-Carved-on-Bamboo-Stem.jpg": "/baybayin-pilipinas/static/media/Baybayin-Carved-on-Bamboo-Stem.8302e208.jpg",
     "static/media/Baybayin-conference-program.jpg": "/baybayin-pilipinas/static/media/Baybayin-conference-program.305c3294.jpg",
     "static/media/BaybayinTranslator.scss": "/baybayin-pilipinas/static/media/icon-0.598ac82f.png",
