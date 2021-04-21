@@ -63,14 +63,17 @@ export const carouselImages = [
 
 export const youtubeLinks = [
     {
+        title: 'GMA Digital Specials: Ano ang Baybayin? | Need to Know',
+        url: 'https://www.youtube.com/embed/N3LOfY1KAno'
+    }, {
+        title: "Baybayin 101 | #BuhayinAngBaybayin #Padayon",
+        url: "https://www.youtube.com/embed/ddghRtW9LpE"
+    }, {
         title: "How to Write Baybayin Tutorial",
         url: "https://www.youtube.com/embed/FKHdYAn7QnQ"
     }, {
         title: 'Learn to Write in Baybayin',
         url: 'https://www.youtube.com/embed/K-Sp9LYfWuw'
-    }, {
-        title: 'BAYBAYIN: Video Documentary about the Essence and Importance of the Baybayin Script',
-        url: 'https://www.youtube.com/embed/7GjeNO-KB8s&t=2s'
     }, {
         title: '3 Steps in Writing Baybayin',
         url: 'https://www.youtube.com/embed/cTbX837DgZM'
