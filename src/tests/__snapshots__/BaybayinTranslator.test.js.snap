@@ -12,7 +12,7 @@ exports[`renders correctly 1`] = `
     className="preview"
     dangerouslySetInnerHTML={
       Object {
-        "__html": "← ← ← type or paste something there<br/>and see the translation here. ↓↓↓<br/><br/><i style=\\"color: #ff00ff\\"><b>Note:</b><br/>This is an assisted and automatic translator as you type.  No need to worry on the convention of typing on a baybayin keyboard.  Just type normally as you would.</i>",
+        "__html": "← ← ← type or paste something there<br/>and see the translation here. ↓↓↓<br/><br/><i style=\\"color: #ff9900\\"><b>Note:</b><br/>This is an assisted and automatic translator as you type.  No need to worry on the convention of typing on a baybayin keyboard.  Just type normally as you would.</i>",
       }
     }
   />
