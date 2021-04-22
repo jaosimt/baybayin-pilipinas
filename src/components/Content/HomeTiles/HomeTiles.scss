@@ -1,4 +1,7 @@
 @import "../../../common";
+@import "../../../fonts/Baybayin.css";
+
+.lang-filipino { font-family: "Baybayin-Modern-Club", serif; }
 
 .home-tile-items {
     display: grid;

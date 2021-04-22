@@ -19,6 +19,23 @@ export const articles = [
         description: 'Typing using a baybayin keyboard is not as simple as how we know typing is.  There are certain typing behaviours that we need to pay attention to.  For instance, typing a vowel character needs to be typed in with the caps lock on.'
     },
     {
+        title: 'Kaibahan at Wastong Paggamit ng "Ng" at "Nang"',
+        language: 'filipino',
+        url: 'https://philnews.ph/2019/07/17/ng-at-nang-kaibahan-wastong-paggamit-ng-ng-at-nang/',
+        image: 'https://philnews.ph/wp-content/uploads/2019/07/Books.jpg',
+        description: 'NG AT NANG – Narito ang kaibahan ng mga katagang "ng" at "nang" at ang wastong paggamit sa kanila.' +
+           '\n\n' +
+           'Hindi maikakaila na karamihan sa mga Pinoy ay mas bihasa sa paggamit ng mga kataga sa Ingles kaysa sa mga katagang Filipino o Tagalog. Marami sa atin ay nahihirapan sa wastong paggamit ng mga salita.' +
+           '\n\n' +
+           'Para mapabilis ang pagtukoy kung ano nga ba ang dapat gamitin, isa sa mabisang paraan ay pag-aralang mabuti ang mga bahagi ng pananalita. Mayroong walong bahagi ng pananalita at bawat isa ay may layunin.' +
+           '\n\n' +
+           'Kung alam na natin ang mga bahagi ng pananalita, mas mapapadali ang ating pag-intindi sa mga wastong paggamit ng ibang mga salita. Katulad na lamang ng "ng at nang".' +
+           '\n\n' +
+           'Isa ka rin ba sa mga madalas nagdadalawang-isip kung saan sa kanila ang dapat gamitin sa pangungusap?' +
+           '\n\n' +
+           'Narito ang mga kaibahan at wastong paggamit ng "ng at nang" sa pangungusap.'
+    },
+    {
         title: 'Baybayin on Windows 10',
         url: 'http://nordenx.blogspot.com/search/label/Windows%2010',
         image: w10,
@@ -88,6 +105,7 @@ export const articles = [
         description: 'Baybayin Pinas aims to promote tourism in the Philippines using Poems and Baybayin (Philippine\'s native script writing). Baybayin in tagalog means exploring while Pinas is the short term for Pilipinas'
     },
     {
+        language: 'filipino',
         title: 'Baybayin Buhayin',
         url: 'https://www.facebook.com/pg/baybayinbuhayin/',
         image: baybayinBuhayin,

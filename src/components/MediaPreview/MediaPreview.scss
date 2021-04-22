@@ -1,4 +1,7 @@
 @import "../../common";
+@import "../../fonts/Baybayin.css";
+
+.lang-filipino { font-family: "Baybayin-Modern-Club", serif; }
 
 .media-preview-overlay {
     z-index: $max-z-index !important;

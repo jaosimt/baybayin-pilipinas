@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { Fragment } from 'react';
+import ReactTooltip from 'react-tooltip';
 import './app.scss';
 import SocialMediaLinks from "./components/SocialMediaLinks/SocialMediaLinks";
 import ImageSlider from "./components/ImageSlider/ImageSlider";
@@ -42,91 +43,96 @@ export default class App extends React.Component {
             selected
         } = this.state;
         
-        return <div className={'app'} style={{opacity: opaque}}>
-            <div className={'header'}>
-                <div className={'logo'}/>
-                
-                <div
-                    className={'app-name'}
-                    onClick={this.onBPClick}
-                >
-                    BAYBAYIN PILIPINAS
+        return <Fragment>
+            <div className={'app'} style={{opacity: opaque}}>
+                <div className={'header'}>
+                    <div className={'logo'}/>
+            
+                    <div
+                       className={'app-name'}
+                       onClick={this.onBPClick}
+                    >
+                        BAYBAYIN PILIPINAS
+                    </div>
+            
+                    <div className={'social'}>
+                        <SocialMediaLinks iconSize={23}/>
+                    </div>
                 </div>
-                
-                <div className={'social'}>
-                    <SocialMediaLinks iconSize={23}/>
-                </div>
-            </div>
-            <div className={'content'}>
-                <div className={'media-carousel'}>
-                    <ImageSlider images={carouselImages}/>
-                </div>
-                
-                <div className={'page-content'} style={{
-                    minHeight: window.innerHeight
-                }}>
-                    <div className={'menu'}>
-                        <ul>
-                            <li
-                                name={'home'}
-                                className={selected === 'home' ? 'selected' : ''}
-                                onClick={this.onMenuClick}
-                            >
-                                Home
-                            </li>
-                            
-                            <li
-                                name={'translator'}
-                                className={selected === 'translator' ? 'selected' : ''}
-                                onClick={this.onMenuClick}
-                            >
-                                Baybayin Keyboard & Translator
-                                <span
-                                    style={{float: 'right'}}
-                                    title={'keyboard assist on/off'}
-                                    onClick={this.onAutoClick}
+                <div className={'content'}>
+                    <div className={'media-carousel'}>
+                        <ImageSlider images={carouselImages}/>
+                    </div>
+            
+                    <div className={'page-content'} style={{
+                        minHeight: window.innerHeight
+                    }}>
+                        <div className={'menu'}>
+                            <ul>
+                                <li
+                                   name={'home'}
+                                   className={selected === 'home' ? 'selected' : ''}
+                                   onClick={this.onMenuClick}
                                 >
+                                    Home
+                                </li>
+                        
+                                <li
+                                   name={'translator'}
+                                   className={selected === 'translator' ? 'selected' : ''}
+                                   onClick={this.onMenuClick}
+                                >
+                                    Baybayin Keyboard & Translator
+                                    <span>
+                                    <span
+                                       style={{float: 'right'}}
+                                       title={'keyboard assist on/off'}
+                                       onClick={this.onAutoClick}
+                                    >
                                     auto
                                 </span>
                                 <input
-                                    type={'checkbox'}
-                                    style={{float: 'right'}}
-                                    title={'keyboard assist on/off'}
-                                    onChange={this.onAutoClick}
-                                    onClick={this.onAutoNoClick}
-                                    checked={this.state.auto}
+                                   type={'checkbox'}
+                                   style={{float: 'right'}}
+                                   title={'keyboard assist on/off'}
+                                   onChange={this.onAutoClick}
+                                   onClick={this.onAutoNoClick}
+                                   checked={this.state.auto}
                                 />
-                            </li>
-                            
-                            <li
-                                name={'about'}
-                                className={selected === 'about' ? 'selected' : ''}
-                                onClick={this.onMenuClick}
-                            >
-                                About
-                            </li>
-                        </ul>
-                        <div className={'youtube-videos'}>
+                                </span>
+                                </li>
+                        
+                                <li
+                                   name={'about'}
+                                   className={selected === 'about' ? 'selected' : ''}
+                                   onClick={this.onMenuClick}
+                                >
+                                    About
+                                </li>
+                            </ul>
+                            <div className={'youtube-videos'}>
+                                {
+                                    youtubeLinks.map((v, i) => <iframe key={i} title={v.title} width="100%" src={v.url}/>)
+                                }
+                            </div>
+                        </div>
+                
+                        <div ref={node => this.node = node} className={'content-area'}>
                             {
-                                youtubeLinks.map((v, i) => <iframe key={i} title={v.title} width="100%" src={v.url}/>)
+                                selected === 'about' ?
+                                   <About/> :
+                                   selected === 'translator' ?
+                                      <BaybayinTranslator autoAssist={this.state.auto}/> :
+                                      <HomeTiles data={homeItems}/>
                             }
                         </div>
                     </div>
-                    
-                    <div ref={node => this.node = node} className={'content-area'}>
-                        {
-                            selected === 'about' ?
-                                <About/> :
-                                selected === 'translator' ?
-                                    <BaybayinTranslator autoAssist={this.state.auto}/> :
-                                    <HomeTiles data={homeItems}/>
-                        }
-                    </div>
+                </div>
+                <div className={'footer'}>
+                    &copy;&nbsp;Copyright Baybayin Pilipinas { new Date().getFullYear() }. All rights reserved.
                 </div>
             </div>
-            <div className={'footer'}>
-                &copy;&nbsp;Copyright Baybayin Pilipinas 2019. All rights reserved.
-            </div>
-        </div>
+            <ReactTooltip html={true} />
+        </Fragment>
     }
 }
