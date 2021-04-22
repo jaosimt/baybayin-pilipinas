@@ -21,7 +21,7 @@ export const carouselImages = [
     },
     {
         image: gintongPamana,
-        name: '',
+        name: 'Gintong Pamana',
         link: 'https://www.youtube.com/watch?v=Rn7nqNAoVd4&ab_channel=magkunnouh'
     },
     {
