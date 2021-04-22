@@ -8,6 +8,7 @@ import baybayinConferenceProgram from './images/carousel/Baybayin-conference-pro
 import hashTag from './images/carousel/hashTagFilipinoAncientWriting.jpg';
 import kultura from './images/carousel/kultura.jpg';
 import chars from './images/carousel/baybayinCharacters.png';
+import gintongPamana from './images/carousel/gintongPamana.jpg';
 
 
 export const homeItems = articles;
@@ -17,6 +18,11 @@ export const carouselImages = [
         image: kultura,
         name: '',
         link: ''
+    },
+    {
+        image: gintongPamana,
+        name: '',
+        link: 'https://www.youtube.com/watch?v=Rn7nqNAoVd4&ab_channel=magkunnouh'
     },
     {
         image: chars,
