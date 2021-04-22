@@ -84,9 +84,6 @@ export const youtubeLinks = [
         title: '3 Steps in Writing Baybayin',
         url: 'https://www.youtube.com/embed/cTbX837DgZM'
     }, {
-        title: "BATHALA Meaning in BAYBAYIN the Old Writing System in the Philippines",
-        url: "https://www.youtube.com/embed/XU1AkpQcfjc"
-    }, {
         title: "Baybayin keyboard app, puwedeng i-download",
         url: "https://www.youtube.com/embed/96wWecabkNU"
     }, {
