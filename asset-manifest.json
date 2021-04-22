@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/baybayin-pilipinas/static/css/main.51b1ec96.chunk.css",
-    "main.js": "/baybayin-pilipinas/static/js/main.9a7c354f.chunk.js",
-    "main.js.map": "/baybayin-pilipinas/static/js/main.9a7c354f.chunk.js.map",
+    "main.js": "/baybayin-pilipinas/static/js/main.2a7ca496.chunk.js",
+    "main.js.map": "/baybayin-pilipinas/static/js/main.2a7ca496.chunk.js.map",
     "runtime-main.js": "/baybayin-pilipinas/static/js/runtime-main.546b77df.js",
     "runtime-main.js.map": "/baybayin-pilipinas/static/js/runtime-main.546b77df.js.map",
     "static/js/2.b64237d8.chunk.js": "/baybayin-pilipinas/static/js/2.b64237d8.chunk.js",
@@ -43,6 +43,6 @@
     "static/js/runtime-main.546b77df.js",
     "static/js/2.b64237d8.chunk.js",
     "static/css/main.51b1ec96.chunk.css",
-    "static/js/main.9a7c354f.chunk.js"
+    "static/js/main.2a7ca496.chunk.js"
   ]
 }
