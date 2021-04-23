@@ -2,7 +2,7 @@
     "name": "baybayin-pilipinas",
     "version": "0.1.0",
     "private": true,
-    "homepage": "http://jaosimt.github.io/baybayin-pilipinas",
+    "homepage": "http://baybayin.jaosimt.com",
     "dependencies": {
         "jimp": "^0.16.1",
         "lodash": "^4.17.11",
