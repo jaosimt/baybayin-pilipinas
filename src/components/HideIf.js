@@ -1,14 +1,14 @@
 import PropTypes from 'prop-types'
 
-const HideIf = ({condition, children}) => {
-    if(condition){
-        return null;
-    }
-    return children;
+const HideIf = ({ condition, children }) => {
+	if (condition) {
+		return null;
+	}
+	return children;
 };
 
 HideIf.propTypes = {
-    condition: PropTypes.bool.isRequired
+	condition: PropTypes.bool.isRequired
 };
 
 export default HideIf
