@@ -14,7 +14,7 @@ export const articles = [
     
     {
         title: 'How to use the Baybayin keyboard',
-        url: 'https://sim.portfolio.ph/howto/how-to-use-the-baybayin-keyboard/',
+        url: 'https://www.jaosimt.com/blogs/baybayin-keyboard',
         image: keyboard,
         description: 'Typing using a baybayin keyboard is not as simple as how we know typing is.  There are certain typing behaviours that we need to pay attention to.  For instance, typing a vowel character needs to be typed in with the caps lock on.'
     },
