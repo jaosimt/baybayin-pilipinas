@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/static/css/main.b5948e97.chunk.css",
+    "main.css": "/static/css/main.e9fe339c.chunk.css",
     "main.js": "/static/js/main.89702392.chunk.js",
     "main.js.map": "/static/js/main.89702392.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.e6c3c451.js",
@@ -8,7 +8,7 @@
     "static/js/2.27d25948.chunk.js": "/static/js/2.27d25948.chunk.js",
     "static/js/2.27d25948.chunk.js.map": "/static/js/2.27d25948.chunk.js.map",
     "index.html": "/index.html",
-    "static/css/main.b5948e97.chunk.css.map": "/static/css/main.b5948e97.chunk.css.map",
+    "static/css/main.e9fe339c.chunk.css.map": "/static/css/main.e9fe339c.chunk.css.map",
     "static/js/2.27d25948.chunk.js.LICENSE.txt": "/static/js/2.27d25948.chunk.js.LICENSE.txt",
     "static/media/Baybayin-Carved-on-Bamboo-Stem.53506f70.jpg": "/static/media/Baybayin-Carved-on-Bamboo-Stem.53506f70.jpg",
     "static/media/Baybayin-conference-program.963e1f78.jpg": "/static/media/Baybayin-conference-program.963e1f78.jpg",
@@ -42,7 +42,7 @@
   "entrypoints": [
     "static/js/runtime-main.e6c3c451.js",
     "static/js/2.27d25948.chunk.js",
-    "static/css/main.b5948e97.chunk.css",
+    "static/css/main.e9fe339c.chunk.css",
     "static/js/main.89702392.chunk.js"
   ]
 }
