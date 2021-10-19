@@ -36,10 +36,10 @@ SocialMediaLinks.defaultProps = {
 			name: 'linkedin',
 			url: 'https://www.linkedin.com/in/sim-jao-65324677'
 		},
-		{
-			name: 'facebook',
-			url: 'https://www.facebook.com/jaosimt/'
-		},
+		// {
+		// 	name: 'facebook',
+		// 	url: 'https://www.facebook.com/jaosimt/'
+		// },
 		{
 			name: 'twitter',
 			url: 'https://twitter.com/jaosimt/'
