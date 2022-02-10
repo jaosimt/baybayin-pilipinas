@@ -6,7 +6,7 @@
     "dependencies": {
         "jimp": "^0.6.4",
         "lodash": "^4.17.21",
-        "node-sass": "^4.13.1",
+        "node-sass": "^7.0.0",
         "prop-types": "^15.7.2",
         "react": "^16.8.6",
         "react-bingmaps": "^3.6.1",
