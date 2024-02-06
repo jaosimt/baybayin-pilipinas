@@ -4,7 +4,7 @@
     "private": true,
     "homepage": "http://jaosimt.github.io/baybayin-pilipinas",
     "dependencies": {
-        "jimp": "^0.6.4",
+        "jimp": "^0.22.7",
         "lodash": "^4.17.21",
         "node-sass": "^4.13.1",
         "prop-types": "^15.7.2",
